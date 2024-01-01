@@ -1,0 +1,21 @@
+version: '2'
+services:
+ 
+    albumentations-notebook:
+        build:
+          context: .
+          args:
+            - NODE_ENV=local
+          dockerfile: Dockerfile_albumentations
+        shm_size: '12gb'
+        volumes:
+            - ./:/pytorch/files
+        ports:
+            - 8888:8888
+        container_name:   albumentations
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: nvidia
+                capabilities: [gpu]
