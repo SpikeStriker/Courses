@@ -53,6 +53,7 @@ def get_datasets():
     Returns the training and validation datasets along 
     with the class names.
     """
+    print(ROOT_DIR)
     dataset = datasets.ImageFolder(
         ROOT_DIR, 
         transform=(TrainTransforms(RESIZE_TO))

@@ -1,3 +1,6 @@
+# python train.py --pretrained --fine-tune --epochs 75 --learning-rate 0.0001
+# https://debuggercafe.com/traffic-sign-recognition-using-pytorch-and-deep-learning/
+
 import torch
 import argparse
 import torch.nn as nn
