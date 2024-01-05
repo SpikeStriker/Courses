@@ -1,0 +1,4 @@
+tables
+matplotlib
+pandas
+numpy
