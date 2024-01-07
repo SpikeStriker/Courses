@@ -1,0 +1,20 @@
+# syntax=docker/dockerfile:1
+FROM jupyter/base-notebook
+LABEL Uday Jain <uday9k@gmail.com>
+WORKDIR /uday
+COPY requirements.txt requirements.txt
+# RUN pip install notebook
+ENV TZ=UTC
+
+USER root
+# RUN apt-get update && apt-get -y install sudo
+# RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+# USER docker
+# CMD /bin/bash
+
+RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends apt-utils build-essential curl xvfb git
+RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg xorg-dev libsdl2-dev swig cmake python3-opengl
+RUN python -m pip install --no-cache-dir --upgrade -r requirements.txt pip
+RUN python -m pip install git+https://github.com/eleurent/rl-agents
+EXPOSE 8888
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='test123'", "--NotebookApp.password=''"]

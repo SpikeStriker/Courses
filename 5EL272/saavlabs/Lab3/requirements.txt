@@ -1,0 +1,12 @@
+tables
+matplotlib
+pandas
+numpy
+highway-env
+moviepy
+tensorboardx
+tensorboard
+tensorboard_plugin_profile
+gym
+pyvirtualdisplay
+imageio-ffmpeg

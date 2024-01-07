@@ -1,0 +1,21 @@
+version: '2'
+services:
+ 
+    rl-notebook:
+        build:
+          context: .
+          args:
+            - NODE_ENV=local
+          dockerfile: Dockerfile
+        shm_size: '12gb'
+        volumes:
+            - ./:/uday/
+        ports:
+            - 8888:8888
+        container_name: rl
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: nvidia
+                capabilities: [gpu]
