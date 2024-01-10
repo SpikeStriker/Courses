@@ -2,7 +2,6 @@ tables
 matplotlib
 pandas
 numpy
-highway-env
 moviepy
 tensorboardx
 tensorboard
