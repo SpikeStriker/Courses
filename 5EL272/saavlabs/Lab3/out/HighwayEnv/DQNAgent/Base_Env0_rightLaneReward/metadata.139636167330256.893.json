@@ -51,13 +51,11 @@
         "id": "highway-v0",
         "import_module": "highway_env",
         "initial_lane_id": 0,
-        "lane_change_reward": -100,
+        "lane_change_reward": 0,
         "lanes_count": 2,
         "manual_control": false,
         "normalize_reward": true,
         "observation": {
-            "absolute": false,
-            "normalize": true,
             "type": "Kinematics"
         },
         "offroad_terminal": false,
@@ -76,7 +74,7 @@
         "screen_width": 600,
         "show_trajectories": false,
         "simulation_frequency": 15,
-        "vehicles_count": 10,
+        "vehicles_count": 0,
         "vehicles_density": 1
     }
 }
