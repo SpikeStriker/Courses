@@ -10,7 +10,9 @@ USER root
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils build-essential curl xvfb git
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg xorg-dev libsdl2-dev swig cmake python3-opengl
 RUN python -m pip install --no-cache-dir --upgrade -r requirements.txt pip
+RUN python -m pip install pip
 RUN python -m pip install -U git+https://github.com/SpikeStriker/HighwayEnv
 RUN python -m pip install git+https://github.com/eleurent/rl-agents
+
 EXPOSE 8888
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='test123'", "--NotebookApp.password=''"]
