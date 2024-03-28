@@ -1,0 +1,257 @@
+AORB_1:13:double_bmi(double,double):height * height => height / height
+AORB_2:13:double_bmi(double,double):height * height => height % height
+AORB_3:13:double_bmi(double,double):height * height => height + height
+AORB_4:13:double_bmi(double,double):height * height => height - height
+AORB_5:13:double_bmi(double,double):weight / (height * height) => weight * (height * height)
+AORB_6:13:double_bmi(double,double):weight / (height * height) => weight % (height * height)
+AORB_7:13:double_bmi(double,double):weight / (height * height) => weight + height * height
+AORB_8:13:double_bmi(double,double):weight / (height * height) => weight - height * height
+AOIU_1:13:double_bmi(double,double):weight => -weight
+AOIU_2:13:double_bmi(double,double):height => -height
+AOIU_3:15:double_bmi(double,double):Double.NaN => -Double.NaN
+AOIU_4:17:double_bmi(double,double):bmiValue => -bmiValue
+AOIU_5:24:java.lang.String_bmiCat(double,double):weight => -weight
+AOIU_6:24:java.lang.String_bmiCat(double,double):height => -height
+AOIU_7:25:java.lang.String_bmiCat(double,double):bmiValue => -bmiValue
+AOIU_8:28:java.lang.String_bmiCat(double,double):bmiValue => -bmiValue
+AOIS_1:13:double_bmi(double,double):weight => ++weight
+AOIS_2:13:double_bmi(double,double):weight => --weight
+AOIS_3:13:double_bmi(double,double):weight => weight++
+AOIS_4:13:double_bmi(double,double):weight => weight--
+AOIS_5:13:double_bmi(double,double):height => ++height
+AOIS_6:13:double_bmi(double,double):height => --height
+AOIS_7:13:double_bmi(double,double):height => height++
+AOIS_8:13:double_bmi(double,double):height => height--
+AOIS_9:13:double_bmi(double,double):height => ++height
+AOIS_10:13:double_bmi(double,double):height => --height
+AOIS_11:13:double_bmi(double,double):height => height++
+AOIS_12:13:double_bmi(double,double):height => height--
+AOIS_13:14:double_bmi(double,double):weight => ++weight
+AOIS_14:14:double_bmi(double,double):weight => --weight
+AOIS_15:14:double_bmi(double,double):weight => weight++
+AOIS_16:14:double_bmi(double,double):weight => weight--
+AOIS_17:14:double_bmi(double,double):height => ++height
+AOIS_18:14:double_bmi(double,double):height => --height
+AOIS_19:14:double_bmi(double,double):height => height++
+AOIS_20:14:double_bmi(double,double):height => height--
+AOIS_21:14:double_bmi(double,double):height => ++height
+AOIS_22:14:double_bmi(double,double):height => --height
+AOIS_23:14:double_bmi(double,double):height => height++
+AOIS_24:14:double_bmi(double,double):height => height--
+AOIS_25:14:double_bmi(double,double):weight => ++weight
+AOIS_26:14:double_bmi(double,double):weight => --weight
+AOIS_27:14:double_bmi(double,double):weight => weight++
+AOIS_28:14:double_bmi(double,double):weight => weight--
+AOIS_29:15:double_bmi(double,double):Double.NaN => ++Double.NaN
+AOIS_30:15:double_bmi(double,double):Double.NaN => --Double.NaN
+AOIS_31:15:double_bmi(double,double):Double.NaN => Double.NaN++
+AOIS_32:15:double_bmi(double,double):Double.NaN => Double.NaN--
+AOIS_33:17:double_bmi(double,double):bmiValue => bmiValue++
+AOIS_34:17:double_bmi(double,double):bmiValue => bmiValue--
+AOIS_35:24:java.lang.String_bmiCat(double,double):weight => ++weight
+AOIS_36:24:java.lang.String_bmiCat(double,double):weight => --weight
+AOIS_37:24:java.lang.String_bmiCat(double,double):weight => weight++
+AOIS_38:24:java.lang.String_bmiCat(double,double):weight => weight--
+AOIS_39:24:java.lang.String_bmiCat(double,double):height => ++height
+AOIS_40:24:java.lang.String_bmiCat(double,double):height => --height
+AOIS_41:24:java.lang.String_bmiCat(double,double):height => height++
+AOIS_42:24:java.lang.String_bmiCat(double,double):height => height--
+AOIS_43:25:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_44:25:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+AOIS_45:28:java.lang.String_bmiCat(double,double):bmiValue => ++bmiValue
+AOIS_46:28:java.lang.String_bmiCat(double,double):bmiValue => --bmiValue
+AOIS_47:28:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_48:28:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+AOIS_49:31:java.lang.String_bmiCat(double,double):bmiValue => ++bmiValue
+AOIS_50:31:java.lang.String_bmiCat(double,double):bmiValue => --bmiValue
+AOIS_51:31:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_52:31:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+AOIS_53:31:java.lang.String_bmiCat(double,double):bmiValue => ++bmiValue
+AOIS_54:31:java.lang.String_bmiCat(double,double):bmiValue => --bmiValue
+AOIS_55:31:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_56:31:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+AOIS_57:34:java.lang.String_bmiCat(double,double):bmiValue => ++bmiValue
+AOIS_58:34:java.lang.String_bmiCat(double,double):bmiValue => --bmiValue
+AOIS_59:34:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_60:34:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+AOIS_61:34:java.lang.String_bmiCat(double,double):bmiValue => ++bmiValue
+AOIS_62:34:java.lang.String_bmiCat(double,double):bmiValue => --bmiValue
+AOIS_63:34:java.lang.String_bmiCat(double,double):bmiValue => bmiValue++
+AOIS_64:34:java.lang.String_bmiCat(double,double):bmiValue => bmiValue--
+ROR_1:14:double_bmi(double,double): weight <= 0  =>   weight > 0
+ROR_2:14:double_bmi(double,double): weight <= 0  =>   weight >= 0
+ROR_3:14:double_bmi(double,double): weight <= 0  =>   weight < 0
+ROR_4:14:double_bmi(double,double): weight <= 0  =>   weight == 0
+ROR_5:14:double_bmi(double,double): weight <= 0  =>   weight != 0
+ROR_6:14:double_bmi(double,double): weight <= 0  =>   true
+ROR_7:14:double_bmi(double,double): weight <= 0  =>   false
+ROR_8:14:double_bmi(double,double): height <= 0  =>   height > 0
+ROR_9:14:double_bmi(double,double): height <= 0  =>   height >= 0
+ROR_10:14:double_bmi(double,double): height <= 0  =>   height < 0
+ROR_11:14:double_bmi(double,double): height <= 0  =>   height == 0
+ROR_12:14:double_bmi(double,double): height <= 0  =>   height != 0
+ROR_13:14:double_bmi(double,double): height <= 0  =>   true
+ROR_14:14:double_bmi(double,double): height <= 0  =>   false
+ROR_15:14:double_bmi(double,double): height >= 2.5  =>   height > 2.5
+ROR_16:14:double_bmi(double,double): height >= 2.5  =>   height < 2.5
+ROR_17:14:double_bmi(double,double): height >= 2.5  =>   height <= 2.5
+ROR_18:14:double_bmi(double,double): height >= 2.5  =>   height == 2.5
+ROR_19:14:double_bmi(double,double): height >= 2.5  =>   height != 2.5
+ROR_20:14:double_bmi(double,double): height >= 2.5  =>   true
+ROR_21:14:double_bmi(double,double): height >= 2.5  =>   false
+ROR_22:14:double_bmi(double,double): weight >= 200  =>   weight > 200
+ROR_23:14:double_bmi(double,double): weight >= 200  =>   weight < 200
+ROR_24:14:double_bmi(double,double): weight >= 200  =>   weight <= 200
+ROR_25:14:double_bmi(double,double): weight >= 200  =>   weight == 200
+ROR_26:14:double_bmi(double,double): weight >= 200  =>   weight != 200
+ROR_27:14:double_bmi(double,double): weight >= 200  =>   true
+ROR_28:14:double_bmi(double,double): weight >= 200  =>   false
+ROR_29:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   bmiValue > 18.5
+ROR_30:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   bmiValue >= 18.5
+ROR_31:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   bmiValue <= 18.5
+ROR_32:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   bmiValue == 18.5
+ROR_33:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   bmiValue != 18.5
+ROR_34:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   true
+ROR_35:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>   false
+ROR_36:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   bmiValue > 18.5
+ROR_37:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   bmiValue < 18.5
+ROR_38:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   bmiValue <= 18.5
+ROR_39:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   bmiValue == 18.5
+ROR_40:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   bmiValue != 18.5
+ROR_41:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   true
+ROR_42:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>   false
+ROR_43:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   bmiValue > 25.0
+ROR_44:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   bmiValue >= 25.0
+ROR_45:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   bmiValue <= 25.0
+ROR_46:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   bmiValue == 25.0
+ROR_47:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   bmiValue != 25.0
+ROR_48:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   true
+ROR_49:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>   false
+ROR_50:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   bmiValue > 25.0
+ROR_51:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   bmiValue < 25.0
+ROR_52:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   bmiValue <= 25.0
+ROR_53:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   bmiValue == 25.0
+ROR_54:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   bmiValue != 25.0
+ROR_55:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   true
+ROR_56:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>   false
+ROR_57:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   bmiValue > 30.0
+ROR_58:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   bmiValue >= 30.0
+ROR_59:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   bmiValue <= 30.0
+ROR_60:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   bmiValue == 30.0
+ROR_61:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   bmiValue != 30.0
+ROR_62:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   true
+ROR_63:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>   false
+COR_1:14:double_bmi(double,double): weight <= 0 | height <= 0  =>   weight <= 0 && height <= 0
+COR_2:14:double_bmi(double,double): weight <= 0 | height <= 0  =>   weight <= 0 ^ height <= 0
+COR_3:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5  =>   weight <= 0 | height <= 0 && height >= 2.5
+COR_4:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5  =>   (weight <= 0 | height <= 0) ^ height >= 2.5
+COR_5:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200  =>   weight <= 0 | height <= 0 | height >= 2.5 && weight >= 200
+COR_6:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200  =>   (weight <= 0 | height <= 0 | height >= 2.5) ^ weight >= 200
+COR_7:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5 & bmiValue < 25.0  =>   bmiValue >= 18.5 || bmiValue < 25.0
+COR_8:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5 & bmiValue < 25.0  =>   bmiValue >= 18.5 ^ bmiValue < 25.0
+COR_9:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0 & bmiValue < 30.0  =>   bmiValue >= 25.0 || bmiValue < 30.0
+COR_10:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0 & bmiValue < 30.0  =>   bmiValue >= 25.0 ^ bmiValue < 30.0
+COI_1:14:double_bmi(double,double): weight <= 0  =>  !(weight <= 0)
+COI_2:14:double_bmi(double,double): height <= 0  =>  !(height <= 0)
+COI_3:14:double_bmi(double,double): weight <= 0 | height <= 0  =>  !(weight <= 0 | height <= 0)
+COI_4:14:double_bmi(double,double): height >= 2.5  =>  !(height >= 2.5)
+COI_5:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5  =>  !(weight <= 0 | height <= 0 | height >= 2.5)
+COI_6:14:double_bmi(double,double): weight >= 200  =>  !(weight >= 200)
+COI_7:14:double_bmi(double,double): weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200  =>  !(weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200)
+COI_8:28:java.lang.String_bmiCat(double,double): bmiValue < 18.5  =>  !(bmiValue < 18.5)
+COI_9:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5  =>  !(bmiValue >= 18.5)
+COI_10:31:java.lang.String_bmiCat(double,double): bmiValue < 25.0  =>  !(bmiValue < 25.0)
+COI_11:31:java.lang.String_bmiCat(double,double): bmiValue >= 18.5 & bmiValue < 25.0  =>  !(bmiValue >= 18.5 & bmiValue < 25.0)
+COI_12:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0  =>  !(bmiValue >= 25.0)
+COI_13:34:java.lang.String_bmiCat(double,double): bmiValue < 30.0  =>  !(bmiValue < 30.0)
+COI_14:34:java.lang.String_bmiCat(double,double): bmiValue >= 25.0 & bmiValue < 30.0  =>  !(bmiValue >= 25.0 & bmiValue < 30.0)
+LOI_1:13:double_bmi(double,double):weight => ~weight
+LOI_2:13:double_bmi(double,double):height => ~height
+LOI_3:13:double_bmi(double,double):height => ~height
+LOI_4:14:double_bmi(double,double):weight => ~weight
+LOI_5:14:double_bmi(double,double):height => ~height
+LOI_6:14:double_bmi(double,double):height => ~height
+LOI_7:14:double_bmi(double,double):weight => ~weight
+LOI_8:15:double_bmi(double,double):Double.NaN => ~Double.NaN
+LOI_9:17:double_bmi(double,double):bmiValue => ~bmiValue
+LOI_10:24:java.lang.String_bmiCat(double,double):weight => ~weight
+LOI_11:24:java.lang.String_bmiCat(double,double):height => ~height
+LOI_12:25:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+LOI_13:28:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+LOI_14:31:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+LOI_15:31:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+LOI_16:34:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+LOI_17:34:java.lang.String_bmiCat(double,double):bmiValue => ~bmiValue
+SDL_1:17:double_bmi(double,double): double bmiValue; bmiValue = weight / (height * height); if (weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200) {     bmiValue = Double.NaN; } return bmiValue;  =>   double bmiValue; if (weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200) {     bmiValue = Double.NaN; } return bmiValue;
+SDL_2:15:double_bmi(double,double): double bmiValue; bmiValue = weight / (height * height); if (weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200) {     bmiValue = Double.NaN; } return bmiValue;  =>   double bmiValue; bmiValue = weight / (height * height); return bmiValue;
+SDL_3:15:double_bmi(double,double): bmiValue = Double.NaN;  =>  
+SDL_4:17:double_bmi(double,double): if (weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200) {     bmiValue = Double.NaN; }  =>   if (true) {     bmiValue = Double.NaN; }
+SDL_5:18:double_bmi(double,double): return bmiValue;  =>   return 0;
+SDL_6:42:java.lang.String_bmiCat(double,double): double bmiValue; java.lang.String cat; bmiValue = bmi( weight, height ); if (Double.isNaN( bmiValue )) {     cat = \"Check Input Values\"; } else {     if (bmiValue < 18.5) {         cat = \"Underweight\";     } else {         if (bmiValue >= 18.5 & bmiValue < 25.0) {             cat = \"Normal weight\";         } else {             if (bmiValue >= 25.0 & bmiValue < 30.0) {                 cat = \"Overweight\";             } else {                 cat = \"Obese\";             }         }     } } return cat;  =>   double bmiValue; java.lang.String cat; if (Double.isNaN( bmiValue )) {     cat = \"Check Input Values\"; } else {     if (bmiValue < 18.5) {         cat = \"Underweight\";     } else {         if (bmiValue >= 18.5 & bmiValue < 25.0) {             cat = \"Normal weight\";         } else {             if (bmiValue >= 25.0 & bmiValue < 30.0) {                 cat = \"Overweight\";             } else {                 cat = \"Obese\";             }         }     } } return cat;
+SDL_7:26:java.lang.String_bmiCat(double,double): double bmiValue; java.lang.String cat; bmiValue = bmi( weight, height ); if (Double.isNaN( bmiValue )) {     cat = \"Check Input Values\"; } else {     if (bmiValue < 18.5) {         cat = \"Underweight\";     } else {         if (bmiValue >= 18.5 & bmiValue < 25.0) {             cat = \"Normal weight\";         } else {             if (bmiValue >= 25.0 & bmiValue < 30.0) {                 cat = \"Overweight\";             } else {                 cat = \"Obese\";             }         }     } } return cat;  =>   double bmiValue; java.lang.String cat; bmiValue = bmi( weight, height ); return cat;
+SDL_8:26:java.lang.String_bmiCat(double,double): cat = \"Check Input Values\";  =>  
+SDL_9:42:java.lang.String_bmiCat(double,double): if (Double.isNaN( bmiValue )) {     cat = \"Check Input Values\"; } else {     if (bmiValue < 18.5) {         cat = \"Underweight\";     } else {         if (bmiValue >= 18.5 & bmiValue < 25.0) {             cat = \"Normal weight\";         } else {             if (bmiValue >= 25.0 & bmiValue < 30.0) {                 cat = \"Overweight\";             } else {                 cat = \"Obese\";             }         }     } }  =>   if (true) {     cat = \"Check Input Values\"; } else {     if (bmiValue < 18.5) {         cat = \"Underweight\";     } else {         if (bmiValue >= 18.5 & bmiValue < 25.0) {             cat = \"Normal weight\";         } else {             if (bmiValue >= 25.0 & bmiValue < 30.0) {                 cat = \"Overweight\";             } else {                 cat = \"Obese\";             }         }     } }
+SDL_10:28:java.lang.String_bmiCat(double,double): if (bmiValue < 18.5) {     cat = \"Underweight\"; } else {     if (bmiValue >= 18.5 & bmiValue < 25.0) {         cat = \"Normal weight\";     } else {         if (bmiValue >= 25.0 & bmiValue < 30.0) {             cat = \"Overweight\";         } else {             cat = \"Obese\";         }     } }  =>  
+SDL_11:29:java.lang.String_bmiCat(double,double): cat = \"Underweight\";  =>  
+SDL_12:41:java.lang.String_bmiCat(double,double): if (bmiValue < 18.5) {     cat = \"Underweight\"; } else {     if (bmiValue >= 18.5 & bmiValue < 25.0) {         cat = \"Normal weight\";     } else {         if (bmiValue >= 25.0 & bmiValue < 30.0) {             cat = \"Overweight\";         } else {             cat = \"Obese\";         }     } }  =>   if (true) {     cat = \"Underweight\"; } else {     if (bmiValue >= 18.5 & bmiValue < 25.0) {         cat = \"Normal weight\";     } else {         if (bmiValue >= 25.0 & bmiValue < 30.0) {             cat = \"Overweight\";         } else {             cat = \"Obese\";         }     } }
+SDL_13:31:java.lang.String_bmiCat(double,double): if (bmiValue >= 18.5 & bmiValue < 25.0) {     cat = \"Normal weight\"; } else {     if (bmiValue >= 25.0 & bmiValue < 30.0) {         cat = \"Overweight\";     } else {         cat = \"Obese\";     } }  =>  
+SDL_14:32:java.lang.String_bmiCat(double,double): cat = \"Normal weight\";  =>  
+SDL_15:40:java.lang.String_bmiCat(double,double): if (bmiValue >= 18.5 & bmiValue < 25.0) {     cat = \"Normal weight\"; } else {     if (bmiValue >= 25.0 & bmiValue < 30.0) {         cat = \"Overweight\";     } else {         cat = \"Obese\";     } }  =>   if (true) {     cat = \"Normal weight\"; } else {     if (bmiValue >= 25.0 & bmiValue < 30.0) {         cat = \"Overweight\";     } else {         cat = \"Obese\";     } }
+SDL_16:34:java.lang.String_bmiCat(double,double): if (bmiValue >= 25.0 & bmiValue < 30.0) {     cat = \"Overweight\"; } else {     cat = \"Obese\"; }  =>  
+SDL_17:35:java.lang.String_bmiCat(double,double): cat = \"Overweight\";  =>  
+SDL_18:39:java.lang.String_bmiCat(double,double): if (bmiValue >= 25.0 & bmiValue < 30.0) {     cat = \"Overweight\"; } else {     cat = \"Obese\"; }  =>   if (true) {     cat = \"Overweight\"; } else {     cat = \"Obese\"; }
+SDL_19:37:java.lang.String_bmiCat(double,double): cat = \"Obese\";  =>  
+SDL_20:43:java.lang.String_bmiCat(double,double): return cat;  =>   return \"\";
+VDL_1:13:double_bmi(double,double):height * height => height
+VDL_2:13:double_bmi(double,double):height * height => height
+VDL_3:13:double_bmi(double,double):weight / (height * height) => height * height
+VDL_4:14:double_bmi(double,double):weight <= 0 => 0
+VDL_5:14:double_bmi(double,double):height <= 0 => 0
+VDL_6:14:double_bmi(double,double):height >= 2.5 => 2.5
+VDL_7:14:double_bmi(double,double):weight >= 200 => 200
+VDL_8:28:java.lang.String_bmiCat(double,double):bmiValue < 18.5 => 18.5
+VDL_9:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 => 18.5
+VDL_10:31:java.lang.String_bmiCat(double,double):bmiValue < 25.0 => 25.0
+VDL_11:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 => 25.0
+VDL_12:34:java.lang.String_bmiCat(double,double):bmiValue < 30.0 => 30.0
+ODL_1:13:double_bmi(double,double):height * height => height
+ODL_2:13:double_bmi(double,double):height * height => height
+ODL_3:13:double_bmi(double,double):weight / (height * height) => weight
+ODL_4:13:double_bmi(double,double):weight / (height * height) => height * height
+ODL_5:14:double_bmi(double,double):weight <= 0 => weight
+ODL_6:14:double_bmi(double,double):weight <= 0 => 0
+ODL_7:14:double_bmi(double,double):height <= 0 => height
+ODL_8:14:double_bmi(double,double):height <= 0 => 0
+ODL_9:14:double_bmi(double,double):weight <= 0 | height <= 0 => weight <= 0
+ODL_10:14:double_bmi(double,double):weight <= 0 | height <= 0 => height <= 0
+ODL_11:14:double_bmi(double,double):height >= 2.5 => height
+ODL_12:14:double_bmi(double,double):height >= 2.5 => 2.5
+ODL_13:14:double_bmi(double,double):weight <= 0 | height <= 0 | height >= 2.5 => weight <= 0 | height <= 0
+ODL_14:14:double_bmi(double,double):weight <= 0 | height <= 0 | height >= 2.5 => height >= 2.5
+ODL_15:14:double_bmi(double,double):weight >= 200 => weight
+ODL_16:14:double_bmi(double,double):weight >= 200 => 200
+ODL_17:14:double_bmi(double,double):weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200 => weight <= 0 | height <= 0 | height >= 2.5
+ODL_18:14:double_bmi(double,double):weight <= 0 | height <= 0 | height >= 2.5 | weight >= 200 => weight >= 200
+ODL_19:28:java.lang.String_bmiCat(double,double):bmiValue < 18.5 => bmiValue
+ODL_20:28:java.lang.String_bmiCat(double,double):bmiValue < 18.5 => 18.5
+ODL_21:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 => bmiValue
+ODL_22:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 => 18.5
+ODL_23:31:java.lang.String_bmiCat(double,double):bmiValue < 25.0 => bmiValue
+ODL_24:31:java.lang.String_bmiCat(double,double):bmiValue < 25.0 => 25.0
+ODL_25:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 & bmiValue < 25.0 => bmiValue >= 18.5
+ODL_26:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 & bmiValue < 25.0 => bmiValue < 25.0
+ODL_27:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 => bmiValue
+ODL_28:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 => 25.0
+ODL_29:34:java.lang.String_bmiCat(double,double):bmiValue < 30.0 => bmiValue
+ODL_30:34:java.lang.String_bmiCat(double,double):bmiValue < 30.0 => 30.0
+ODL_31:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 & bmiValue < 30.0 => bmiValue >= 25.0
+ODL_32:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 & bmiValue < 30.0 => bmiValue < 30.0
+CDL_1:14:double_bmi(double,double):weight <= 0 => weight
+CDL_2:14:double_bmi(double,double):height <= 0 => height
+CDL_3:14:double_bmi(double,double):height >= 2.5 => height
+CDL_4:14:double_bmi(double,double):weight >= 200 => weight
+CDL_5:28:java.lang.String_bmiCat(double,double):bmiValue < 18.5 => bmiValue
+CDL_6:31:java.lang.String_bmiCat(double,double):bmiValue >= 18.5 => bmiValue
+CDL_7:31:java.lang.String_bmiCat(double,double):bmiValue < 25.0 => bmiValue
+CDL_8:34:java.lang.String_bmiCat(double,double):bmiValue >= 25.0 => bmiValue
+CDL_9:34:java.lang.String_bmiCat(double,double):bmiValue < 30.0 => bmiValue

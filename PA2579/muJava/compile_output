@@ -1,4 +1,4 @@
-D:\GitHub\Courses\PA2579\muJava\result\WeightHelper\traditional_mutants\java.lang.String_bmiCat(double,double)\VDL_9\WeightHelper.java:31: error: bad operand types for binary operator '&'
+D:\GitHub\Courses\PA2579\muJava\result\main.java.assignment.WeightHelper\traditional_mutants\java.lang.String_bmiCat(double,double)\VDL_9\WeightHelper.java:31: error: bad operand types for binary operator '&'
                 if (18.5 & bmiValue < 25.0) {
                          ^
   first type:  double
