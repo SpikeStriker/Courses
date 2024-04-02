@@ -21,5 +21,14 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>evosuite</groupId>
+      <artifactId>evosuite</artifactId>
+      <version>1.0.6</version>
+      <scope>system</scope>
+      <systemPath>D:/GitHub/Courses/PA2579/assignment_bmi/evosuite-1.0.6.jar</systemPath>
+    </dependency>
+
+
   </dependencies>
 </project>
