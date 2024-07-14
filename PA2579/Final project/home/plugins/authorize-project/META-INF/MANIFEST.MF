@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Authorize Project
+Specification-Version: 1.7
+Implementation-Title: Authorize Project
+Implementation-Version: 1.7.2
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: authorize-project
+Short-Name: authorize-project
+Long-Name: Authorize Project
+Url: https://github.com/jenkinsci/authorize-project-plugin
+Compatible-Since-Version: 1.3.0
+Plugin-Version: 1.7.2
+Hudson-Version: 2.426.3
+Jenkins-Version: 2.426.3
+Plugin-Developers: Mark Waite:markewaite:mark.earl.waite@gmail.com,IKEDA
+  Yasuyuki:ikedam:
+Plugin-License-Name: The MIT license
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/authorize-pro
+ ject-plugin.git
+Plugin-ScmTag: authorize-project-1.7.2
+Plugin-ScmUrl: https://github.com/jenkinsci/authorize-project-plugin
+Plugin-GitHash: c26973f9a16242261aafee3b34b385fceb1cebb8
+Implementation-Build: c26973f9a16242261aafee3b34b385fceb1cebb8
+
