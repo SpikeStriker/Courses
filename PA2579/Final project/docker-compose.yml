@@ -2,12 +2,18 @@ version: '2'
 
 services:
   jenkins:
-    image: docker.io/bitnami/jenkins:2
+    build:
+          context: .
+          dockerfile: Dockerfile
+
+    # image: docker.io/bitnami/jenkins:2
     ports:
       - "80:8080"
     environment:
       - "JENKINS_SKIP_IMAGE_PLUGINS=True"
       - "JENKINS_PLUGINS_LATEST_SPECIFIED=True"
+      - "JENKINS_USERNAME=user"
+      - "JENKINS_PASSWORD=bitnami"
     volumes:
       - ./:/bitnami/jenkins
     container_name: bitnami_Jetkins

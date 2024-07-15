@@ -3,15 +3,8 @@
   <installations>
     <hudson.tasks.Maven_-MavenInstallation>
       <name>MAVEN</name>
-      <properties>
-        <hudson.tools.InstallSourceProperty>
-          <installers>
-            <hudson.tasks.Maven_-MavenInstaller>
-              <id>3.9.8</id>
-            </hudson.tasks.Maven_-MavenInstaller>
-          </installers>
-        </hudson.tools.InstallSourceProperty>
-      </properties>
+      <home>/opt/apache-maven-3.8.8</home>
+      <properties/>
     </hudson.tasks.Maven_-MavenInstallation>
   </installations>
 </hudson.tasks.Maven_-DescriptorImpl>
