@@ -1,0 +1,42 @@
+Started by user [8mha:////4PdMHJt/HODzC8rWp4yqU6iKRaY6X+Wg2r8Qui3qD8+dAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/FinalProjectPA2579
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/FinalProjectPA2579/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 463a1dc642ad7c58f8355ab3798fec646cad0f12 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 463a1dc642ad7c58f8355ab3798fec646cad0f12 # timeout=10
+Commit message: "Reset code after lecture"
+First time build. Skipping changelog.
+Unpacking https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.3.1/apache-maven-3.3.1-bin.zip to /bitnami/jenkins/home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN on Jenkins
+FATAL: Failed to rename /bitnami/jenkins/home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/apache-maven-3.3.1 to /bitnami/jenkins/home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/apache-maven-3.3.1.__rename
+java.io.IOException: Failed to rename /bitnami/jenkins/home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/apache-maven-3.3.1 to /bitnami/jenkins/home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/apache-maven-3.3.1.__rename
+	at hudson.FilePath$MoveAllChildrenTo.invoke(FilePath.java:2628)
+	at hudson.FilePath$MoveAllChildrenTo.invoke(FilePath.java:2613)
+	at hudson.FilePath.act(FilePath.java:1232)
+	at hudson.FilePath.act(FilePath.java:1215)
+	at hudson.FilePath.moveAllChildrenTo(FilePath.java:2610)
+	at hudson.tools.DownloadFromUrlInstaller.performInstallation(DownloadFromUrlInstaller.java:81)
+	at hudson.tools.InstallerTranslator.getToolHome(InstallerTranslator.java:70)
+	at hudson.tools.ToolLocationNodeProperty.getToolHome(ToolLocationNodeProperty.java:109)
+	at hudson.tools.ToolInstallation.translateFor(ToolInstallation.java:221)
+	at hudson.tasks.Maven$MavenInstallation.forNode(Maven.java:682)
+	at hudson.tasks.Maven.perform(Maven.java:318)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.Build$BuildExecution.build(Build.java:199)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:164)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:526)
+	at hudson.model.Run.execute(Run.java:1894)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: FAILURE
