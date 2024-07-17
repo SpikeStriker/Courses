@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 21
+Specification-Title: Test Results Analyzer Plugin
+Specification-Version: 0.4
+Implementation-Title: Test Results Analyzer Plugin
+Implementation-Version: 0.4.1
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: test-results-analyzer
+Short-Name: test-results-analyzer
+Long-Name: Test Results Analyzer Plugin
+Url: https://github.com/jenkinsci/test-results-analyzer-plugin
+Plugin-Version: 0.4.1
+Hudson-Version: 2.361.4
+Jenkins-Version: 2.361.4
+Plugin-Dependencies: junit:1202.v79a_986785076
+Plugin-Developers: Varun Menon:menonvarun:mr.varun.menon@gmail.com
+Plugin-License-Name: Apache 2.0
+Plugin-License-Url: http://www.apache.org/licenses/LICENSE-2.0.html
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/test-results-
+ analyzer-plugin.git
+Plugin-ScmTag: test-results-analyzer-0.4.1
+Plugin-ScmUrl: https://github.com/jenkinsci/test-results-analyzer-plugin
+ .git
+Plugin-GitHash: 749c0a3671b55aa94a94111fbd11af2ad4d81267
+Implementation-Build: 749c0a3671b55aa94a94111fbd11af2ad4d81267
+

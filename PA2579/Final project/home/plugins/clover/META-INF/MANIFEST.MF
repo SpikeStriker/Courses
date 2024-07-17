@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Jenkins Clover plugin
+Specification-Version: 0.0
+Implementation-Title: Jenkins Clover plugin
+Implementation-Version: 4.14.2.596.vb_4d6475e990b_
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: clover
+Short-Name: clover
+Long-Name: Jenkins Clover plugin
+Url: https://github.com/jenkinsci/clover-plugin
+Plugin-Version: 4.14.2.596.vb_4d6475e990b_
+Hudson-Version: 2.401.3
+Jenkins-Version: 2.401.3
+Plugin-Developers: Marek Parfianowicz:marek-parfianowicz:marek.parfianow
+ icz@gmail.com,Grzegorz Lewandowski:grzlew:grzlew@gmail.com
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/clover-plugin
+ .git
+Plugin-ScmTag: b4d6475e990bbc09df3672bfbf0320da47e424ae
+Plugin-ScmUrl: https://github.com/jenkinsci/clover-plugin
+Plugin-GitHash: b4d6475e990bbc09df3672bfbf0320da47e424ae
+Implementation-Build: b4d6475e990bbc09df3672bfbf0320da47e424ae
+

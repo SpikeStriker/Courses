@@ -1,0 +1,11 @@
+commit 01f6def6b1dfccc235f280db26f882d5bf35eec5
+tree 6d81f744333324a67063313d171b380bd917606e
+parent 341493d2b36e37bb3cb5da1909e9c3d90a912f56
+author Uday Jain <uday9k@gmail.com> 2024-07-17 04:46:27 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-17 04:46:27 +0200
+
+    updates part 6.2 to tests to resolve failure issues
+
+
+:100755 100755 e5784d9d5ba1a602b9aefa544a800634d13f0c4f 4eb22bf572f68fe240e26aeac63930c812bd1568 M	src/test/java/org/joda/time/TestDateTimeFieldType.java
+:100755 100755 d564069d73e65b0dba5b382134dc29ca9d1b4d83 26cc303ca354217dd16adad2f1b125ab5ba3f8e9 M	src/test/java/org/joda/time/TestDurationFieldType.java
