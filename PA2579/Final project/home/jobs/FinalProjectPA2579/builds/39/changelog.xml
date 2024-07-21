@@ -1,0 +1,10 @@
+commit eddc3f1d1b53d93305d815418a04a1d0c779e3ef
+tree 5de50e064dfe5c50d2bd7f4d7039e64d03a44e72
+parent f3644c92dd9eae4dcd2b1aadefc13635a90e0247
+author Uday Jain <uday9k@gmail.com> 2024-07-21 01:04:25 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-21 01:04:25 +0200
+
+    update pom to resolve issues with pi test 1
+
+
+:100755 100755 4ca3172bf6f5fcf875343f5d8d5d998fbd3e2860 24582df3db6a14397d4ab2276c6e2ab2f470bf51 M	pom.xml

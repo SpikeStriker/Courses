@@ -28,7 +28,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Maven>
-      <targets>clean clover:setup test clover:aggregate clover:clover</targets>
+      <targets>clean clover:setup -DwithHistory test-compile org.pitest:pitest-maven:mutationCoverage clover:aggregate clover:clover </targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>

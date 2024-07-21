@@ -1,0 +1,40 @@
+Started by user [8mha:////4PdMHJt/HODzC8rWp4yqU6iKRaY6X+Wg2r8Qui3qD8+dAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/FinalProjectPA2579
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/FinalProjectPA2579/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision eddc3f1d1b53d93305d815418a04a1d0c779e3ef (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f eddc3f1d1b53d93305d815418a04a1d0c779e3ef # timeout=10
+Commit message: "update pom to resolve issues with pi test 1"
+ > git rev-list --no-walk f3644c92dd9eae4dcd2b1aadefc13635a90e0247 # timeout=10
+[FinalProjectPA2579] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[8mha:////4NJa7BiBQ/TirdH+Xe1c6eGAyP7GotoVJSvjRzuEVInwAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 'build.plugins.plugin.version' for org.openclover:clover-maven-plugin is missing. @ line 343, column 12
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 'build.plugins.plugin.version' for org.pitest:pitest-maven must be a valid version but is 'LATEST'. @ line 563, column 14
+ @ 
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] The build could not read 1 project -> [Help 1]
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]   
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]   The project joda-time:joda-time:2.9.9 (/bitnami/jenkins/home/workspace/FinalProjectPA2579/pom.xml) has 1 error
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]     'build.plugins.plugin.version' for org.pitest:pitest-maven must be a valid version but is 'LATEST'. @ line 563, column 14
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4ODdgiwHv9EMkmvktFtdZK8VVAXZRL/SlRzNHVCOucLxAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Recording test results
+ERROR: Step ?Publish JUnit test result report? failed: No test report files were found. Configuration error?
+Publishing Clover coverage report...
+No Clover report will be published due to a build Failure
+Finished: FAILURE
