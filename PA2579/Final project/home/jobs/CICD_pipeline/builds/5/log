@@ -1,0 +1,145 @@
+Started by user [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/CICD_pipeline
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/CICD_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 6e8b65dbd6db3484069024755d185874e6e8da14 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6e8b65dbd6db3484069024755d185874e6e8da14 # timeout=10
+Commit message: "limiting mutation tests"
+ > git rev-list --no-walk 6e8b65dbd6db3484069024755d185874e6e8da14 # timeout=10
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Some problems were encountered while building the effective model for joda-time:joda-time:jar:2.9.9
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 'build.plugins.plugin.version' for org.openclover:clover-maven-plugin is missing. @ line 343, column 12
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ joda-time ---
+[INFO] Deleting /bitnami/jenkins/home/workspace/CICD_pipeline/target
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:setup (default-cli) @ joda-time ---
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Creating new database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 167 files (8 packages).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Updating existing database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 159 files (7 packages).
+[INFO] 4220 test methods detected.
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource to META-INF
+[INFO] Copying 16 resources
+[INFO] Copying 1 resource
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 167 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- exec-maven-plugin:1.4.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ joda-time ---
+[INFO] Surefire report directory: /bitnami/jenkins/home/workspace/CICD_pipeline/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.joda.time.TestAllPackages
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.joda.time.TestDateTimeZone (file:/bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes/)
+WARNING: Please consider reporting this to the maintainers of org.joda.time.TestDateTimeZone
+WARNING: System::setSecurityManager will be removed in a future release
+
+TestBuddhistChronology.testCalendar
+
+TestCopticChronology.testCalendar
+
+TestEthiopicChronology.testCalendar
+
+TestIslamicChronology.testCalendar
+
+Testing Gregorian chronology over 1000 iterations
+100% complete (i=1000)
+
+Testing Julian chronology over 1000 iterations
+100% complete (i=1000)
+Writing zoneinfo files
+Writing ZoneInfoMap
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 83.454 sec - in org.joda.time.TestAllPackages
+
+Results :
+
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:aggregate (default-cli) @ joda-time ---
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:clover (default-cli) @ joda-time ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /tmp/mvn15981804403022747445resource
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing HTML report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover'
+[INFO] Done. Processed 9 packages in 70823ms (7869ms per package).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10:31 min
+[INFO] Finished at: 2024-07-21T22:47:48Z
+[INFO] ------------------------------------------------------------------------
+Recording test results
+[Checks API] No suitable checks publisher found.
+Publishing Clover coverage report...
+Publishing Clover HTML report...
+Publishing Clover XML report...
+Processing Clover XML report ...
+Publishing Clover coverage results...
+Finished: SUCCESS
