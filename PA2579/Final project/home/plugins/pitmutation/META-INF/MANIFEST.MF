@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: benjamin
+Build-Jdk: 13.0.2
+Extension-Name: pitmutation
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: pitmutation
+Implementation-Version: 1.0-18
+Group-Id: org.jenkins-ci.plugins
+Short-Name: pitmutation
+Long-Name: Jenkins PIT Mutation Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/pitmutation
+Minimum-Java-Version: 1.8
+Plugin-Version: 1.0-18
+Hudson-Version: 2.199
+Jenkins-Version: 2.199
+Plugin-Developers: Edward Kimber:ekimber:edward.kimber@gmail.com,Benja
+ min Sproule:gigaSproule:benjamin@benjaminsproule.com
+Plugin-ScmUrl: https://github.com/jenkinsci/pitmutation-plugin
+

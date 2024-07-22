@@ -32,7 +32,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Maven>
-      <targets>clean clover:setup test clover:aggregate  clover:clover</targets>
+      <targets>clean  clover:setup  test clover:aggregate  clover:clover </targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -40,7 +40,7 @@
       <injectBuildVariables>false</injectBuildVariables>
     </hudson.tasks.Maven>
     <hudson.tasks.Maven>
-      <targets>-DwithHistory  test-compile  org.pitest:pitest-maven:mutationCoverage</targets>
+      <targets>test-compile site org.pitest:pitest-maven:mutationCoverage</targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -49,8 +49,17 @@
     </hudson.tasks.Maven>
   </builders>
   <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>target/site/clover/clover.xml</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+      <followSymlinks>false</followSymlinks>
+    </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1265.v65b_14fa_f12f0">
-      <testResults>target/surefire-reports/*.xml, target/pit-reports/*.html</testResults>
+      <testResults>target/surefire-reports/*.xml</testResults>
       <stdioRetention>NONE</stdioRetention>
       <keepProperties>false</keepProperties>
       <healthScaleFactor>1.0</healthScaleFactor>
@@ -61,7 +70,7 @@
       <skipOldReports>false</skipOldReports>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.clover.CloverPublisher plugin="clover@4.14.2.596.vb_4d6475e990b_">
-      <cloverReportDir>target/site/clover</cloverReportDir>
+      <cloverReportDir>target/site/clover/</cloverReportDir>
       <cloverReportFileName>clover.xml</cloverReportFileName>
       <healthyTarget>
         <methodCoverage>80</methodCoverage>
@@ -79,6 +88,17 @@
         <statementCoverage>20</statementCoverage>
       </failingTarget>
     </hudson.plugins.clover.CloverPublisher>
+    <org.jenkinsci.plugins.pitmutation.PitPublisher plugin="pitmutation@1.0-18">
+      <buildConditions>
+        <org.jenkinsci.plugins.pitmutation.PitPublisher_-PercentageThresholdCondition>
+          <percentage>0.0</percentage>
+          <outer-class reference="../../.."/>
+        </org.jenkinsci.plugins.pitmutation.PitPublisher_-PercentageThresholdCondition>
+      </buildConditions>
+      <mutationStatsFile>target/pit-reports/**/index.html</mutationStatsFile>
+      <killRatioMustImprove>false</killRatioMustImprove>
+      <minimumKillRatio>70.0</minimumKillRatio>
+    </org.jenkinsci.plugins.pitmutation.PitPublisher>
   </publishers>
   <buildWrappers>
     <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.27"/>

@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 22 23:26:33 UTC 2024
+joda-time-2.9.9-sources.jar>=
+joda-time-2.9.9-no-tzdb-sources.jar>=
+joda-time-2.9.9-no-tzdb-javadoc.jar>=
+joda-time-2.9.9.jar>=
+joda-time-2.9.9.pom>=
+joda-time-2.9.9-no-tzdb.jar>=
+joda-time-2.9.9-javadoc.jar>=

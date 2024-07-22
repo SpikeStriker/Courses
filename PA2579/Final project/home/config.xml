@@ -4,7 +4,7 @@
     <string>hudson.util.DoubleLaunchChecker</string>
   </disabledAdministrativeMonitors>
   <version>2.452.3</version>
-  <numExecutors>2</numExecutors>
+  <numExecutors>1</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
