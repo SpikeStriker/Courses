@@ -3,11 +3,7 @@
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <org.jenkinsci.plugins.mavenrepocleaner.MavenRepoCleanerProperty plugin="maven-repo-cleaner@1.3">
-      <notOnThisProject>false</notOnThisProject>
-    </org.jenkinsci.plugins.mavenrepocleaner.MavenRepoCleanerProperty>
-  </properties>
+  <properties/>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.2">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
@@ -32,7 +28,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Maven>
-      <targets>clean  clover:setup  test clover:aggregate  clover:clover </targets>
+      <targets>clean clover:setup test clover:aggregate  clover:clover </targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -40,7 +36,7 @@
       <injectBuildVariables>false</injectBuildVariables>
     </hudson.tasks.Maven>
     <hudson.tasks.Maven>
-      <targets>test-compile site org.pitest:pitest-maven:mutationCoverage</targets>
+      <targets>test-compile org.pitest:pitest-maven:mutationCoverage</targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
@@ -50,7 +46,7 @@
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>target/site/clover/clover.xml</artifacts>
+      <artifacts>target/pit-reports/**/mutations.xml, target/pit-reports/**/index.html</artifacts>
       <allowEmptyArchive>false</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
@@ -58,6 +54,23 @@
       <caseSensitive>true</caseSensitive>
       <followSymlinks>false</followSymlinks>
     </hudson.tasks.ArtifactArchiver>
+    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.36">
+      <reportTargets>
+        <htmlpublisher.HtmlPublisherTarget>
+          <reportName>PIT Mutation Reporting</reportName>
+          <reportDir>target/pit-reports/**/*</reportDir>
+          <reportFiles>index.html</reportFiles>
+          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
+          <reportTitles></reportTitles>
+          <keepAll>false</keepAll>
+          <allowMissing>false</allowMissing>
+          <includes>**/*</includes>
+          <escapeUnderscores>true</escapeUnderscores>
+          <useWrapperFileDirectly>true</useWrapperFileDirectly>
+          <numberOfWorkers>0</numberOfWorkers>
+        </htmlpublisher.HtmlPublisherTarget>
+      </reportTargets>
+    </htmlpublisher.HtmlPublisher>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1265.v65b_14fa_f12f0">
       <testResults>target/surefire-reports/*.xml</testResults>
       <stdioRetention>NONE</stdioRetention>
@@ -95,7 +108,7 @@
           <outer-class reference="../../.."/>
         </org.jenkinsci.plugins.pitmutation.PitPublisher_-PercentageThresholdCondition>
       </buildConditions>
-      <mutationStatsFile>target/pit-reports/**/index.html</mutationStatsFile>
+      <mutationStatsFile>target/pit-reports/**/mutations.xml</mutationStatsFile>
       <killRatioMustImprove>false</killRatioMustImprove>
       <minimumKillRatio>70.0</minimumKillRatio>
     </org.jenkinsci.plugins.pitmutation.PitPublisher>

@@ -1,0 +1,11 @@
+commit cbb5c462bf5ca16f1d993cc0b4974a9af2e561a0
+tree 7ab4e594d67b5b584fe682aa1e3c940d6344c699
+parent 2d50513ec28c0f890ea115c20cd19c3a59b7e352
+author Uday Jain <uday9k@gmail.com> 2024-07-23 04:03:02 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-23 04:03:02 +0200
+
+    enabling all packages and updating output format for pitest
+
+
+:100755 100755 8f9809f6950b9007f545b23806934fb223336894 87ca30443f4c99e4632c4e38f2a6ebdc8b0e2b8b M	pom.xml
+:100755 100755 b7c03ba33da4a71facae89eaaee39d67d8ed5c17 81f9d7cedc26666d20f36ab6cbd9c8176ce2fd5d M	src/test/java/org/joda/time/TestAllPackages.java

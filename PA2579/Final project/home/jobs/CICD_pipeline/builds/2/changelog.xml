@@ -1,0 +1,20 @@
+commit 2d50513ec28c0f890ea115c20cd19c3a59b7e352
+tree 62b3bb5213a666ff55ec2ee8d6c199902cfc297c
+parent 199677f96bd716373d65fa65f3ee03804433f1df
+author Uday Jain <uday9k@gmail.com> 2024-07-23 03:05:07 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-23 03:05:07 +0200
+
+    adding site plugin version
+
+
+:100755 100755 6935af9c5a0d3cc05f6997b9729a9ce8e3df7b09 8f9809f6950b9007f545b23806934fb223336894 M	pom.xml
+commit 199677f96bd716373d65fa65f3ee03804433f1df
+tree c904a2e24e5d82b296ade15271fecc97d61979ff
+parent 081a09f17b115152b06d1e43556c792d16f1b171
+author Uday Jain <uday9k@gmail.com> 2024-07-23 02:39:49 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-23 02:39:49 +0200
+
+    adding clover version
+
+
+:100755 100755 ce40bbedd185927789ef569c403914155db038a5 6935af9c5a0d3cc05f6997b9729a9ce8e3df7b09 M	pom.xml
