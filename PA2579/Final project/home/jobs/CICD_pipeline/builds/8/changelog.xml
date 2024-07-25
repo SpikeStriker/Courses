@@ -1,0 +1,10 @@
+commit 68a75dba71a1153984de54d31dbf46c0e78061b8
+tree 75d8e7e4875d3d62f7e1d75bbdf74c96261d66c2
+parent bb66cac84bfbfecc11700de0ba04b7b07241674e
+author Uday Jain <uday9k@gmail.com> 2024-07-23 11:55:19 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-23 11:55:19 +0200
+
+    removed few test
+
+
+:100755 100755 81f9d7cedc26666d20f36ab6cbd9c8176ce2fd5d 9a39f039b7888f0e72617160bf3c9d9f070fa2fa M	src/test/java/org/joda/time/TestAllPackages.java

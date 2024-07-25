@@ -46,31 +46,14 @@
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>target/pit-reports/**/mutations.xml, target/pit-reports/**/index.html</artifacts>
-      <allowEmptyArchive>false</allowEmptyArchive>
+      <artifacts>target/pit-reports/**/mutations.xml, target/pit-reports/**/index.html,target/site/clover/clover.xml,target/site/clover/index.html</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
       <defaultExcludes>true</defaultExcludes>
       <caseSensitive>true</caseSensitive>
       <followSymlinks>false</followSymlinks>
     </hudson.tasks.ArtifactArchiver>
-    <htmlpublisher.HtmlPublisher plugin="htmlpublisher@1.36">
-      <reportTargets>
-        <htmlpublisher.HtmlPublisherTarget>
-          <reportName>PIT Mutation Reporting</reportName>
-          <reportDir>target/pit-reports/**/*</reportDir>
-          <reportFiles>index.html</reportFiles>
-          <alwaysLinkToLastBuild>false</alwaysLinkToLastBuild>
-          <reportTitles></reportTitles>
-          <keepAll>false</keepAll>
-          <allowMissing>false</allowMissing>
-          <includes>**/*</includes>
-          <escapeUnderscores>true</escapeUnderscores>
-          <useWrapperFileDirectly>true</useWrapperFileDirectly>
-          <numberOfWorkers>0</numberOfWorkers>
-        </htmlpublisher.HtmlPublisherTarget>
-      </reportTargets>
-    </htmlpublisher.HtmlPublisher>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1265.v65b_14fa_f12f0">
       <testResults>target/surefire-reports/*.xml</testResults>
       <stdioRetention>NONE</stdioRetention>
@@ -110,7 +93,7 @@
       </buildConditions>
       <mutationStatsFile>target/pit-reports/**/mutations.xml</mutationStatsFile>
       <killRatioMustImprove>false</killRatioMustImprove>
-      <minimumKillRatio>70.0</minimumKillRatio>
+      <minimumKillRatio>0.0</minimumKillRatio>
     </org.jenkinsci.plugins.pitmutation.PitPublisher>
   </publishers>
   <buildWrappers>

@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>FixedDateTimeZone.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  Copyright 2001-2005 Stephen Colebourne</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  you may not use this file except in compliance with the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  Unless required by applicable law or agreed to in writing, software</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  distributed under the License is distributed on an &#34;AS IS&#34; BASIS,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  See the License for the specific language governing permissions and</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  limitations under the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.joda.time.tz;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.joda.time.DateTimeZone;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Basic DateTimeZone implementation that has a fixed name key and offsets.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * &#60;p&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * FixedDateTimeZone is thread-safe and immutable.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * </span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author Brian S O&#39;Neill</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 1.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public final class FixedDateTimeZone extends DateTimeZone {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final long serialVersionUID = -3513011772763289092L;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final String iNameKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final int iWallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final int iStandardOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public FixedDateTimeZone(String id, String nameKey,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                             int wallOffset, int standardOffset) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        super(id);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        iNameKey = nameKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        iWallOffset = wallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        iStandardOffset = standardOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public String getNameKey(long instant) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_45'/>
+45
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_45'>1</a>
+<span>
+1. getNameKey : replaced return value with &#34;&#34; for org/joda/time/tz/FixedDateTimeZone::getNameKey &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return iNameKey;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getOffset(long instant) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_49'/>
+49
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_49'>1</a>
+<span>
+1. getOffset : replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getOffset &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return iWallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getStandardOffset(long instant) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_53'/>
+53
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_53'>1</a>
+<span>
+1. getStandardOffset : replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getStandardOffset &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return iStandardOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getOffsetFromLocal(long instantLocal) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_57'/>
+57
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_57'>1</a>
+<span>
+1. getOffsetFromLocal : replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getOffsetFromLocal &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return iWallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isFixed() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_61'/>
+61
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_61'>1</a>
+<span>
+1. isFixed : replaced boolean return with false for org/joda/time/tz/FixedDateTimeZone::isFixed &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public long nextTransition(long instant) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_65'/>
+65
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_65'>1</a>
+<span>
+1. nextTransition : replaced long return with 0 for org/joda/time/tz/FixedDateTimeZone::nextTransition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return instant;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public long previousTransition(long instant) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_69'>1</a>
+<span>
+1. previousTransition : replaced long return with 0 for org/joda/time/tz/FixedDateTimeZone::previousTransition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return instant;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Override to return the correct timezone instance.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @since 1.5</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public java.util.TimeZone toTimeZone() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String id = getID();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_78'/>
+78
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_78'>3</a>
+<span>
+1. toTimeZone : negated conditional &rarr; SURVIVED<br/>
+2. toTimeZone : negated conditional &rarr; KILLED<br/>
+3. toTimeZone : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (id.length() == 6 &#38;&#38; (id.startsWith(&#34;+&#34;) || id.startsWith(&#34;-&#34;))) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            // standard format offset [+-]hh:mm</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            // our ID is without any prefix, so we need to add the GMT back</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_81'/>
+81
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_81'>1</a>
+<span>
+1. toTimeZone : replaced return value with null for org/joda/time/tz/FixedDateTimeZone::toTimeZone &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return java.util.TimeZone.getTimeZone(&#34;GMT&#34; + getID());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // unusual offset, so setup a SimpleTimeZone as best we can</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_84'/>
+84
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_84'>1</a>
+<span>
+1. toTimeZone : replaced return value with null for org/joda/time/tz/FixedDateTimeZone::toTimeZone &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new java.util.SimpleTimeZone(iWallOffset, getID());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean equals(Object obj) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_88'/>
+88
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_88'>1</a>
+<span>
+1. equals : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (this == obj) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_89'/>
+89
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_89'>1</a>
+<span>
+1. equals : replaced boolean return with false for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_90'/>
+90
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_90'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_91'/>
+91
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_91'>1</a>
+<span>
+1. equals : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (obj instanceof FixedDateTimeZone) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_92'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            FixedDateTimeZone other = (FixedDateTimeZone) obj;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_93'/>
+93
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_93'>1</a>
+<span>
+1. equals : replaced boolean return with true for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_94'/>
+94
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_94'>3</a>
+<span>
+1. equals : negated conditional &rarr; KILLED<br/>
+2. equals : negated conditional &rarr; KILLED<br/>
+3. equals : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                getID().equals(other.getID()) &#38;&#38;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_95'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                iStandardOffset == other.iStandardOffset &#38;&#38;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                iWallOffset == other.iWallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_97'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_98'/>
+98
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_98'>1</a>
+<span>
+1. equals : replaced boolean return with true for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_99'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_100'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int hashCode() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_102'/>
+102
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_102'>5</a>
+<span>
+1. hashCode : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+2. hashCode : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+3. hashCode : Replaced integer multiplication with division &rarr; KILLED<br/>
+4. hashCode : Replaced integer multiplication with division &rarr; KILLED<br/>
+5. hashCode : replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::hashCode &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return getID().hashCode() + 37 * iStandardOffset + 31 * iWallOffset;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@30599e2d_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_45'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNameKey<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for org/joda/time/tz/FixedDateTimeZone::getNameKey &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_49'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOffset<br/><b>Killed by : </b>org.joda.time.format.TestDateTimeParserBucket.testCompute(org.joda.time.format.TestDateTimeParserBucket)</span></span> replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getOffset &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_53'>53</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_53'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getStandardOffset<br/><b>Killed by : </b>org.joda.time.tz.TestBuilder.testFixed(org.joda.time.tz.TestBuilder)</span></span> replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getStandardOffset &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_57'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOffsetFromLocal<br/><b>Killed by : </b>org.joda.time.format.TestDateTimeParserBucket.testCompute(org.joda.time.format.TestDateTimeParserBucket)</span></span> replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::getOffsetFromLocal &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_61'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isFixed<br/><b>Killed by : </b>org.joda.time.tz.TestBuilder.testFixed(org.joda.time.tz.TestBuilder)</span></span> replaced boolean return with false for org/joda/time/tz/FixedDateTimeZone::isFixed &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_65'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextTransition<br/><b>Killed by : </b>org.joda.time.tz.TestZoneInfoCompiler.testTestTwo(org.joda.time.tz.TestZoneInfoCompiler)</span></span> replaced long return with 0 for org/joda/time/tz/FixedDateTimeZone::nextTransition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>previousTransition<br/><b>Killed by : </b>org.joda.time.TestDateTimeZone.testTransitionFixed(org.joda.time.TestDateTimeZone)</span></span> replaced long return with 0 for org/joda/time/tz/FixedDateTimeZone::previousTransition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_78'>78</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_78'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toTimeZone<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>toTimeZone<br/><b>Killed by : </b>org.joda.time.TestDateTimeZone.testTimeZoneConversion(org.joda.time.TestDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>toTimeZone<br/><b>Killed by : </b>org.joda.time.TestDateTimeZone.testTimeZoneConversion(org.joda.time.TestDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_81'>81</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_81'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toTimeZone<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testToTimeZone1(org.joda.time.tz.TestFixedDateTimeZone)</span></span> replaced return value with null for org/joda/time/tz/FixedDateTimeZone::toTimeZone &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toTimeZone<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testToTimeZone2(org.joda.time.tz.TestFixedDateTimeZone)</span></span> replaced return value with null for org/joda/time/tz/FixedDateTimeZone::toTimeZone &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_88'>88</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_88'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_89'>89</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_89'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> replaced boolean return with false for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_91'>91</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_91'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_93'>93</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_93'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> replaced boolean return with true for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_94'>94</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_94'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_98'>98</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_98'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>org.joda.time.tz.TestBuilder.testFixed(org.joda.time.tz.TestBuilder)</span></span> replaced boolean return with true for org/joda/time/tz/FixedDateTimeZone::equals &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@30599e2d_102'>102</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@30599e2d_102'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>org.joda.time.convert.TestReadableIntervalConverter.testSupportedType(org.joda.time.convert.TestReadableIntervalConverter)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>org.joda.time.convert.TestReadableIntervalConverter.testSupportedType(org.joda.time.convert.TestReadableIntervalConverter)</span></span> Replaced integer multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>org.joda.time.tz.TestFixedDateTimeZone.testHashCode(org.joda.time.tz.TestFixedDateTimeZone)</span></span> replaced int return with 0 for org/joda/time/tz/FixedDateTimeZone::hashCode &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.joda.time.tz.TestFixedDateTimeZone.testToTimeZone2(org.joda.time.tz.TestFixedDateTimeZone) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactory_FromDateFields_null(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactory_FromDateFields_null(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.test_now_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.test_now_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.test_now_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.test_now_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_long2(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.test_now(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstantMidnight(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_long1(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_invalidObject_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_invalidObject_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long2_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long2_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long1_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long1_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstantMidnight(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_nullObject(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.test_now_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long1_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long1(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long2_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.test_now_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.test_now(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_invalidObject_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long2_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long2(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.test_now(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long2(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_long1_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.test_now_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.test_now_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_invalidObject_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_long1(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Object_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullObject_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Object_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullObject_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Object_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullObject_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullObject_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_invalidObject(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Object(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactory_FromCalendarFields_Calendar(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_invalidObject(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_Object(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactory_FromDateFields_after1970(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullObject_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Object_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactory_FromDateFields_before1970(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Object_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullObject_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Object_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Object_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullObject_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactoryMillisOfDay_long_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullObject_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_invalidObject(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_Object_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactoryMillisOfDay_long_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactoryMillisOfDay_long1_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_nullObject(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactoryMillisOfDay_long1(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_nullObject(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long1_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_long2(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long2_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_long1_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_int_int_int_int_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactoryMillisOfDay_long(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_long2_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int_int_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testFactoryMillisOfDay_long_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_long_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_long1(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long_DateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_Object(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long1(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long_nullDateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long2(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testConstructor_badconverterObject(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactory_FromDateFields_after1970(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactory_FromCalendarFields(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testFactory_FromDateFields_before1970(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_Object1(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_nullObject_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_int_int(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_int_int_int_int_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_Object_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_nullObject(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_Object_nullChronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_nullObject_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_int_int_int(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_int_int_int_int(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_badconverterObject(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_badconverterObject(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_badconverterObject_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_badconverterObject_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_badconverterObject_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_badconverterObject_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object1_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int_int(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_int_int_int_int_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_todObject(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullObject_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullObject_nullDateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullObject_DateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullObject_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object1(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object_nullChronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object_nullDateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullObject(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object1_DateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testTest(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testTest(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx1(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx2(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx3(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx4(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectStringEx1(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectStringEx3(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectStringEx4(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectStringEx2(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectStringEx2(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectStringEx1(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectLocalTime(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectTimeOfDay(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max_long(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_min_long(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx6(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectStringEx5(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectLocalDate(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_nullDateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_nullChronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_nullDateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_Object2(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_nullChronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_min_math(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_min(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString6(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString_DateTimeZoneNewYork(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString_DateTimeZoneTokyo(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString_DateTimeZoneLondon(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max_math(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString5(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString4(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_DateTimeZone(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString3(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max_fieldsUTC(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_DateTimeZone(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_Chronology(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_int_Chronology(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_int_int_int_int_int_int_int(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testConstructor_int_int_int_int_int_int_int(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_nullDateTimeZone(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object2_Chronology(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_nullDateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_DateTimeZone(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testParse_noFormatter(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString1(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectLocalDateTime(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_Object2(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString3(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString2(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_DateTimeZone(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor2_Object_Chronology(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString1Tokyo(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_min_fields(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString7(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString1(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_ObjectString1NewYork(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString2(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestTimeOfDay_Constructors.testConstructor_ObjectString4(org.joda.time.TestTimeOfDay_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testParse_formatter(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString5(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestLocalTime_Constructors.testConstructor_long_DateTimeZone_2(org.joda.time.TestLocalTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString1(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString6(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString2(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testParse_formatter(org.joda.time.TestInstant_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString3(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testParse_formatter(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testConstructor_ObjectString4(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testParse_noFormatter_vs_constructor_noOffset(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_aroundZero(org.joda.time.TestMinMaxLong) (3 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max_fieldsNewYork(org.joda.time.TestMinMaxLong) (1 ms)</li><li>org.joda.time.TestMinMaxLong.testPrintParseMin(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testDateTime_max_fields(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestMinMaxLong.testPrintParseMax(org.joda.time.TestMinMaxLong) (0 ms)</li><li>org.joda.time.TestInstant_Constructors.testParse_noFormatter(org.joda.time.TestInstant_Constructors) (1 ms)</li><li>org.joda.time.TestMutableDateTime_Constructors.testParse_noFormatter(org.joda.time.TestMutableDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testParse_formatter(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testParse_noFormatter_vs_constructor_correctOffset(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.TestDateTime_Constructors.testParse_noFormatter(org.joda.time.TestDateTime_Constructors) (0 ms)</li><li>org.joda.time.tz.TestFixedDateTimeZone.testEquals(org.joda.time.tz.TestFixedDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetZone_Zone(org.joda.time.TestDateTimeUtils) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testReset(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoInterval_Object2(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoInterval_Object3(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testForTimeZone_TimeZone(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testForID_String(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testEqualsHashCode(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testBasicComps5(org.joda.time.TestDateTimeComparator) (3 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testGetChronology_Object_Zone(org.joda.time.convert.TestCalendarConverter) (4 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testGetChronology_Object_nullChronology(org.joda.time.convert.TestCalendarConverter) (1 ms)</li><li>org.joda.time.chrono.TestGJChronology.testDurationFields(org.joda.time.chrono.TestGJChronology) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetChronology_Chronology(org.joda.time.TestDateTimeUtils) (1 ms)</li><li>org.joda.time.tz.TestZoneInfoCompiler.testTestTwo(org.joda.time.tz.TestZoneInfoCompiler) (0 ms)</li><li>org.joda.time.tz.TestBuilder.testFixed(org.joda.time.tz.TestBuilder) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testGetOffsetFixed(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testSerialization2(org.joda.time.TestDateTimeZone) (1 ms)</li><li>org.joda.time.TestDateTimeZone.testForOffsetHours_int(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testForOffsetMillis_int(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testForOffsetHoursMinutes_int_int(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min1max3(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min2max3(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min3max3(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min1max2(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min2max2(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.tz.TestCompiler.test_Amman_2005(org.joda.time.tz.TestCompiler) (0 ms)</li><li>org.joda.time.tz.TestCompiler.test_Amman_2004(org.joda.time.tz.TestCompiler) (0 ms)</li><li>org.joda.time.tz.TestCompiler.test_Amman_2006(org.joda.time.tz.TestCompiler) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_parse(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.convert.TestStringConverter.testSetIntoInterval_Object_Chronology6(org.joda.time.convert.TestStringConverter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_print_min1max1(org.joda.time.format.TestDateTimeFormatterBuilder) (1 ms)</li><li>org.joda.time.chrono.TestLenientChronology.testNearDstTransition(org.joda.time.chrono.TestLenientChronology) (2 ms)</li><li>org.joda.time.TestStringConvert.testDateTime(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_parseWrongOffset(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.TestStringConvert.testMutableDateTime(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.chrono.TestISOChronology.testDurationFields(org.joda.time.chrono.TestISOChronology) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_localParseWrongOffsetAndZone(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_localPrintParseOffset(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_parseWrongOffsetAndZone(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.TestDateTimeZoneCutover.testWithMinuteOfHourInDstChange_mockZone(org.joda.time.TestDateTimeZoneCutover) (1 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseOffset(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseLocalDate_simple(org.joda.time.format.TestDateTimeFormatter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseMutableDateTime_offsetParsed(org.joda.time.format.TestDateTimeFormatter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseLocalTime_simple(org.joda.time.format.TestDateTimeFormatter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseLocalDateTime_simple(org.joda.time.format.TestDateTimeFormatter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseInto_offsetParsed(org.joda.time.format.TestDateTimeFormatter) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatter.testParseDateTime_offsetParsed(org.joda.time.format.TestDateTimeFormatter) (1 ms)</li><li>org.joda.time.tz.TestCompiler.test_Amman_2003(org.joda.time.tz.TestCompiler) (13 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_localPrintParseOffsetAndZone(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseOffsetAndZone(org.joda.time.format.TestDateTimeFormatterBuilder) (1 ms)</li><li>org.joda.time.TestInterval_Constructors.testParseWithOffset_offsetInString(org.joda.time.TestInterval_Constructors) (0 ms)</li><li>org.joda.time.convert.TestStringConverter.testSetIntoInterval_Object_Chronology5(org.joda.time.convert.TestStringConverter) (0 ms)</li><li>org.joda.time.convert.TestStringConverter.testSetIntoInterval_Object_Chronology4(org.joda.time.convert.TestStringConverter) (2 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT1(org.joda.time.format.TestDateTimeFormatterBuilder) (11 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT10(org.joda.time.format.TestDateTimeFormatterBuilder) (12 ms)</li><li>org.joda.time.chrono.TestBuddhistChronology.testDurationFields(org.joda.time.chrono.TestBuddhistChronology) (16 ms)</li><li>org.joda.time.TestStringConvert.testDateMidnight(org.joda.time.TestStringConvert) (197 ms)</li><li>org.joda.time.TestAbstractPartial.testGetField(org.joda.time.TestAbstractPartial) (62 ms)</li><li>org.joda.time.convert.TestReadablePeriodConverter.testGetPeriodType_Object(org.joda.time.convert.TestReadablePeriodConverter) (0 ms)</li><li>org.joda.time.chrono.TestGregorianChronology.testDurationFields(org.joda.time.chrono.TestGregorianChronology) (0 ms)</li><li>org.joda.time.chrono.TestIslamicChronology.testDurationFields(org.joda.time.chrono.TestIslamicChronology) (0 ms)</li><li>org.joda.time.chrono.TestEthiopicChronology.testDurationFields(org.joda.time.chrono.TestEthiopicChronology) (0 ms)</li><li>org.joda.time.chrono.TestCopticChronology.testDurationFields(org.joda.time.chrono.TestCopticChronology) (0 ms)</li><li>org.joda.time.chrono.TestJulianChronology.testDurationFields(org.joda.time.chrono.TestJulianChronology) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testCompute(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getLeapAmount_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_get(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_isLeap_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsText_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getDifference_long_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_remainder_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsShortText_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getDifferenceAsLong_long_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsText_long_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testNullValuesToGetInstanceThrowsException(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsShortText_long_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_roundCeiling_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getMinimumValue_RP(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getMaximumValue_RP_intarray(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_roundHalfCeiling_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_roundFloor_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getMaximumValue_RP(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testToString(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_roundHalfFloor_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getMinimumValue_RP_intarray(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testPublicGetNameMethod(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_set_long_int(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testAlwaysFalseReturnTypes(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_set_long_String(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_add_long_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testMethodsThatShouldAlwaysReturnNull(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testGetPartialValues(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_add_long_int(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testGetPartialValues(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testGetPartialValues(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_set_long_String_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testDifferentDurationReturnDifferentObjects(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getMaximumValue_RP(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getMinimumValue_RP(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_roundHalfEven_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_addWrapField_long_int(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getMaximumValue_RP_intarray(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getMinimumValue_RP_intarray(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testGetPartialValues(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getMaximumValue_RP_intarray(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getMinimumValue_RP_intarray(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testGetChronology_Object_Chronology(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMinimumValue_RP(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getMaximumValue_RP(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMinimumValue_RP_intarray(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumValue_RP(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getMinimumValue_RP(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumValue_RP_intarray(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testGetChronology_Object_Zone(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_addWrapField_RP_int_intarray_int(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_offset(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_zone(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_addWrapField_RP_int_intarray_int(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveCompute(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_set_RP_int_intarray_int(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_set_RP_int_intarray_String_Locale(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_addWrapField_RP_int_intarray_int(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_text(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_avoidSideEffects(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_set_RP_int_intarray_int(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testParse(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testGetOffsetFixed_RI(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_addWrapField_RP_int_intarray_int(org.joda.time.field.TestOffsetDateTimeField) (1 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_append_Formatter(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testDelegatedMethods(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_set_RP_int_intarray_int(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_set_RP_int_intarray_int(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_append_Printer(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_sameStates(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_set_RP_int_intarray_String_Locale(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_set_RP_int_intarray_String_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeParserBucket.testSaveRestoreState_twoStates(org.joda.time.format.TestDateTimeParserBucket) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_set_RP_int_intarray_String_Locale(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoPeriod_Object2(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetPartialConverter(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoPeriod_Object1(org.joda.time.convert.TestReadableIntervalConverter) (2 ms)</li><li>org.joda.time.TestDateTimeZone.testTimeZoneConversion(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_add_RP_int_intarray_int(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_add_RP_int_intarray_int(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_add_RP_int_intarray_int(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_add_RP_int_intarray_int(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestUnsupportedDateTimeField.testUnsupportedMethods(org.joda.time.field.TestUnsupportedDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testGetPartialValues(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testBasicComps3(org.joda.time.TestDateTimeComparator) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testBasicComps4(org.joda.time.TestDateTimeComparator) (1 ms)</li><li>org.joda.time.TestDateTimeZone.testPatchedNameKeysSydneyHistoric(org.joda.time.TestDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testNullDT(org.joda.time.TestDateTimeComparator) (0 ms)</li><li>org.joda.time.TestBaseSingleFieldPeriod.testFactory_between_RPartial(org.joda.time.TestBaseSingleFieldPeriod) (2 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendFixedSignedDecimal(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testPatchedNameKeysGazaHistoric(org.joda.time.TestDateTimeZone) (25 ms)</li><li>org.joda.time.TestDateTimeZone.testPatchedNameKeysSydney(org.joda.time.TestDateTimeZone) (24 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneGMT_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneGMT(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT1_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT10_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneEtcGMT(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendFixedDecimal(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testPatchedNameKeysLondon(org.joda.time.TestDateTimeZone) (21 ms)</li><li>org.joda.time.convert.TestStringConverter.testGetInstantMillis_Object(org.joda.time.convert.TestStringConverter) (0 ms)</li><li>org.joda.time.convert.TestStringConverter.testSetIntoInterval_Object_Chronology8(org.joda.time.convert.TestStringConverter) (1 ms)</li><li>org.joda.time.tz.TestFixedDateTimeZone.testHashCode(org.joda.time.tz.TestFixedDateTimeZone) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSupportedType(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testGetInstantMillis_Object_Chronology(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testSupportedType(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testSupportedType(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePeriodConverter.testSupportedType(org.joda.time.convert.TestReadablePeriodConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testGetDurationMillis_Object(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testSupportedType(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testSupportedType(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testToString(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePeriodConverter.testToString(org.joda.time.convert.TestReadablePeriodConverter) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testSupportedType(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testGetInstantMillis_Object_Chronology(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testSupportedType(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testGetInstantMillis_Object_Chronology(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testToString(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testIsReadableInterval_Object_Chronology(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testToString(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testToString(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testGetChronology_Object_Zone(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testGetChronology_Object_Chronology(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testGetPeriodType_Object(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testGetChronology_Object_Zone(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testGetPeriodType_Object(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testToString(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testGetDurationMillis_Object(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testToString(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationField.test_compareTo(org.joda.time.field.TestPreciseDurationField) (0 ms)</li><li>org.joda.time.convert.TestLongConverter.testSingleton(org.joda.time.convert.TestLongConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSingleton(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.field.TestMillisDurationField.test_compareTo(org.joda.time.field.TestMillisDurationField) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testSingleton(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testSingleton(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePeriodConverter.testSingleton(org.joda.time.convert.TestReadablePeriodConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testToString(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testGetChronology_Object_Chronology(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testGetDurationMillis_Object(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumValue_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testGetChronology_Object_Chronology(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestReadablePartialConverter.testSingleton(org.joda.time.convert.TestReadablePartialConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsText_int_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getOffset(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumTextLength_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsShortText_int_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestScaledDurationField.test_compareTo(org.joda.time.field.TestScaledDurationField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationField.test_equals(org.joda.time.field.TestPreciseDurationField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getType(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_isLenient(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testSingleton(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getName(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMinimumValue_long(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_isSupported(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumValue(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getLeapDurationField(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestDateConverter.testSingleton(org.joda.time.convert.TestDateConverter) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationField.test_hashCode(org.joda.time.field.TestPreciseDurationField) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetIntervalChronology_RInterval(org.joda.time.TestDateTimeUtils) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testGetInstantMillis_Object_Chronology(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMaximumShortTextLength_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getMinimumValue(org.joda.time.field.TestOffsetDateTimeField) (1 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_toString(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetReadableInterval_ReadableInterval(org.joda.time.TestDateTimeUtils) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetInstantChronology_RI(org.joda.time.TestDateTimeUtils) (0 ms)</li><li>org.joda.time.field.TestScaledDurationField.test_equals(org.joda.time.field.TestScaledDurationField) (0 ms)</li><li>org.joda.time.field.TestScaledDurationField.test_hashCode(org.joda.time.field.TestScaledDurationField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_constructor2(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_convertText(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoInterval_Object4(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testGetChronology_Object_nullChronology(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.convert.TestReadableIntervalConverter.testSetIntoInterval_Object1(org.joda.time.convert.TestReadableIntervalConverter) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getAsText_RP_int_Locale(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_constructor1(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetIntervalConverter(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getAsShortText_RP_Locale(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getAsText_RP_int_Locale(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getAsText_RP_Locale(org.joda.time.field.TestBaseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsText_RP_int_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getAsShortText_RP_int_Locale(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetDurationConverter(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsShortText_RP_int_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneOffset_invalidText(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getAsText_RP_int_Locale(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getAsShortText_RP_int_Locale(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestBaseDateTimeField.test_getAsShortText_RP_int_Locale(org.joda.time.field.TestBaseDateTimeField) (4 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsText_RP_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.TestIllegalFieldValueException.testVerifyValueBounds(org.joda.time.TestIllegalFieldValueException) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getAsText_RP_Locale(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDurationDateTimeField.test_getAsShortText_RP_Locale(org.joda.time.field.TestPreciseDurationDateTimeField) (0 ms)</li><li>org.joda.time.field.TestOffsetDateTimeField.test_getAsShortText_RP_Locale(org.joda.time.field.TestOffsetDateTimeField) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetInstantConverter(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestReadableInstantConverter.testGetChronology_Object_Zone(org.joda.time.convert.TestReadableInstantConverter) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getAsShortText_RP_Locale(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.field.TestPreciseDateTimeField.test_getAsText_RP_Locale(org.joda.time.field.TestPreciseDateTimeField) (0 ms)</li><li>org.joda.time.TestBaseSingleFieldPeriod.testToMutablePeriod(org.joda.time.TestBaseSingleFieldPeriod) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetPartialConverterOKMultipleMatches(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetInstantConverterOKMultipleMatches(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetPartialConverterBadMultipleMatches(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetInstantConverterBadMultipleMatches(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestConverterManager.testGetPeriodConverter(org.joda.time.convert.TestConverterManager) (0 ms)</li><li>org.joda.time.convert.TestReadablePeriodConverter.testSetInto_Object(org.joda.time.convert.TestReadablePeriodConverter) (2 ms)</li><li>org.joda.time.TestIllegalFieldValueException.testReadablePartialValidate(org.joda.time.TestIllegalFieldValueException) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_ja_checkRedundantSeparator(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.convert.TestReadableDurationConverter.testSetInto_Object(org.joda.time.convert.TestReadableDurationConverter) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_getDefault_checkRedundantSeparator(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_append_Parser(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testNullNowCheckedOnce(org.joda.time.TestDateTimeComparator) (14 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_pl_checkRedundantSeparator(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendOptional_Parser(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_Y(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestStringConvert.testHours(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testDays(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestDays.testFactory_daysBetween_RPartial_YearMonth(org.joda.time.TestDays) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_ordinalBased_Y(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestStringConvert.testMonths(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_Y(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestStringConvert.testYears(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestHours.testFactory_hoursBetween_RPartial(org.joda.time.TestHours) (0 ms)</li><li>org.joda.time.TestMinutes.testFactory_minutesBetween_RPartial(org.joda.time.TestMinutes) (0 ms)</li><li>org.joda.time.TestSeconds.testFactory_secondsBetween_RPartial(org.joda.time.TestSeconds) (0 ms)</li><li>org.joda.time.TestStringConvert.testMinutes(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testWeeks(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestMonths.testFactory_monthsBetween_RPartial_YearMonth(org.joda.time.TestMonths) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_H(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_pt_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_es_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_ja_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_fr_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_de_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.TestStringConvert.testSeconds(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_getDefault_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_nl_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_ja_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_pl_parseOneField(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_de_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_pt_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.TestMonths.testFactory_monthsBetween_RPartial_MonthDay(org.joda.time.TestMonths) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_getDefault_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_es_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_fr_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_nl_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_M(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestHours.testFactory_parseHours_String(org.joda.time.TestHours) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_ordinalBased_D(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_pl_parseTwoFields(org.joda.time.format.TestPeriodFormat) (0 ms)</li><li>org.joda.time.TestMonths.testFactory_parseMonths_String(org.joda.time.TestMonths) (0 ms)</li><li>org.joda.time.TestYears.testFactory_parseYears_String(org.joda.time.TestYears) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_W(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestWeeks.testFactory_parseWeeks_String(org.joda.time.TestWeeks) (0 ms)</li><li>org.joda.time.TestMinutes.testFactory_parseMinutes_String(org.joda.time.TestMinutes) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_D(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testIsContiguous_RP(org.joda.time.TestDateTimeUtils) (1 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_M(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestSeconds.testFactory_parseSeconds_String(org.joda.time.TestSeconds) (1 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_m(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_S(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_YM(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HM(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_MD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestDays.testFactory_parseDays_String(org.joda.time.TestDays) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HS(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_MS(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HMS(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_ordinalBased_YD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_WD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_Mm(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_D(org.joda.time.format.TestISODateTimeFormat_Fields) (4 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_Hm(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_datetime_DM(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_YD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_YMD_unmodifiable(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_MSm(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_YD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_datetime_DH(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_Sm(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_datetime_YH(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HSm(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestWeeks.testFactory_weeksBetween_RPartial(org.joda.time.TestWeeks) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_YMD_duplicates(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestDays.testFactory_daysBetween_RPartial_LocalDate(org.joda.time.TestDays) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_YW(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HMm(org.joda.time.format.TestISODateTimeFormat_Fields) (1 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_calBased_YMD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_time_HMSm(org.joda.time.format.TestISODateTimeFormat_Fields) (1 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_appendTimeZoneId(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_weekBased_YWD(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestMonths.testFactory_monthsBetween_RPartial_LocalDate(org.joda.time.TestMonths) (0 ms)</li><li>org.joda.time.TestYears.testFactory_yearsBetween_RPartial(org.joda.time.TestYears) (0 ms)</li><li>org.joda.time.format.TestISODateTimeFormat_Fields.testForFields_datetime_YMDH(org.joda.time.format.TestISODateTimeFormat_Fields) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testGetIntervalChronology_RI_RI(org.joda.time.TestDateTimeUtils) (0 ms)</li><li>org.joda.time.convert.TestCalendarConverter.testGetChronology_Object_Chronology(org.joda.time.convert.TestCalendarConverter) (0 ms)</li><li>org.joda.time.TestStringConvert.testPeriod(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestDays.testFactory_daysBetween_RPartial_MonthDay(org.joda.time.TestDays) (0 ms)</li><li>org.joda.time.TestStringConvert.testYearMonth(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testLocalDate(org.joda.time.TestStringConvert) (1 ms)</li><li>org.joda.time.TestStringConvert.testMutablePeriod(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestDateTimeComparator.testInvalidObj(org.joda.time.TestDateTimeComparator) (0 ms)</li><li>org.joda.time.TestDateTimeUtils.testIsContiguous_RP_GJChronology(org.joda.time.TestDateTimeUtils) (1 ms)</li><li>org.joda.time.TestStringConvert.testLocalTime(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testLocalDateTime(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testMonthDay_leapDay(org.joda.time.TestStringConvert) (0 ms)</li><li>org.joda.time.TestStringConvert.testMonthDay(org.joda.time.TestStringConvert) (1 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneDawson_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneDawsonCreek_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneTokyo(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_localPrintParseZoneTokyo(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneMET_suffix(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseLongNameWithLookup(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseShortNameWithLookup(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestPeriodFormat.test_wordBased_en_withLocale_pt(org.joda.time.format.TestPeriodFormat) (15 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneParis(org.joda.time.format.TestDateTimeFormatterBuilder) (0 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseShortNameWithAutoLookup(org.joda.time.format.TestDateTimeFormatterBuilder) (14 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneDawsonCreek(org.joda.time.format.TestDateTimeFormatterBuilder) (11 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneBahiaBanderas(org.joda.time.format.TestDateTimeFormatterBuilder) (15 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneDawson(org.joda.time.format.TestDateTimeFormatterBuilder) (14 ms)</li><li>org.joda.time.format.TestDateTimeFormatterBuilder.test_printParseZoneMET(org.joda.time.format.TestDateTimeFormatterBuilder) (14 ms)</li><li>org.joda.time.tz.TestFixedDateTimeZone.testToTimeZone1(org.joda.time.tz.TestFixedDateTimeZone) (0 ms)</li><li>org.joda.time.TestDateTimeZone.testTransitionFixed(org.joda.time.TestDateTimeZone) (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.16.1
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+commit bb66cac84bfbfecc11700de0ba04b7b07241674e
+tree f0ac112c8fa8409ed4c9c9490159b470fbd8f696
+parent cbb5c462bf5ca16f1d993cc0b4974a9af2e561a0
+author Uday Jain <uday9k@gmail.com> 2024-07-23 11:54:12 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-23 11:54:12 +0200
+
+    updated config for pitest
+
+
+:100755 100755 87ca30443f4c99e4632c4e38f2a6ebdc8b0e2b8b 9ad89af4ca8da7b5f21b43cdc6397abebb491404 M	pom.xml
