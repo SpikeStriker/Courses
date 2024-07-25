@@ -1,0 +1,10 @@
+commit 47367393fd720f5d376fdfaf85688cef05319dd3
+tree 4397b24a15639e68028bd67cb40c7abb355c4e5c
+parent 99c28b29628a1e9c94109fbc92cdfbf8f2199b18
+author Uday Jain <uday9k@gmail.com> 2024-07-25 17:58:04 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-25 17:58:04 +0200
+
+    updates to dependencies
+
+
+:100755 100755 1ce73c63ef8ee3b1a3c606bf0a99cd23df40ba6c e46e098b1857a3897b86af4011c6dc9a5c321ce4 M	pom.xml

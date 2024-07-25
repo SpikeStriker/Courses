@@ -1,0 +1,44 @@
+Started by user [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/CICD_pipeline
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/CICD_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 99c28b29628a1e9c94109fbc92cdfbf8f2199b18 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 99c28b29628a1e9c94109fbc92cdfbf8f2199b18 # timeout=10
+Commit message: "adding pitest-junit5-plugin dependency"
+ > git rev-list --no-walk 3c0f6ffef35f9277f52e99ec4f39d0b456b1663e # timeout=10
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Malformed POM /bitnami/jenkins/home/workspace/CICD_pipeline/pom.xml: Unrecognised tag: 'dependencies' (position: START_TAG seen ...</version>\n\t\t\t\t<dependencies>... @816:19)  @ /bitnami/jenkins/home/workspace/CICD_pipeline/pom.xml, line 816, column 19
+ @ 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] The build could not read 1 project -> [Help 1]
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]   
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]   The project joda-time:joda-time:2.9.9 (/bitnami/jenkins/home/workspace/CICD_pipeline/pom.xml) has 1 error
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]     Malformed POM /bitnami/jenkins/home/workspace/CICD_pipeline/pom.xml: Unrecognised tag: 'dependencies' (position: START_TAG seen ...</version>\n\t\t\t\t<dependencies>... @816:19)  @ /bitnami/jenkins/home/workspace/CICD_pipeline/pom.xml, line 816, column 19 -> [Help 2]
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/ModelParseException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Publishing Clover coverage report...
+No Clover report will be published due to a build Failure
+Looking for PIT reports in /bitnami/jenkins/home/workspace/CICD_pipeline
+Publishing mutation report: /bitnami/jenkins/home/workspace/CICD_pipeline/target/pit-reports/202407250804/mutations.xml
+Kill ratio is NaN% (0  0)
+Finished: FAILURE

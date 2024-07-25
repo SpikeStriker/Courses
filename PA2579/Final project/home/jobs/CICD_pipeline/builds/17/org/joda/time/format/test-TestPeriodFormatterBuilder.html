@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="../../../../img/clover.ico" />
+
+    <link rel="stylesheet" href="../../../../aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="../../../../aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="../../../../aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('../../../../style.css');
+        @import url('../../../../tree.css');
+        
+    </style>
+
+    <script src="../../../../jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../../../../aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="../../../../aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="../../../../aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="../../../../package-nodes-tree.js" type="text/javascript"></script>
+    <script src="../../../../clover-tree.js" type="text/javascript"></script>
+    <script src="../../../../clover.js" type="text/javascript"></script>
+    <script src="../../../../clover-descriptions.js" type="text/javascript"></script>
+    <script src="../../../../cloud.js" type="text/javascript"></script>
+
+            <title>Joda-Time 2.9.9</title>
+    </head>
+
+<body>
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="https://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="https://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                    <a href="http://www.joda.org/joda-time/" target="_top">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="../../../../img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+                    </a>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                            <a href="http://www.joda.org/joda-time/" target="_top">
+                                        Joda-Time 2.9.9
+                                        </a>
+                    </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="">
+                    <a href="../../../../dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                <div class="packages-tree-wrapper" data-root-relative="../../../../" data-package-name="org.joda.time.format">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs">
+    
+    <li><a href="../../../../dashboard.html"> Project Clover database Thu Jul 25 2024 07:51:22 UTC</a></li>
+     <li><a href="test-pkg-summary.html">Package org.joda.time.format</a></li>
+</ol></div>
+    
+<h1 class="aui-h2-clover">
+            
+        Class TestPeriodFormatterBuilder
+    </h1>
+
+
+ 
+<div class="aui-tabs horizontal-tabs" id="tabs-file">
+    <ul class="tabs-menu">
+        <li class="menu-item">
+            <a href="TestPeriodFormatterBuilder.html"><strong>Source file</strong></a>
+        </li>
+        <li class="menu-item active-tab">
+            <a href="#tabs-file-test-results"><strong>Test results</strong></a>
+        </li>
+    </ul>
+    <div class="tabs-pane aui-tabs-pane-100-pcnt active-pane" id="tabs-file-test-results">
+        <div>&#160;</div>
+
+
+
+
+<table id="testClassSummaryTable" class="aui">
+<thead>
+    <tr>
+        <th width="40%"><label>Class</label></th>
+        <th width="10%"><label title="Total number of tests (or test iterations) executed.">Tests</label></th>
+        <th width="10%"><label title="Number of failed tests">Fail</label></th>
+        <th width="10%"><label title="Number of test errors">Error</label></th>
+        <th width="10%">
+            <label title="The total time in seconds taken to run this set of tests.">Time (secs)</label>
+        </th>
+        <th width="20%"><label>% Tests Success</label></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>TestPeriodFormatterBuilder</td>
+        <td class="testPasses"><span class="sortValue">81</span>81</td>
+<td class=""><span class="sortValue">0</span>0</td>
+<td class=""><span class="sortValue">0</span>0</td>
+        <td>0.032</td>
+        <td class="align-middle">
+            
+
+<div style="display: table; width: 100%">
+            <div class="barGraphValue"><span class="sortValue">1.0</span>100%</div>         <div style="display: table-cell">
+            
+            <div title="0% Errors" style="min-width: 40px;" class="testBarError">
+                <div title="100% of tests passed&lt;br/&gt;0% of tests failed" class="testBarFail" style="width: 100%"><div class="testBarPass" style="width: 100%"></div></div>
+            </div>
+        </div>
+    </div>        </td>
+    </tr>
+</tbody>
+</table>
+
+<div>&#160;</div>
+
+<table id="testClassTestsTable" class="aui aui-table-sortable">
+<thead>
+    <tr>
+        <th width="40%">
+            <label title="Tests (or test iterations) which were executed.">Tests</label>
+        </th>
+        <th width="10%"><label>Started</label></th>
+        <th width="10%"><label>Status</label></th>
+        <th width="10%">
+            <label title="The total time in seconds taken to run this set of tests.">Time (secs)</label>
+        </th>
+        <th width="30%"><label>Message</label></th>
+    </tr>
+</thead>
+<tbody>
+
+
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatMillis3Digit</span><a href="TestPeriodFormatterBuilder_testFormatMillis3Digit_2u8.html">TestPeriodFormatterBuilder.testFormatMillis3Digit</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163356</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixRegEx4</span><a href="TestPeriodFormatterBuilder_testFormatSuffixRegEx4_2ld.html">TestPeriodFormatterBuilder.testFormatSuffixRegEx4</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163546</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatMinutes</span><a href="TestPeriodFormatterBuilder_testFormatMinutes_1bh.html">TestPeriodFormatterBuilder.testFormatMinutes</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163370</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixSimple3</span><a href="TestPeriodFormatterBuilder_testFormatSuffixSimple3_1gt.html">TestPeriodFormatterBuilder.testFormatSuffixSimple3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163395</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixRegEx1</span><a href="TestPeriodFormatterBuilder_testFormatPrefixRegEx1_be.html">TestPeriodFormatterBuilder.testFormatPrefixRegEx1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163662</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixPlural2</span><a href="TestPeriodFormatterBuilder_testFormatSuffixPlural2_2vv.html">TestPeriodFormatterBuilder.testFormatSuffixPlural2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163713</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixPlural3</span><a href="TestPeriodFormatterBuilder_testFormatPrefixPlural3_11x.html">TestPeriodFormatterBuilder.testFormatPrefixPlural3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163340</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testToFormatterPrinterParser</span><a href="TestPeriodFormatterBuilder_testToFormatterPrinterParser_1kh.html">TestPeriodFormatterBuilder.testToFormatterPrinterParser</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163256</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatWeeks</span><a href="TestPeriodFormatterBuilder_testFormatWeeks_378.html">TestPeriodFormatterBuilder.testFormatWeeks</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163507</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixSimple1</span><a href="TestPeriodFormatterBuilder_testFormatSuffixSimple1_rv.html">TestPeriodFormatterBuilder.testFormatSuffixSimple1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163378</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple4IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple4IgnoringPrefix_2wq.html">TestPeriodFormatterBuilder.testFormatPrefixSimple4IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163083</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixSimple2</span><a href="TestPeriodFormatterBuilder_testFormatSuffixSimple2_1l1.html">TestPeriodFormatterBuilder.testFormatSuffixSimple2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163385</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSeconds</span><a href="TestPeriodFormatterBuilder_testFormatSeconds_1zy.html">TestPeriodFormatterBuilder.testFormatSeconds</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163584</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixRegEx3</span><a href="TestPeriodFormatterBuilder_testFormatSuffixRegEx3_143.html">TestPeriodFormatterBuilder.testFormatSuffixRegEx3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163537</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixPlural1</span><a href="TestPeriodFormatterBuilder_testFormatPrefixPlural1_2w9.html">TestPeriodFormatterBuilder.testFormatPrefixPlural1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163325</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixPlural1</span><a href="TestPeriodFormatterBuilder_testFormatSuffixPlural1_hu.html">TestPeriodFormatterBuilder.testFormatSuffixPlural1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163704</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSeparatorIfFieldsAfter</span><a href="TestPeriodFormatterBuilder_testFormatSeparatorIfFieldsAfter_2jt.html">TestPeriodFormatterBuilder.testFormatSeparatorIfFieldsAfter</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163646</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParserThenClear</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParserThenClear_ig.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParserThenClear</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163363</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatMinDigits</span><a href="TestPeriodFormatterBuilder_testFormatMinDigits_2te.html">TestPeriodFormatterBuilder.testFormatMinDigits</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163181</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testBug2495455</span><a href="TestPeriodFormatterBuilder_testBug2495455_ti.html">TestPeriodFormatterBuilder.testBug2495455</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163139</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_null_null</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParser_null_null_27x.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_null_null</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163230</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatMonths</span><a href="TestPeriodFormatterBuilder_testFormatMonths_2xz.html">TestPeriodFormatterBuilder.testFormatMonths</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163164</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSeparatorIfFieldsBefore</span><a href="TestPeriodFormatterBuilder_testFormatSeparatorIfFieldsBefore_su.html">TestPeriodFormatterBuilder.testFormatSeparatorIfFieldsBefore</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163308</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyLast</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyLast_20x.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyLast</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163483</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSuffix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSuffix_1c6.html">TestPeriodFormatterBuilder.testFormatPrefixSuffix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163696</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixRegEx2</span><a href="TestPeriodFormatterBuilder_testFormatSuffixRegEx2_1w4.html">TestPeriodFormatterBuilder.testFormatSuffixRegEx2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163529</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendPrefixTakingString</span><a href="TestPeriodFormatterBuilder_testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendPrefixTakingString_1ij.html">TestPeriodFormatterBuilder.testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendPrefixTakingString</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163653</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSecondsWithOptionalMillis</span><a href="TestPeriodFormatterBuilder_testFormatSecondsWithOptionalMillis_1pq.html">TestPeriodFormatterBuilder.testFormatSecondsWithOptionalMillis</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163476</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_null_Parser</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParser_null_Parser_2m9.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_null_Parser</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163687</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroIfSupported</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroIfSupported_2m4.html">TestPeriodFormatterBuilder.testFormatPrintZeroIfSupported</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163426</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixPlural4IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatSuffixPlural4IgnoringPrefix_2f5.html">TestPeriodFormatterBuilder.testFormatSuffixPlural4IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163348</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstDays</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstDays_2bp.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstDays</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163156</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatDays</span><a href="TestPeriodFormatterBuilder_testFormatDays_1gw.html">TestPeriodFormatterBuilder.testFormatDays</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163299</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixComposite5IgnoringAffix</span><a href="TestPeriodFormatterBuilder_testFormatSuffixComposite5IgnoringAffix_hc.html">TestPeriodFormatterBuilder.testFormatSuffixComposite5IgnoringAffix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163189</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.011</span>0.011</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppendFormatter</span><a href="TestPeriodFormatterBuilder_testFormatAppendFormatter_hd.html">TestPeriodFormatterBuilder.testFormatAppendFormatter</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163264</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixPlural2</span><a href="TestPeriodFormatterBuilder_testFormatPrefixPlural2_16f.html">TestPeriodFormatterBuilder.testFormatPrefixPlural2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163332</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatLiteral</span><a href="TestPeriodFormatterBuilder_testFormatLiteral_33j.html">TestPeriodFormatterBuilder.testFormatLiteral</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163239</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendSeparatorTaking3ArgumentsWithNullAndNonEmptyArray</span><a href="TestPeriodFormatterBuilder_testAppendSeparatorTaking3ArgumentsWithNullAndNonEmptyArray_17r.html">TestPeriodFormatterBuilder.testAppendSeparatorTaking3ArgumentsWithNullAndNonEmptyArray</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163630</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixRegEx1</span><a href="TestPeriodFormatterBuilder_testFormatSuffixRegEx1_1ex.html">TestPeriodFormatterBuilder.testFormatSuffixRegEx1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163520</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendLiteralThrowsIllegalArgumentException</span><a href="TestPeriodFormatterBuilder_testAppendLiteralThrowsIllegalArgumentException_1r4.html">TestPeriodFormatterBuilder.testAppendLiteralThrowsIllegalArgumentException</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163608</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testRegExAffixParseOrder</span><a href="TestPeriodFormatterBuilder_testRegExAffixParseOrder_2y3.html">TestPeriodFormatterBuilder.testRegExAffixParseOrder</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163075</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixPlural4</span><a href="TestPeriodFormatterBuilder_testFormatSuffixPlural4_wh.html">TestPeriodFormatterBuilder.testFormatSuffixPlural4</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163730</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple2</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple2_240.html">TestPeriodFormatterBuilder.testFormatPrefixSimple2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163111</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirst</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirst_2in.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirst</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163553</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixComposite1</span><a href="TestPeriodFormatterBuilder_testFormatPrefixComposite1_2cz.html">TestPeriodFormatterBuilder.testFormatPrefixComposite1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163221</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSeparatorSimple</span><a href="TestPeriodFormatterBuilder_testFormatSeparatorSimple_1hc.html">TestPeriodFormatterBuilder.testFormatSeparatorSimple</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163615</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixRegEx5IgnoringAffix</span><a href="TestPeriodFormatterBuilder_testFormatSuffixRegEx5IgnoringAffix_2bq.html">TestPeriodFormatterBuilder.testFormatSuffixRegEx5IgnoringAffix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163417</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple6IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple6IgnoringPrefix_z7.html">TestPeriodFormatterBuilder.testFormatPrefixSimple6IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163592</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroDefault</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroDefault_2qb.html">TestPeriodFormatterBuilder.testFormatPrintZeroDefault</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163740</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixRegEx3</span><a href="TestPeriodFormatterBuilder_testFormatPrefixRegEx3_1yd.html">TestPeriodFormatterBuilder.testFormatPrefixRegEx3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163679</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstMonths</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstMonths_1rs.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstMonths</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163568</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testMonthsAndMinutesAreConsideredSeparateAndCaseIsNotIgnored</span><a href="TestPeriodFormatterBuilder_testMonthsAndMinutesAreConsideredSeparateAndCaseIsNotIgnored_15q.html">TestPeriodFormatterBuilder.testMonthsAndMinutesAreConsideredSeparateAndCaseIsNotIgnored</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163316</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple1</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple1_f7.html">TestPeriodFormatterBuilder.testFormatPrefixSimple1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163101</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixRegEx4IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixRegEx4IgnoringPrefix_r3.html">TestPeriodFormatterBuilder.testFormatPrefixRegEx4IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163491</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstSeconds</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstSeconds_212.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstSeconds</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163274</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstHours</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstHours_2f9.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstHours</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163433</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatYears</span><a href="TestPeriodFormatterBuilder_testFormatYears_2yz.html">TestPeriodFormatterBuilder.testFormatYears</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163514</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroNever</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroNever_sa.html">TestPeriodFormatterBuilder.testFormatPrintZeroNever</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163577</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixPlural4IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixPlural4IgnoringPrefix_gz.html">TestPeriodFormatterBuilder.testFormatPrefixPlural4IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163213</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSeparatorComplex</span><a href="TestPeriodFormatterBuilder_testFormatSeparatorComplex_31f.html">TestPeriodFormatterBuilder.testFormatSeparatorComplex</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163622</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstYears</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstYears_21f.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstYears</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163448</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendSeparatorTaking3ArgumentsWithEmptyStringAndNull</span><a href="TestPeriodFormatterBuilder_testAppendSeparatorTaking3ArgumentsWithEmptyStringAndNull_15w.html">TestPeriodFormatterBuilder.testAppendSeparatorTaking3ArgumentsWithEmptyStringAndNull</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163130</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_Printer_null</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParser_Printer_null_s1.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_Printer_null</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163561</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatMillis</span><a href="TestPeriodFormatterBuilder_testFormatMillis_ar.html">TestPeriodFormatterBuilder.testFormatMillis</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163148</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixPlural3</span><a href="TestPeriodFormatterBuilder_testFormatSuffixPlural3_9f.html">TestPeriodFormatterBuilder.testFormatSuffixPlural3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163722</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple5IgnoringPrefix</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple5IgnoringPrefix_24b.html">TestPeriodFormatterBuilder.testFormatPrefixSimple5IgnoringPrefix</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163291</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstMinutes</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstMinutes_kd.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstMinutes</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163172</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroAlways</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroAlways_oa.html">TestPeriodFormatterBuilder.testFormatPrintZeroAlways</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163247</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendSuffixTaking2StringArraysThrowsIllegalStateException</span><a href="TestPeriodFormatterBuilder_testAppendSuffixTaking2StringArraysThrowsIllegalStateException_lp.html">TestPeriodFormatterBuilder.testAppendSuffixTaking2StringArraysThrowsIllegalStateException</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163466</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSecondsWithMillis</span><a href="TestPeriodFormatterBuilder_testFormatSecondsWithMillis_263.html">TestPeriodFormatterBuilder.testFormatSecondsWithMillis</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163599</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendSeparatorIfFieldsAfter</span><a href="TestPeriodFormatterBuilder_testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendSeparatorIfFieldsAfter_27y.html">TestPeriodFormatterBuilder.testAppendSeparatorIfFieldsBeforeThrowsIllegalStateExceptionAndAppendSeparatorIfFieldsAfter</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163281</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixSimple4</span><a href="TestPeriodFormatterBuilder_testFormatSuffixSimple4_1is.html">TestPeriodFormatterBuilder.testFormatSuffixSimple4</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163402</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatSuffixComposite1</span><a href="TestPeriodFormatterBuilder_testFormatSuffixComposite1_2hc.html">TestPeriodFormatterBuilder.testFormatSuffixComposite1</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163637</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstWeeks</span><a href="TestPeriodFormatterBuilder_testFormatPrintZeroRarelyFirstWeeks_1pm.html">TestPeriodFormatterBuilder.testFormatPrintZeroRarelyFirstWeeks</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163442</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixRegEx2</span><a href="TestPeriodFormatterBuilder_testFormatPrefixRegEx2_8t.html">TestPeriodFormatterBuilder.testFormatPrefixRegEx2</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163669</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testAppendTakingPeriodFormatterThrowsIllegalArgumentException</span><a href="TestPeriodFormatterBuilder_testAppendTakingPeriodFormatterThrowsIllegalArgumentException_2c6.html">TestPeriodFormatterBuilder.testAppendTakingPeriodFormatterThrowsIllegalArgumentException</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163206</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_Printer_null_null_Parser</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParser_Printer_null_null_Parser_z.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_Printer_null_null_Parser</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163410</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testPluralAffixParseOrder</span><a href="TestPeriodFormatterBuilder_testPluralAffixParseOrder_2vm.html">TestPeriodFormatterBuilder.testPluralAffixParseOrder</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163092</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatHours</span><a href="TestPeriodFormatterBuilder_testFormatHours_201.html">TestPeriodFormatterBuilder.testFormatHours</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163498</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatPrefixSimple3</span><a href="TestPeriodFormatterBuilder_testFormatPrefixSimple3_mn.html">TestPeriodFormatterBuilder.testFormatPrefixSimple3</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163119</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_PrinterParser</span><a href="TestPeriodFormatterBuilder_testFormatAppend_PrinterParser_PrinterParser_rc.html">TestPeriodFormatterBuilder.testFormatAppend_PrinterParser_PrinterParser</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721894163458</span>25 Jul 07:56:03</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+
+    </tbody>
+</table>
+
+    </div> <!-- tabs-pane -->
+</div> <!-- aui-tabs horizontal-tabs -->
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="https://openclover.org">OpenClover</a> v 4.5.2
+                on Thu Jul 25 2024 07:57:47 UTC using coverage data from Thu Jul 25 2024 07:56:04 UTC.
+            </li>
+        </ul>
+        <ul>
+            <li>OpenClover is free and open-source software. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

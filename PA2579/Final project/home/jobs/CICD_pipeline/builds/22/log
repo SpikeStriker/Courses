@@ -1,0 +1,61 @@
+Started by user [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/CICD_pipeline
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/CICD_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 7f2b8958093a4d52c13e0d302694a17439994e6b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7f2b8958093a4d52c13e0d302694a17439994e6b # timeout=10
+Commit message: "try different version of pitest and junit5"
+ > git rev-list --no-walk 1c06d67c61c7b144190e05b9867c1be616a43598 # timeout=10
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ joda-time ---
+[INFO] Deleting /bitnami/jenkins/home/workspace/CICD_pipeline/target
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:setup (default-cli) @ joda-time ---
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Creating new database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+Build was aborted
+Aborted by [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Archiving artifacts
+Recording test results
+ERROR: Step ?Publish JUnit test result report? failed: No test report files were found. Configuration error?
+Publishing Clover coverage report...
+No Clover report will be published due to a build Failure
+Looking for PIT reports in /bitnami/jenkins/home/workspace/CICD_pipeline
+ERROR: Step ?Record Pit mutation testing report? aborted due to exception: 
+java.io.IOException: No reports found at location:target/pit-reports/**/mutations.xml
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:366)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:347)
+	at hudson.FilePath.act(FilePath.java:1232)
+	at hudson.FilePath.act(FilePath.java:1215)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher.perform(PitPublisher.java:118)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:47)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:767)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:711)
+	at hudson.model.Run.execute(Run.java:1917)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: ABORTED

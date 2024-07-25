@@ -1,0 +1,10 @@
+commit 1c06d67c61c7b144190e05b9867c1be616a43598
+tree fda73ac8d62984df95495dfcc964e2d30353a035
+parent 47367393fd720f5d376fdfaf85688cef05319dd3
+author Uday Jain <uday9k@gmail.com> 2024-07-25 19:28:01 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-25 19:28:01 +0200
+
+    update junit5 plugin version
+
+
+:100755 100755 e46e098b1857a3897b86af4011c6dc9a5c321ce4 3d56a0dd7a5d864094486f03e3ffc707abcd4032 M	pom.xml

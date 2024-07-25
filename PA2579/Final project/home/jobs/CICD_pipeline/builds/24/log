@@ -1,0 +1,388 @@
+Started by user [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/CICD_pipeline
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /bitnami/jenkins/home/workspace/CICD_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a216ab7a2a0ff465d34c38863bf1eb68236b9a3a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a216ab7a2a0ff465d34c38863bf1eb68236b9a3a # timeout=10
+Commit message: "try different version of pitest and junit5 3"
+ > git rev-list --no-walk 2df7134bf9b03be8fa4af99f177dec84687d9ffc # timeout=10
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ joda-time ---
+[INFO] Deleting /bitnami/jenkins/home/workspace/CICD_pipeline/target
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:setup (default-cli) @ joda-time ---
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Creating new database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 167 files (8 packages).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Updating existing database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 159 files (7 packages).
+[INFO] 4220 test methods detected.
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource to META-INF
+[INFO] Copying 16 resources
+[INFO] Copying 1 resource
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 167 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- exec-maven-plugin:1.4.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ joda-time ---
+[INFO] Surefire report directory: /bitnami/jenkins/home/workspace/CICD_pipeline/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.joda.time.TestAllPackages
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.joda.time.TestDateTimeZone (file:/bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes/)
+WARNING: Please consider reporting this to the maintainers of org.joda.time.TestDateTimeZone
+WARNING: System::setSecurityManager will be removed in a future release
+
+TestBuddhistChronology.testCalendar
+
+TestCopticChronology.testCalendar
+
+TestEthiopicChronology.testCalendar
+
+TestIslamicChronology.testCalendar
+
+Testing Gregorian chronology over 1000 iterations
+100% complete (i=1000)
+
+Testing Julian chronology over 1000 iterations
+100% complete (i=1000)
+Writing zoneinfo files
+Writing ZoneInfoMap
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.586 sec - in org.joda.time.TestAllPackages
+
+Results :
+
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:aggregate (default-cli) @ joda-time ---
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:clover (default-cli) @ joda-time ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /tmp/mvn16680661023548729540resource
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing HTML report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover'
+[INFO] Done. Processed 9 packages in 60184ms (6687ms per package).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10:34 min
+[INFO] Finished at: 2024-07-25T20:40:03Z
+[INFO] ------------------------------------------------------------------------
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn test-compile org.pitest:pitest-maven:mutationCoverage
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-maven/1.7.5/pitest-maven-1.7.5.pom
+Progress (1): 2.8/6.3 kBProgress (1): 5.5/6.3 kBProgress (1): 6.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-maven/1.7.5/pitest-maven-1.7.5.pom (6.3 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-parent/1.7.5/pitest-parent-1.7.5.pom
+Progress (1): 2.8/14 kBProgress (1): 5.5/14 kBProgress (1): 8.9/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-parent/1.7.5/pitest-parent-1.7.5.pom (14 kB at 54 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-maven/1.7.5/pitest-maven-1.7.5.jar
+Progress (1): 4.1/76 kBProgress (1): 8.2/76 kBProgress (1): 12/76 kB Progress (1): 16/76 kBProgress (1): 20/76 kBProgress (1): 25/76 kBProgress (1): 29/76 kBProgress (1): 33/76 kBProgress (1): 37/76 kBProgress (1): 41/76 kBProgress (1): 45/76 kBProgress (1): 49/76 kBProgress (1): 53/76 kBProgress (1): 57/76 kBProgress (1): 61/76 kBProgress (1): 66/76 kBProgress (1): 70/76 kBProgress (1): 74/76 kBProgress (1): 76 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-maven/1.7.5/pitest-maven-1.7.5.jar (76 kB at 358 kB/s)
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource to META-INF
+[INFO] Copying 16 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 167 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- exec-maven-plugin:1.4.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes
+[INFO] 
+[INFO] --- pitest-maven:1.7.5:mutationCoverage (default-cli) @ joda-time ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-entry/1.7.5/pitest-entry-1.7.5.pom
+Progress (1): 4.1/7.3 kBProgress (1): 7.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-entry/1.7.5/pitest-entry-1.7.5.pom (7.3 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest/1.7.5/pitest-1.7.5.pom
+Progress (1): 4.1/8.5 kBProgress (1): 8.2/8.5 kBProgress (1): 8.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest/1.7.5/pitest-1.7.5.pom (8.5 kB at 60 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-html-report/1.7.5/pitest-html-report-1.7.5.pom
+Progress (1): 4.1/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-html-report/1.7.5/pitest-html-report-1.7.5.pom (4.8 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-aggregator/1.7.5/pitest-aggregator-1.7.5.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-aggregator/1.7.5/pitest-aggregator-1.7.5.pom (1.7 kB at 6.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-entry/1.7.5/pitest-entry-1.7.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest/1.7.5/pitest-1.7.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-html-report/1.7.5/pitest-html-report-1.7.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-aggregator/1.7.5/pitest-aggregator-1.7.5.jar
+Progress (1): 4.1/656 kBProgress (2): 4.1/656 kB | 2.8/21 kBProgress (2): 8.2/656 kB | 2.8/21 kBProgress (2): 12/656 kB | 2.8/21 kB Progress (2): 16/656 kB | 2.8/21 kBProgress (2): 16/656 kB | 5.5/21 kBProgress (2): 20/656 kB | 5.5/21 kBProgress (2): 20/656 kB | 8.3/21 kBProgress (2): 25/656 kB | 8.3/21 kBProgress (2): 29/656 kB | 8.3/21 kBProgress (2): 29/656 kB | 11/21 kB Progress (2): 33/656 kB | 11/21 kBProgress (2): 33/656 kB | 14/21 kBProgress (2): 37/656 kB | 14/21 kBProgress (3): 37/656 kB | 14/21 kB | 4.1/650 kBProgress (4): 37/656 kB | 14/21 kB | 4.1/650 kB | 2.8/662 kBProgress (4): 41/656 kB | 14/21 kB | 4.1/650 kB | 2.8/662 kBProgress (4): 41/656 kB | 17/21 kB | 4.1/650 kB | 2.8/662 kBProgress (4): 45/656 kB | 17/21 kB | 4.1/650 kB | 2.8/662 kBProgress (4): 45/656 kB | 19/21 kB | 4.1/650 kB | 2.8/662 kBProgress (4): 45/656 kB | 19/21 kB | 8.2/650 kB | 2.8/662 kBProgress (4): 45/656 kB | 21 kB | 8.2/650 kB | 2.8/662 kB   Progress (4): 49/656 kB | 21 kB | 8.2/650 kB | 2.8/662 kBProgress (4): 49/656 kB | 21 kB | 8.2/650 kB | 5.5/662 kBProgress (4): 49/656 kB | 21 kB | 12/650 kB | 5.5/662 kB Progress (4): 53/656 kB | 21 kB | 12/650 kB | 5.5/662 kBProgress (4): 53/656 kB | 21 kB | 16/650 kB | 5.5/662 kBProgress (4): 53/656 kB | 21 kB | 16/650 kB | 8.3/662 kBProgress (4): 57/656 kB | 21 kB | 16/650 kB | 8.3/662 kBProgress (4): 57/656 kB | 21 kB | 16/650 kB | 11/662 kB Progress (4): 61/656 kB | 21 kB | 16/650 kB | 11/662 kBProgress (4): 61/656 kB | 21 kB | 20/650 kB | 11/662 kBProgress (4): 66/656 kB | 21 kB | 20/650 kB | 11/662 kBProgress (4): 66/656 kB | 21 kB | 20/650 kB | 14/662 kBProgress (4): 66/656 kB | 21 kB | 25/650 kB | 14/662 kBProgress (4): 66/656 kB | 21 kB | 29/650 kB | 14/662 kBProgress (4): 70/656 kB | 21 kB | 29/650 kB | 14/662 kBProgress (4): 70/656 kB | 21 kB | 29/650 kB | 18/662 kBProgress (4): 70/656 kB | 21 kB | 33/650 kB | 18/662 kBProgress (4): 70/656 kB | 21 kB | 33/650 kB | 22/662 kBProgress (4): 74/656 kB | 21 kB | 33/650 kB | 22/662 kBProgress (4): 74/656 kB | 21 kB | 33/650 kB | 26/662 kBProgress (4): 74/656 kB | 21 kB | 37/650 kB | 26/662 kBProgress (4): 74/656 kB | 21 kB | 37/650 kB | 30/662 kBProgress (4): 78/656 kB | 21 kB | 37/650 kB | 30/662 kBProgress (4): 78/656 kB | 21 kB | 41/650 kB | 30/662 kBProgress (4): 78/656 kB | 21 kB | 41/650 kB | 34/662 kBProgress (4): 82/656 kB | 21 kB | 41/650 kB | 34/662 kBProgress (4): 82/656 kB | 21 kB | 45/650 kB | 34/662 kBProgress (4): 82/656 kB | 21 kB | 45/650 kB | 38/662 kBProgress (4): 86/656 kB | 21 kB | 45/650 kB | 38/662 kBProgress (4): 86/656 kB | 21 kB | 45/650 kB | 42/662 kBProgress (4): 86/656 kB | 21 kB | 49/650 kB | 42/662 kBProgress (4): 90/656 kB | 21 kB | 49/650 kB | 42/662 kBProgress (4): 90/656 kB | 21 kB | 49/650 kB | 47/662 kBProgress (4): 94/656 kB | 21 kB | 49/650 kB | 47/662 kBProgress (4): 94/656 kB | 21 kB | 53/650 kB | 47/662 kBProgress (4): 94/656 kB | 21 kB | 53/650 kB | 51/662 kBProgress (4): 98/656 kB | 21 kB | 53/650 kB | 51/662 kBProgress (4): 98/656 kB | 21 kB | 53/650 kB | 55/662 kBProgress (4): 98/656 kB | 21 kB | 57/650 kB | 55/662 kBProgress (4): 98/656 kB | 21 kB | 57/650 kB | 59/662 kBProgress (4): 102/656 kB | 21 kB | 57/650 kB | 59/662 kBProgress (4): 102/656 kB | 21 kB | 57/650 kB | 63/662 kBProgress (4): 102/656 kB | 21 kB | 61/650 kB | 63/662 kBProgress (4): 106/656 kB | 21 kB | 61/650 kB | 63/662 kBProgress (4): 106/656 kB | 21 kB | 66/650 kB | 63/662 kBProgress (4): 106/656 kB | 21 kB | 66/650 kB | 67/662 kBProgress (4): 111/656 kB | 21 kB | 66/650 kB | 67/662 kBProgress (4): 111/656 kB | 21 kB | 66/650 kB | 71/662 kBProgress (4): 111/656 kB | 21 kB | 70/650 kB | 71/662 kBProgress (4): 115/656 kB | 21 kB | 70/650 kB | 71/662 kBProgress (4): 115/656 kB | 21 kB | 74/650 kB | 71/662 kBProgress (4): 115/656 kB | 21 kB | 74/650 kB | 75/662 kBProgress (4): 115/656 kB | 21 kB | 78/650 kB | 75/662 kBProgress (4): 115/656 kB | 21 kB | 78/650 kB | 79/662 kBProgress (4): 119/656 kB | 21 kB | 78/650 kB | 79/662 kBProgress (4): 119/656 kB | 21 kB | 82/650 kB | 79/662 kBProgress (4): 123/656 kB | 21 kB | 82/650 kB | 79/662 kBProgress (4): 123/656 kB | 21 kB | 82/650 kB | 83/662 kBProgress (4): 127/656 kB | 21 kB | 82/650 kB | 83/662 kBProgress (4): 127/656 kB | 21 kB | 82/650 kB | 88/662 kBProgress (4): 127/656 kB | 21 kB | 86/650 kB | 88/662 kBProgress (4): 127/656 kB | 21 kB | 86/650 kB | 92/662 kBProgress (4): 131/656 kB | 21 kB | 86/650 kB | 92/662 kBProgress (4): 131/656 kB | 21 kB | 86/650 kB | 96/662 kBProgress (4): 131/656 kB | 21 kB | 90/650 kB | 96/662 kBProgress (4): 131/656 kB | 21 kB | 90/650 kB | 100/662 kBProgress (4): 131/656 kB | 21 kB | 94/650 kB | 100/662 kBProgress (4): 131/656 kB | 21 kB | 94/650 kB | 104/662 kBProgress (4): 135/656 kB | 21 kB | 94/650 kB | 104/662 kBProgress (4): 135/656 kB | 21 kB | 94/650 kB | 108/662 kBProgress (4): 135/656 kB | 21 kB | 98/650 kB | 108/662 kBProgress (4): 135/656 kB | 21 kB | 98/650 kB | 112/662 kBProgress (4): 139/656 kB | 21 kB | 98/650 kB | 112/662 kBProgress (4): 139/656 kB | 21 kB | 102/650 kB | 112/662 kBProgress (4): 143/656 kB | 21 kB | 102/650 kB | 112/662 kB                                                          Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-aggregator/1.7.5/pitest-aggregator-1.7.5.jar (21 kB at 79 kB/s)
+Progress (3): 143/656 kB | 102/650 kB | 116/662 kBProgress (3): 143/656 kB | 106/650 kB | 116/662 kBProgress (3): 143/656 kB | 106/650 kB | 120/662 kBProgress (3): 147/656 kB | 106/650 kB | 120/662 kBProgress (3): 147/656 kB | 106/650 kB | 124/662 kBProgress (3): 147/656 kB | 111/650 kB | 124/662 kBProgress (3): 147/656 kB | 111/650 kB | 128/662 kBProgress (3): 147/656 kB | 115/650 kB | 128/662 kBProgress (3): 152/656 kB | 115/650 kB | 128/662 kBProgress (3): 156/656 kB | 115/650 kB | 128/662 kBProgress (3): 156/656 kB | 115/650 kB | 133/662 kBProgress (3): 160/656 kB | 115/650 kB | 133/662 kBProgress (3): 160/656 kB | 115/650 kB | 137/662 kBProgress (3): 160/656 kB | 119/650 kB | 137/662 kBProgress (3): 160/656 kB | 119/650 kB | 141/662 kBProgress (3): 164/656 kB | 119/650 kB | 141/662 kBProgress (3): 164/656 kB | 123/650 kB | 141/662 kBProgress (3): 164/656 kB | 123/650 kB | 145/662 kBProgress (3): 168/656 kB | 123/650 kB | 145/662 kBProgress (3): 168/656 kB | 127/650 kB | 145/662 kBProgress (3): 168/656 kB | 127/650 kB | 149/662 kBProgress (3): 168/656 kB | 131/650 kB | 149/662 kBProgress (3): 172/656 kB | 131/650 kB | 149/662 kBProgress (3): 172/656 kB | 131/650 kB | 153/662 kBProgress (3): 176/656 kB | 131/650 kB | 153/662 kBProgress (3): 176/656 kB | 135/650 kB | 153/662 kBProgress (3): 176/656 kB | 135/650 kB | 157/662 kBProgress (3): 176/656 kB | 139/650 kB | 157/662 kBProgress (3): 180/656 kB | 139/650 kB | 157/662 kBProgress (3): 180/656 kB | 143/650 kB | 157/662 kBProgress (3): 180/656 kB | 143/650 kB | 161/662 kBProgress (3): 180/656 kB | 147/650 kB | 161/662 kBProgress (3): 184/656 kB | 147/650 kB | 161/662 kBProgress (3): 188/656 kB | 147/650 kB | 161/662 kBProgress (3): 188/656 kB | 147/650 kB | 165/662 kBProgress (3): 193/656 kB | 147/650 kB | 165/662 kBProgress (3): 193/656 kB | 147/650 kB | 169/662 kBProgress (3): 193/656 kB | 152/650 kB | 169/662 kBProgress (3): 193/656 kB | 152/650 kB | 174/662 kBProgress (3): 197/656 kB | 152/650 kB | 174/662 kBProgress (3): 197/656 kB | 152/650 kB | 178/662 kBProgress (3): 197/656 kB | 156/650 kB | 178/662 kBProgress (3): 201/656 kB | 156/650 kB | 178/662 kBProgress (3): 201/656 kB | 156/650 kB | 182/662 kBProgress (3): 201/656 kB | 160/650 kB | 182/662 kBProgress (3): 205/656 kB | 160/650 kB | 182/662 kBProgress (3): 205/656 kB | 164/650 kB | 182/662 kBProgress (3): 205/656 kB | 164/650 kB | 186/662 kBProgress (3): 209/656 kB | 164/650 kB | 186/662 kBProgress (3): 209/656 kB | 164/650 kB | 190/662 kBProgress (3): 213/656 kB | 164/650 kB | 190/662 kBProgress (3): 213/656 kB | 168/650 kB | 190/662 kBProgress (3): 213/656 kB | 168/650 kB | 194/662 kBProgress (3): 213/656 kB | 172/650 kB | 194/662 kBProgress (3): 213/656 kB | 176/650 kB | 194/662 kBProgress (3): 213/656 kB | 176/650 kB | 198/662 kBProgress (3): 213/656 kB | 180/650 kB | 198/662 kBProgress (3): 217/656 kB | 180/650 kB | 198/662 kBProgress (3): 217/656 kB | 180/650 kB | 202/662 kBProgress (3): 217/656 kB | 184/650 kB | 202/662 kBProgress (3): 221/656 kB | 184/650 kB | 202/662 kBProgress (3): 221/656 kB | 188/650 kB | 202/662 kBProgress (3): 221/656 kB | 188/650 kB | 206/662 kBProgress (3): 221/656 kB | 193/650 kB | 206/662 kBProgress (3): 225/656 kB | 193/650 kB | 206/662 kBProgress (3): 225/656 kB | 197/650 kB | 206/662 kBProgress (3): 225/656 kB | 197/650 kB | 210/662 kBProgress (3): 229/656 kB | 197/650 kB | 210/662 kBProgress (3): 229/656 kB | 197/650 kB | 214/662 kBProgress (3): 229/656 kB | 201/650 kB | 214/662 kBProgress (3): 233/656 kB | 201/650 kB | 214/662 kBProgress (3): 233/656 kB | 201/650 kB | 219/662 kBProgress (3): 238/656 kB | 201/650 kB | 219/662 kBProgress (3): 238/656 kB | 205/650 kB | 219/662 kBProgress (3): 238/656 kB | 205/650 kB | 223/662 kBProgress (3): 242/656 kB | 205/650 kB | 223/662 kBProgress (3): 242/656 kB | 209/650 kB | 223/662 kBProgress (3): 242/656 kB | 209/650 kB | 227/662 kBProgress (3): 246/656 kB | 209/650 kB | 227/662 kBProgress (3): 246/656 kB | 213/650 kB | 227/662 kBProgress (3): 246/656 kB | 213/650 kB | 231/662 kBProgress (3): 250/656 kB | 213/650 kB | 231/662 kBProgress (3): 250/656 kB | 213/650 kB | 235/662 kBProgress (3): 250/656 kB | 213/650 kB | 239/662 kBProgress (3): 254/656 kB | 213/650 kB | 239/662 kBProgress (3): 254/656 kB | 217/650 kB | 239/662 kBProgress (3): 258/656 kB | 217/650 kB | 239/662 kBProgress (3): 258/656 kB | 217/650 kB | 243/662 kBProgress (3): 258/656 kB | 221/650 kB | 243/662 kBProgress (3): 262/656 kB | 221/650 kB | 243/662 kBProgress (3): 262/656 kB | 225/650 kB | 243/662 kBProgress (3): 262/656 kB | 225/650 kB | 247/662 kBProgress (3): 266/656 kB | 225/650 kB | 247/662 kBProgress (3): 266/656 kB | 229/650 kB | 247/662 kBProgress (3): 270/656 kB | 229/650 kB | 247/662 kBProgress (3): 270/656 kB | 229/650 kB | 251/662 kBProgress (3): 274/656 kB | 229/650 kB | 251/662 kBProgress (3): 274/656 kB | 229/650 kB | 255/662 kBProgress (3): 274/656 kB | 233/650 kB | 255/662 kBProgress (3): 279/656 kB | 233/650 kB | 255/662 kBProgress (3): 279/656 kB | 233/650 kB | 260/662 kBProgress (3): 279/656 kB | 238/650 kB | 260/662 kBProgress (3): 279/656 kB | 242/650 kB | 260/662 kBProgress (3): 279/656 kB | 242/650 kB | 264/662 kBProgress (3): 283/656 kB | 242/650 kB | 264/662 kBProgress (3): 283/656 kB | 246/650 kB | 264/662 kBProgress (3): 287/656 kB | 246/650 kB | 264/662 kBProgress (3): 287/656 kB | 246/650 kB | 268/662 kBProgress (3): 291/656 kB | 246/650 kB | 268/662 kBProgress (3): 291/656 kB | 246/650 kB | 272/662 kBProgress (3): 291/656 kB | 250/650 kB | 272/662 kBProgress (3): 295/656 kB | 250/650 kB | 272/662 kBProgress (3): 295/656 kB | 250/650 kB | 276/662 kBProgress (3): 295/656 kB | 254/650 kB | 276/662 kBProgress (3): 295/656 kB | 258/650 kB | 276/662 kBProgress (3): 295/656 kB | 258/650 kB | 280/662 kBProgress (3): 299/656 kB | 258/650 kB | 280/662 kBProgress (3): 299/656 kB | 262/650 kB | 280/662 kBProgress (3): 299/656 kB | 262/650 kB | 284/662 kBProgress (3): 303/656 kB | 262/650 kB | 284/662 kBProgress (3): 303/656 kB | 262/650 kB | 288/662 kBProgress (3): 303/656 kB | 266/650 kB | 288/662 kBProgress (3): 303/656 kB | 266/650 kB | 292/662 kBProgress (3): 303/656 kB | 270/650 kB | 292/662 kBProgress (3): 307/656 kB | 270/650 kB | 292/662 kBProgress (3): 307/656 kB | 274/650 kB | 292/662 kBProgress (3): 311/656 kB | 274/650 kB | 292/662 kBProgress (3): 311/656 kB | 279/650 kB | 292/662 kBProgress (3): 315/656 kB | 279/650 kB | 292/662 kBProgress (3): 315/656 kB | 283/650 kB | 292/662 kBProgress (3): 319/656 kB | 283/650 kB | 292/662 kBProgress (3): 319/656 kB | 283/650 kB | 296/662 kBProgress (3): 324/656 kB | 283/650 kB | 296/662 kBProgress (3): 324/656 kB | 283/650 kB | 301/662 kBProgress (3): 324/656 kB | 287/650 kB | 301/662 kBProgress (3): 324/656 kB | 287/650 kB | 305/662 kBProgress (3): 328/656 kB | 287/650 kB | 305/662 kBProgress (3): 328/656 kB | 291/650 kB | 305/662 kBProgress (3): 328/656 kB | 291/650 kB | 309/662 kBProgress (3): 328/656 kB | 295/650 kB | 309/662 kBProgress (3): 332/656 kB | 295/650 kB | 309/662 kBProgress (3): 332/656 kB | 295/650 kB | 313/662 kBProgress (3): 336/656 kB | 295/650 kB | 313/662 kBProgress (3): 336/656 kB | 295/650 kB | 317/662 kBProgress (3): 340/656 kB | 295/650 kB | 317/662 kBProgress (3): 340/656 kB | 295/650 kB | 321/662 kBProgress (3): 344/656 kB | 295/650 kB | 321/662 kBProgress (3): 344/656 kB | 299/650 kB | 321/662 kBProgress (3): 344/656 kB | 303/650 kB | 321/662 kBProgress (3): 344/656 kB | 303/650 kB | 325/662 kBProgress (3): 348/656 kB | 303/650 kB | 325/662 kBProgress (3): 348/656 kB | 307/650 kB | 325/662 kBProgress (3): 352/656 kB | 307/650 kB | 325/662 kBProgress (3): 352/656 kB | 311/650 kB | 325/662 kBProgress (3): 356/656 kB | 311/650 kB | 325/662 kBProgress (3): 356/656 kB | 311/650 kB | 329/662 kBProgress (3): 356/656 kB | 315/650 kB | 329/662 kBProgress (3): 360/656 kB | 315/650 kB | 329/662 kBProgress (3): 360/656 kB | 319/650 kB | 329/662 kBProgress (3): 360/656 kB | 319/650 kB | 333/662 kBProgress (3): 360/656 kB | 324/650 kB | 333/662 kBProgress (3): 360/656 kB | 324/650 kB | 337/662 kBProgress (3): 365/656 kB | 324/650 kB | 337/662 kBProgress (3): 365/656 kB | 328/650 kB | 337/662 kBProgress (3): 365/656 kB | 328/650 kB | 341/662 kBProgress (3): 369/656 kB | 328/650 kB | 341/662 kBProgress (3): 369/656 kB | 332/650 kB | 341/662 kBProgress (3): 369/656 kB | 332/650 kB | 346/662 kBProgress (3): 369/656 kB | 336/650 kB | 346/662 kBProgress (3): 373/656 kB | 336/650 kB | 346/662 kBProgress (3): 373/656 kB | 336/650 kB | 350/662 kBProgress (3): 373/656 kB | 340/650 kB | 350/662 kBProgress (3): 373/656 kB | 340/650 kB | 354/662 kBProgress (3): 377/656 kB | 340/650 kB | 354/662 kBProgress (3): 377/656 kB | 340/650 kB | 358/662 kBProgress (3): 377/656 kB | 344/650 kB | 358/662 kBProgress (3): 377/656 kB | 348/650 kB | 358/662 kBProgress (3): 377/656 kB | 348/650 kB | 362/662 kBProgress (3): 377/656 kB | 352/650 kB | 362/662 kBProgress (3): 377/656 kB | 352/650 kB | 366/662 kBProgress (3): 381/656 kB | 352/650 kB | 366/662 kBProgress (3): 381/656 kB | 356/650 kB | 366/662 kBProgress (3): 381/656 kB | 356/650 kB | 370/662 kBProgress (3): 385/656 kB | 356/650 kB | 370/662 kBProgress (3): 385/656 kB | 356/650 kB | 374/662 kBProgress (3): 389/656 kB | 356/650 kB | 374/662 kBProgress (3): 389/656 kB | 360/650 kB | 374/662 kBProgress (3): 393/656 kB | 360/650 kB | 374/662 kBProgress (3): 393/656 kB | 360/650 kB | 378/662 kBProgress (3): 393/656 kB | 360/650 kB | 382/662 kBProgress (3): 393/656 kB | 365/650 kB | 382/662 kBProgress (3): 393/656 kB | 365/650 kB | 387/662 kBProgress (3): 397/656 kB | 365/650 kB | 387/662 kBProgress (3): 397/656 kB | 369/650 kB | 387/662 kBProgress (3): 397/656 kB | 369/650 kB | 391/662 kBProgress (3): 397/656 kB | 373/650 kB | 391/662 kBProgress (3): 401/656 kB | 373/650 kB | 391/662 kBProgress (3): 401/656 kB | 377/650 kB | 391/662 kBProgress (3): 401/656 kB | 377/650 kB | 395/662 kBProgress (3): 406/656 kB | 377/650 kB | 395/662 kBProgress (3): 406/656 kB | 381/650 kB | 395/662 kBProgress (3): 406/656 kB | 381/650 kB | 399/662 kBProgress (3): 406/656 kB | 385/650 kB | 399/662 kBProgress (3): 410/656 kB | 385/650 kB | 399/662 kBProgress (3): 410/656 kB | 389/650 kB | 399/662 kBProgress (3): 410/656 kB | 393/650 kB | 399/662 kBProgress (3): 410/656 kB | 393/650 kB | 403/662 kBProgress (3): 410/656 kB | 397/650 kB | 403/662 kBProgress (3): 410/656 kB | 401/650 kB | 403/662 kBProgress (3): 410/656 kB | 406/650 kB | 403/662 kBProgress (3): 410/656 kB | 406/650 kB | 407/662 kBProgress (3): 410/656 kB | 410/650 kB | 407/662 kBProgress (3): 410/656 kB | 410/650 kB | 411/662 kBProgress (3): 414/656 kB | 410/650 kB | 411/662 kBProgress (3): 414/656 kB | 410/650 kB | 415/662 kBProgress (3): 418/656 kB | 410/650 kB | 415/662 kBProgress (3): 418/656 kB | 414/650 kB | 415/662 kBProgress (3): 418/656 kB | 414/650 kB | 419/662 kBProgress (3): 422/656 kB | 414/650 kB | 419/662 kBProgress (3): 422/656 kB | 414/650 kB | 423/662 kBProgress (3): 426/656 kB | 414/650 kB | 423/662 kBProgress (3): 426/656 kB | 418/650 kB | 423/662 kBProgress (3): 426/656 kB | 418/650 kB | 427/662 kBProgress (3): 426/656 kB | 422/650 kB | 427/662 kBProgress (3): 430/656 kB | 422/650 kB | 427/662 kBProgress (3): 430/656 kB | 422/650 kB | 432/662 kBProgress (3): 430/656 kB | 426/650 kB | 432/662 kBProgress (3): 434/656 kB | 426/650 kB | 432/662 kBProgress (3): 434/656 kB | 426/650 kB | 436/662 kBProgress (3): 434/656 kB | 430/650 kB | 436/662 kBProgress (3): 438/656 kB | 430/650 kB | 436/662 kBProgress (3): 438/656 kB | 430/650 kB | 440/662 kBProgress (3): 438/656 kB | 434/650 kB | 440/662 kBProgress (3): 442/656 kB | 434/650 kB | 440/662 kBProgress (3): 442/656 kB | 438/650 kB | 440/662 kBProgress (3): 442/656 kB | 438/650 kB | 444/662 kBProgress (3): 442/656 kB | 442/650 kB | 444/662 kBProgress (3): 446/656 kB | 442/650 kB | 444/662 kBProgress (3): 446/656 kB | 442/650 kB | 448/662 kBProgress (3): 451/656 kB | 442/650 kB | 448/662 kBProgress (3): 451/656 kB | 442/650 kB | 452/662 kBProgress (3): 451/656 kB | 446/650 kB | 452/662 kBProgress (3): 455/656 kB | 446/650 kB | 452/662 kBProgress (3): 455/656 kB | 451/650 kB | 452/662 kBProgress (3): 455/656 kB | 451/650 kB | 456/662 kBProgress (3): 459/656 kB | 451/650 kB | 456/662 kBProgress (3): 459/656 kB | 455/650 kB | 456/662 kBProgress (3): 459/656 kB | 455/650 kB | 460/662 kBProgress (3): 463/656 kB | 455/650 kB | 460/662 kBProgress (3): 463/656 kB | 459/650 kB | 460/662 kBProgress (3): 463/656 kB | 459/650 kB | 464/662 kBProgress (3): 467/656 kB | 459/650 kB | 464/662 kBProgress (3): 467/656 kB | 459/650 kB | 468/662 kBProgress (3): 471/656 kB | 459/650 kB | 468/662 kBProgress (3): 471/656 kB | 463/650 kB | 468/662 kBProgress (3): 471/656 kB | 463/650 kB | 473/662 kBProgress (3): 475/656 kB | 463/650 kB | 473/662 kBProgress (3): 475/656 kB | 467/650 kB | 473/662 kBProgress (3): 475/656 kB | 471/650 kB | 473/662 kBProgress (3): 479/656 kB | 471/650 kB | 473/662 kBProgress (3): 479/656 kB | 471/650 kB | 477/662 kBProgress (3): 483/656 kB | 471/650 kB | 477/662 kBProgress (3): 483/656 kB | 475/650 kB | 477/662 kBProgress (3): 483/656 kB | 475/650 kB | 481/662 kBProgress (3): 487/656 kB | 475/650 kB | 481/662 kBProgress (3): 487/656 kB | 475/650 kB | 485/662 kBProgress (3): 487/656 kB | 479/650 kB | 485/662 kBProgress (3): 492/656 kB | 479/650 kB | 485/662 kBProgress (3): 492/656 kB | 483/650 kB | 485/662 kBProgress (3): 492/656 kB | 483/650 kB | 489/662 kBProgress (3): 492/656 kB | 487/650 kB | 489/662 kBProgress (3): 492/656 kB | 487/650 kB | 493/662 kBProgress (3): 492/656 kB | 492/650 kB | 493/662 kBProgress (3): 496/656 kB | 492/650 kB | 493/662 kBProgress (3): 496/656 kB | 492/650 kB | 497/662 kBProgress (3): 500/656 kB | 492/650 kB | 497/662 kBProgress (3): 504/656 kB | 492/650 kB | 497/662 kBProgress (3): 504/656 kB | 496/650 kB | 497/662 kBProgress (3): 504/656 kB | 496/650 kB | 501/662 kBProgress (3): 504/656 kB | 500/650 kB | 501/662 kBProgress (3): 508/656 kB | 500/650 kB | 501/662 kBProgress (3): 508/656 kB | 500/650 kB | 505/662 kBProgress (3): 508/656 kB | 504/650 kB | 505/662 kBProgress (3): 512/656 kB | 504/650 kB | 505/662 kBProgress (3): 516/656 kB | 504/650 kB | 505/662 kBProgress (3): 516/656 kB | 504/650 kB | 509/662 kBProgress (3): 520/656 kB | 504/650 kB | 509/662 kBProgress (3): 520/656 kB | 504/650 kB | 514/662 kBProgress (3): 520/656 kB | 508/650 kB | 514/662 kBProgress (3): 524/656 kB | 508/650 kB | 514/662 kBProgress (3): 524/656 kB | 508/650 kB | 518/662 kBProgress (3): 524/656 kB | 508/650 kB | 522/662 kBProgress (3): 528/656 kB | 508/650 kB | 522/662 kBProgress (3): 528/656 kB | 512/650 kB | 522/662 kBProgress (3): 532/656 kB | 512/650 kB | 522/662 kBProgress (3): 532/656 kB | 512/650 kB | 526/662 kBProgress (3): 532/656 kB | 516/650 kB | 526/662 kBProgress (3): 537/656 kB | 516/650 kB | 526/662 kBProgress (3): 537/656 kB | 516/650 kB | 530/662 kBProgress (3): 541/656 kB | 516/650 kB | 530/662 kBProgress (3): 541/656 kB | 520/650 kB | 530/662 kBProgress (3): 541/656 kB | 520/650 kB | 534/662 kBProgress (3): 541/656 kB | 524/650 kB | 534/662 kBProgress (3): 541/656 kB | 524/650 kB | 538/662 kBProgress (3): 545/656 kB | 524/650 kB | 538/662 kBProgress (3): 549/656 kB | 524/650 kB | 538/662 kBProgress (3): 549/656 kB | 528/650 kB | 538/662 kBProgress (3): 549/656 kB | 528/650 kB | 542/662 kBProgress (3): 553/656 kB | 528/650 kB | 542/662 kBProgress (3): 553/656 kB | 532/650 kB | 542/662 kBProgress (3): 557/656 kB | 532/650 kB | 542/662 kBProgress (3): 557/656 kB | 532/650 kB | 546/662 kBProgress (3): 557/656 kB | 532/650 kB | 550/662 kBProgress (3): 557/656 kB | 537/650 kB | 550/662 kBProgress (3): 561/656 kB | 537/650 kB | 550/662 kBProgress (3): 561/656 kB | 537/650 kB | 554/662 kBProgress (3): 561/656 kB | 541/650 kB | 554/662 kBProgress (3): 565/656 kB | 541/650 kB | 554/662 kBProgress (3): 569/656 kB | 541/650 kB | 554/662 kBProgress (3): 569/656 kB | 541/650 kB | 559/662 kBProgress (3): 569/656 kB | 545/650 kB | 559/662 kBProgress (3): 569/656 kB | 545/650 kB | 563/662 kBProgress (3): 569/656 kB | 549/650 kB | 563/662 kBProgress (3): 573/656 kB | 549/650 kB | 563/662 kBProgress (3): 573/656 kB | 549/650 kB | 567/662 kBProgress (3): 573/656 kB | 553/650 kB | 567/662 kBProgress (3): 573/656 kB | 553/650 kB | 571/662 kBProgress (3): 573/656 kB | 557/650 kB | 571/662 kBProgress (3): 578/656 kB | 557/650 kB | 571/662 kBProgress (3): 578/656 kB | 557/650 kB | 575/662 kBProgress (3): 578/656 kB | 561/650 kB | 575/662 kBProgress (3): 582/656 kB | 561/650 kB | 575/662 kBProgress (3): 582/656 kB | 565/650 kB | 575/662 kBProgress (3): 586/656 kB | 565/650 kB | 575/662 kBProgress (3): 586/656 kB | 565/650 kB | 579/662 kBProgress (3): 586/656 kB | 569/650 kB | 579/662 kBProgress (3): 590/656 kB | 569/650 kB | 579/662 kBProgress (3): 590/656 kB | 569/650 kB | 583/662 kBProgress (3): 590/656 kB | 573/650 kB | 583/662 kBProgress (3): 590/656 kB | 573/650 kB | 587/662 kBProgress (3): 594/656 kB | 573/650 kB | 587/662 kBProgress (3): 594/656 kB | 578/650 kB | 587/662 kBProgress (3): 598/656 kB | 578/650 kB | 587/662 kBProgress (3): 598/656 kB | 578/650 kB | 591/662 kBProgress (3): 598/656 kB | 582/650 kB | 591/662 kBProgress (3): 598/656 kB | 582/650 kB | 595/662 kBProgress (3): 598/656 kB | 586/650 kB | 595/662 kBProgress (3): 602/656 kB | 586/650 kB | 595/662 kBProgress (3): 602/656 kB | 586/650 kB | 600/662 kBProgress (3): 602/656 kB | 590/650 kB | 600/662 kBProgress (3): 606/656 kB | 590/650 kB | 600/662 kBProgress (3): 606/656 kB | 590/650 kB | 604/662 kBProgress (3): 606/656 kB | 590/650 kB | 608/662 kBProgress (3): 606/656 kB | 594/650 kB | 608/662 kBProgress (3): 610/656 kB | 594/650 kB | 608/662 kBProgress (3): 610/656 kB | 594/650 kB | 612/662 kBProgress (3): 610/656 kB | 598/650 kB | 612/662 kBProgress (3): 614/656 kB | 598/650 kB | 612/662 kBProgress (3): 614/656 kB | 598/650 kB | 616/662 kBProgress (3): 614/656 kB | 602/650 kB | 616/662 kBProgress (3): 618/656 kB | 602/650 kB | 616/662 kBProgress (3): 618/656 kB | 602/650 kB | 620/662 kBProgress (3): 618/656 kB | 606/650 kB | 620/662 kBProgress (3): 623/656 kB | 606/650 kB | 620/662 kBProgress (3): 623/656 kB | 606/650 kB | 624/662 kBProgress (3): 627/656 kB | 606/650 kB | 624/662 kBProgress (3): 627/656 kB | 610/650 kB | 624/662 kBProgress (3): 627/656 kB | 610/650 kB | 628/662 kBProgress (3): 631/656 kB | 610/650 kB | 628/662 kBProgress (3): 631/656 kB | 614/650 kB | 628/662 kBProgress (3): 631/656 kB | 614/650 kB | 632/662 kBProgress (3): 635/656 kB | 614/650 kB | 632/662 kBProgress (3): 635/656 kB | 618/650 kB | 632/662 kBProgress (3): 635/656 kB | 618/650 kB | 636/662 kBProgress (3): 639/656 kB | 618/650 kB | 636/662 kBProgress (3): 639/656 kB | 623/650 kB | 636/662 kBProgress (3): 639/656 kB | 623/650 kB | 640/662 kBProgress (3): 639/656 kB | 627/650 kB | 640/662 kBProgress (3): 643/656 kB | 627/650 kB | 640/662 kBProgress (3): 643/656 kB | 627/650 kB | 645/662 kBProgress (3): 643/656 kB | 631/650 kB | 645/662 kBProgress (3): 643/656 kB | 631/650 kB | 649/662 kBProgress (3): 643/656 kB | 635/650 kB | 649/662 kBProgress (3): 643/656 kB | 635/650 kB | 653/662 kBProgress (3): 643/656 kB | 639/650 kB | 653/662 kBProgress (3): 643/656 kB | 639/650 kB | 657/662 kBProgress (3): 643/656 kB | 643/650 kB | 657/662 kBProgress (3): 647/656 kB | 643/650 kB | 657/662 kBProgress (3): 647/656 kB | 643/650 kB | 661/662 kBProgress (3): 647/656 kB | 647/650 kB | 661/662 kBProgress (3): 651/656 kB | 647/650 kB | 661/662 kBProgress (3): 651/656 kB | 647/650 kB | 662 kB    Progress (3): 651/656 kB | 650 kB | 662 kB    Progress (3): 655/656 kB | 650 kB | 662 kBProgress (3): 656 kB | 650 kB | 662 kB                                          Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-html-report/1.7.5/pitest-html-report-1.7.5.jar (656 kB at 1.4 MB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest-entry/1.7.5/pitest-entry-1.7.5.jar (650 kB at 1.4 MB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/pitest/pitest/1.7.5/pitest-1.7.5.jar (662 kB at 1.4 MB/s)
+[INFO] Root dir is : /bitnami/jenkins/home/workspace/CICD_pipeline
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Enum constructor filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Plugin available : Git integration
+[INFO] Plugin available : Support for mutating kotlin bytecode
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : TestNG plugin
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,RETURN_VALS,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_RETURN_VALUES_MUTATOR,EXPERIMENTAL_SWITCH,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Mutating from /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+8:43:43 PM PIT >> INFO : Project base directory is /bitnami/jenkins/home/workspace/CICD_pipeline
+8:43:43 PM PIT >> INFO : ---------------------------------------------------------------------------
+8:43:43 PM PIT >> INFO : Enabled (+) and disabled (-) features.
+8:43:43 PM PIT >> INFO : -----------------------------------------
+8:43:43 PM PIT >> INFO : +fann           Filters mutations in classes and methods with matching annotations of class or runtime retention
+8:43:43 PM PIT >> INFO :   [annotation]    Annotation to avoid (full package name not required)
+8:43:43 PM PIT >> INFO : +fenum          Filters mutations in enum constructors
+8:43:43 PM PIT >> INFO : +ffblock        Filters mutations in code duplicated by finally block inlining
+8:43:43 PM PIT >> INFO : +ffeach         Filters mutations in compiler generated code that implements for each loops
+8:43:43 PM PIT >> INFO : +ffloop         Filters any mutations to increments in for loops as they may cause timeouts
+8:43:43 PM PIT >> INFO : +finfinc        Filters mutations to increments that may cause infinite loops
+8:43:43 PM PIT >> INFO : +finfit         Filters mutations that may cause infinite loops by removing calls to iterator.next
+8:43:43 PM PIT >> INFO : +finull         Filters mutations in compiler generated code that checks for null by calling getClass
+8:43:43 PM PIT >> INFO : +fkotlin        Filters out junk mutations in bytecode created by compiler for kotlin language features
+8:43:43 PM PIT >> INFO : +flogcall       Filters mutations in code that makes calls to logging frameworks
+8:43:43 PM PIT >> INFO : +fmrnull        Filters mutations in compiler generated code that inserts Objects.requireNonNull for method references
+8:43:43 PM PIT >> INFO : +frecord        Filters mutations in compiler generated record code
+8:43:43 PM PIT >> INFO : +fretequiv      Filters return vals mutants with bytecode equivalent to the unmutated class
+8:43:43 PM PIT >> INFO : +fsequivequals  Filters equivalent mutations that affect only performance in short cutting equals methods
+8:43:43 PM PIT >> INFO : +fstati         Filters mutations in static initializers and code called only from them
+8:43:43 PM PIT >> INFO : +ftrywr         Filters mutations in code generated for try with resources statements
+8:43:43 PM PIT >> INFO : -classlimit     Limits the maximum number of mutations per class
+8:43:43 PM PIT >> INFO :   [limit]         Integer value for maximum mutations to create per class
+8:43:43 PM PIT >> INFO : -export         Exports mutants bytecode and other details to disk
+8:43:43 PM PIT >> INFO : -git            Git integration
+8:43:43 PM PIT >> INFO : -kotlin         Support for mutating kotlin bytecode
+8:43:43 PM PIT >> INFO : ---------------------------------------------------------------------------
+8:43:47 PM PIT >> FINE : Running report with ReportOptions [targetClasses=[org.joda.time.tz.*, org.joda.time.*, org.joda.time.base.*, org.joda.time.format.*, org.joda.time.convert.*, tutorial.*, org.joda.time.chrono.*, org.joda.time.field.*], excludedMethods=[], excludedClasses=[tutorial*], excludedTestClasses=[^tutorial.*$], codePaths=[/bitnami/jenkins/home/workspace/CICD_pipeline/target/classes], reportDir=/bitnami/jenkins/home/workspace/CICD_pipeline/target/pit-reports, historyInputLocation=null, historyOutputLocation=null, sourceDirs=[/bitnami/jenkins/home/workspace/CICD_pipeline/src/main/java, /bitnami/jenkins/home/workspace/CICD_pipeline/target/generated-sources/annotations, /bitnami/jenkins/home/workspace/CICD_pipeline/src/test/java, /bitnami/jenkins/home/workspace/CICD_pipeline/target/generated-test-sources/test-annotations], classPathElements=[/bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes, /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes, /bitnami/jenkins/home/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar, /bitnami/jenkins/home/.m2/repository/junit/junit/4.12/junit-4.12.jar, /bitnami/jenkins/home/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /bitnami/jenkins/home/.m2/repository/org/pitest/pitest-junit5-plugin/0.15/pitest-junit5-plugin-0.15.jar, /bitnami/jenkins/home/.m2/repository/org/pitest/pitest/1.7.5/pitest-1.7.5.jar], mutators=[], features=[], dependencyAnalysisMaxDistance=-1, jvmArgs=[-Djava.awt.headless=true], numberOfThreads=8, timeoutFactor=1.25, timeoutConstant=3000, targetTests=[^org\.joda\.time\.tz\..*$, ^org\.joda\.time\..*$, ^org\.joda\.time\.chrono\.gj\..*$, ^org\.joda\.time\.format\..*$, ^org\.joda\.time\.convert\..*$, ^org\.joda\.time\.chrono\..*$, ^org\.joda\.time\.field\..*$], loggingClasses=[], verbosity=VERBOSE, failWhenNoMutations=true, outputs=[HTML, XML], groupConfig=TestGroupConfig [excludedGroups=[], includedGroups=[]], fullMutationMatrix=false, mutationUnitSize=1, shouldCreateTimestampedReports=true, detectInlinedCode=true, exportLineCoverage=false, mutationThreshold=0, testStrengthThreshold=0, coverageThreshold=0, mutationEngine=gregor, javaExecutable=null, includeLaunchClasspath=true, properties={}, maxSurvivors=0, excludedRunners=[], includedTestMethods=[], testPlugin=, useClasspathJar=false, skipFailingTests=false]
+8:43:47 PM PIT >> FINE : System class path is /opt/apache-maven-3.8.8/boot/plexus-classworlds-2.6.0.jar
+8:43:47 PM PIT >> FINE : Maximum available memory is 6388 mb
+8:43:56 PM PIT >> FINE : Could not find java/util/HashMap on classpath for analysis. Falling back to classloader
+8:43:56 PM PIT >> FINE : Could not find java/util/Map on classpath for analysis. Falling back to classloader
+8:43:56 PM PIT >> FINE : Could not find java/util/AbstractMap on classpath for analysis. Falling back to classloader
+8:43:56 PM PIT >> FINE : Could not find java/lang/Object on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/lang/IllegalArgumentException on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/util/ArrayList on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/lang/RuntimeException on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/lang/Exception on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/lang/Throwable on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/util/AbstractList on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/util/AbstractCollection on classpath for analysis. Falling back to classloader
+8:43:59 PM PIT >> FINE : Could not find java/lang/Object on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/util/concurrent/ConcurrentHashMap on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/util/Map on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/util/AbstractMap on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/Object on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/io/FileInputStream on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/io/InputStream on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/RuntimeException on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/String on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/Exception on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/Throwable on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/IllegalArgumentException on classpath for analysis. Falling back to classloader
+8:44:02 PM PIT >> FINE : Could not find java/lang/SecurityException on classpath for analysis. Falling back to classloader
+8:44:03 PM PIT >> FINE : Incremental analysis set 10081 mutations to a status of NOT_STARTED
+8:44:03 PM PIT >> INFO : Incremental analysis reduced number of mutations by 0
+8:44:03 PM PIT >> INFO : Created  10081 mutation test units in pre scan
+8:44:05 PM PIT >> FINE : MINION : Installing PIT agent
+8:44:05 PM PIT >> INFO : Sending 470 test classes to minion
+8:44:05 PM PIT >> INFO : Sent tests to minion
+8:44:05 PM PIT >> INFO : MINION : 8:44:05 PM PIT >> FINE : Expecting 470 tests classes from parent
+8:44:05 PM PIT >> INFO : MINION : 8:44:05 PM PIT >> FINE : Tests classes received
+8:44:05 PM PIT >> FINE : MINION : org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+8:44:05 PM PIT >> FINE : MINION : 	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:296)
+8:44:05 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:55)
+8:44:05 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:134)
+8:44:05 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:125)
+8:44:05 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:109)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.junit5.JUnit5TestUnitFinder.<init>(JUnit5TestUnitFinder.java:54)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.junit5.JUnit5Configuration.testUnitFinder(JUnit5Configuration.java:43)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+8:44:05 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.makeFinder(PrioritisingTestConfiguration.java:61)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.<init>(PrioritisingTestConfiguration.java:20)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.MinionSettings.getTestFrameworkPlugin(MinionSettings.java:38)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.createTestPlugin(CoverageMinion.java:168)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.getTestsFromParent(CoverageMinion.java:132)
+8:44:05 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.main(CoverageMinion.java:82)
+8:44:05 PM PIT >> INFO : MINION : 8:44:05 PM PIT >> SEVERE : Error calculating coverage. Process will exit.
+8:44:05 PM PIT >> INFO : MINION : org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+8:44:05 PM PIT >> INFO : MINION : 	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:296)
+8:44:05 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:55)
+8:44:05 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:134)
+8:44:05 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:125)
+8:44:05 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:109)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.junit5.JUnit5TestUnitFinder.<init>(JUnit5TestUnitFinder.java:54)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.junit5.JUnit5Configuration.testUnitFinder(JUnit5Configuration.java:43)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+8:44:05 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.makeFinder(PrioritisingTestConfiguration.java:61)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.<init>(PrioritisingTestConfiguration.java:20)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.MinionSettings.getTestFrameworkPlugin(MinionSettings.java:38)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.createTestPlugin(CoverageMinion.java:168)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.getTestsFromParent(CoverageMinion.java:132)
+8:44:05 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.main(CoverageMinion.java:82)
+8:44:05 PM PIT >> SEVERE : Coverage generator Minion exited abnormally due to UNKNOWN_ERROR
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:01 min
+[INFO] Finished at: 2024-07-25T20:44:05Z
+[INFO] ------------------------------------------------------------------------
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Failed to execute goal org.pitest:pitest-maven:1.7.5:mutationCoverage (default-cli) on project joda-time: Execution default-cli of goal org.pitest:pitest-maven:1.7.5:mutationCoverage failed: Coverage generation minion exited abnormally!
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Please copy and paste the information and the complete stacktrace below when reporting an issue
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] VM : OpenJDK 64-Bit Server VM
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Vendor : BellSoft
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Version : 17.0.12+10-LTS
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Uptime : 242865
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Input -> 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  1 : -Dclassworlds.conf=/opt/apache-maven-3.8.8/bin/m2.conf
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  2 : -Dmaven.home=/opt/apache-maven-3.8.8
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  3 : -Dlibrary.jansi.path=/opt/apache-maven-3.8.8/lib/jansi-native
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  4 : -Dmaven.multiModuleProjectDirectory=/bitnami/jenkins/home/workspace/CICD_pipeline
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] BootClassPathSupported : false
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Please copy and paste the information and the complete stacktrace below when reporting an issue
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] VM : OpenJDK 64-Bit Server VM
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Vendor : BellSoft
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Version : 17.0.12+10-LTS
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Uptime : 242868
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Input -> 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  1 : -Dclassworlds.conf=/opt/apache-maven-3.8.8/bin/m2.conf
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  2 : -Dmaven.home=/opt/apache-maven-3.8.8
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  3 : -Dlibrary.jansi.path=/opt/apache-maven-3.8.8/lib/jansi-native
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  4 : -Dmaven.multiModuleProjectDirectory=/bitnami/jenkins/home/workspace/CICD_pipeline
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] BootClassPathSupported : false
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] -> [Help 1]
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Publishing Clover coverage report...
+No Clover report will be published due to a build Failure
+Looking for PIT reports in /bitnami/jenkins/home/workspace/CICD_pipeline
+ERROR: Step ?Record Pit mutation testing report? aborted due to exception: 
+java.io.IOException: No reports found at location:target/pit-reports/**/mutations.xml
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:366)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:347)
+	at hudson.FilePath.act(FilePath.java:1232)
+	at hudson.FilePath.act(FilePath.java:1215)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher.perform(PitPublisher.java:118)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:47)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:767)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:711)
+	at hudson.model.Run.execute(Run.java:1917)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: FAILURE

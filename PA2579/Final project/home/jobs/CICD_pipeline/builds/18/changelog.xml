@@ -1,0 +1,10 @@
+commit 99c28b29628a1e9c94109fbc92cdfbf8f2199b18
+tree 94983296ed52f41f19aa194132f50391d51c6257
+parent 3c0f6ffef35f9277f52e99ec4f39d0b456b1663e
+author Uday Jain <uday9k@gmail.com> 2024-07-25 17:53:48 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-25 17:53:48 +0200
+
+    adding pitest-junit5-plugin dependency
+
+
+:100755 100755 87ca30443f4c99e4632c4e38f2a6ebdc8b0e2b8b 1ce73c63ef8ee3b1a3c606bf0a99cd23df40ba6c M	pom.xml
