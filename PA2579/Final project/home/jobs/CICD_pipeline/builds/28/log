@@ -1,0 +1,358 @@
+Started by user [8mha:////4AEwgb1tHlKD3nCyWVj6HjjU9pFR7MYSYESRKex3GvGsAAAAkx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CIwAQDYegtJvwAAAA==[0muser
+Running as SYSTEM
+Building in workspace /bitnami/jenkins/home/workspace/CICD_pipeline
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/SpikeStriker/lecture_ci.git
+ > git init /bitnami/jenkins/home/workspace/CICD_pipeline # timeout=10
+Fetching upstream changes from https://github.com/SpikeStriker/lecture_ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/SpikeStriker/lecture_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SpikeStriker/lecture_ci.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision e13a0d1e0b27344cab54c95f93a257c9448240ce (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e13a0d1e0b27344cab54c95f93a257c9448240ce # timeout=10
+Commit message: "try different version of pitest and junit5 6"
+ > git rev-list --no-walk e13a0d1e0b27344cab54c95f93a257c9448240ce # timeout=10
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ joda-time ---
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:setup (default-cli) @ joda-time ---
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Creating new database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 167 files (8 packages).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Updating existing database at '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'.
+[INFO] Processing files at JAVA_17 source level.
+[INFO] Clover all over. Instrumented 159 files (7 packages).
+[INFO] 4220 test methods detected.
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource to META-INF
+[INFO] Copying 16 resources
+[INFO] Copying 1 resource
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 167 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- exec-maven-plugin:1.4.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ joda-time ---
+[INFO] Surefire report directory: /bitnami/jenkins/home/workspace/CICD_pipeline/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.joda.time.TestAllPackages
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by org.joda.time.TestDateTimeZone (file:/bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes/)
+WARNING: Please consider reporting this to the maintainers of org.joda.time.TestDateTimeZone
+WARNING: System::setSecurityManager will be removed in a future release
+
+TestBuddhistChronology.testCalendar
+
+TestCopticChronology.testCalendar
+
+TestEthiopicChronology.testCalendar
+
+TestIslamicChronology.testCalendar
+
+Testing Gregorian chronology over 1000 iterations
+100% complete (i=1000)
+
+Testing Julian chronology over 1000 iterations
+100% complete (i=1000)
+Writing zoneinfo files
+Writing ZoneInfoMap
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 73.333 sec - in org.joda.time.TestAllPackages
+
+Results :
+
+Tests run: 4212, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:aggregate (default-cli) @ joda-time ---
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- clover-maven-plugin:4.5.2:clover (default-cli) @ joda-time ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /tmp/mvn12473714459515321763resource
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing HTML report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover'
+[INFO] Done. Processed 9 packages in 61042ms (6782ms per package).
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Clover is enabled with initstring '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] OpenClover Version 4.5.2, built on 2024-01-31
+[INFO] Loading coverage database from: '/bitnami/jenkins/home/workspace/CICD_pipeline/target/clover/clover.db'
+[INFO] Writing report to '/bitnami/jenkins/home/workspace/CICD_pipeline/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  09:20 min
+[INFO] Finished at: 2024-07-25T22:51:29Z
+[INFO] ------------------------------------------------------------------------
+[CICD_pipeline] $ /opt/apache-maven-3.8.8/bin/mvn test-compile org.pitest:pitest-maven:mutationCoverage
+[INFO] Scanning for projects...
+[8mha:////4BnE4xIbJboZsKDLBZVSefFRUl3okm6/QxB0nUCn91G7AAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] The project joda-time:joda-time:jar:2.9.9 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.9.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource to META-INF
+[INFO] Copying 16 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 167 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- exec-maven-plugin:1.4.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ joda-time ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[8mha:////4E8UYNYERfcF9TzgTqYKP7bRSZTSksSyuCkKhU0BYAvhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ joda-time ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes
+[INFO] 
+[INFO] --- pitest-maven:1.7.3:mutationCoverage (default-cli) @ joda-time ---
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum constructor filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : TestNG plugin
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,RETURN_VALS,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_RETURN_VALUES_MUTATOR,EXPERIMENTAL_SWITCH,EXPERIMENTAL_BIG_INTEGER,ABS,AOD1,AOD2,AOR1,AOR2,AOR3,AOR4,CRCR1,CRCR2,CRCR3,CRCR4,CRCR5,CRCR6,OBBN1,OBBN2,OBBN3,ROR1,ROR2,ROR3,ROR4,ROR5,UOI1,UOI2,UOI3,UOI4
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Mutating from /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes
+[INFO] Defaulting target classes to match packages in build directory
+[INFO] Defaulting target tests to match packages in test build directory
+10:55:12 PM PIT >> INFO : ---------------------------------------------------------------------------
+10:55:12 PM PIT >> INFO : Enabled (+) and disabled (-) features.
+10:55:12 PM PIT >> INFO : -----------------------------------------
+10:55:12 PM PIT >> INFO : +FANN           Filters mutations in classes and methods with matching annotations of class or runtime retention
+10:55:12 PM PIT >> INFO :   [annotation]    Annotation to avoid (full package name not required)
+10:55:12 PM PIT >> INFO : +FENUM          Filters mutations in enum constructors
+10:55:12 PM PIT >> INFO : +FFBLOCK        Filters mutations in code duplicated by finally block inlining
+10:55:12 PM PIT >> INFO : +FFEACH         Filters mutations in compiler generated code that implements for each loops
+10:55:12 PM PIT >> INFO : +FFLOOP         Filters any mutations to increments in for loops as they may cause timeouts
+10:55:12 PM PIT >> INFO : +FINFINC        Filters mutations to increments that may cause infinite loops
+10:55:12 PM PIT >> INFO : +FINFIT         Filters mutations that may cause infinite loops by removing calls to iterator.next
+10:55:12 PM PIT >> INFO : +FINULL         Filters mutations in compiler generated code that checks for null by calling getClass
+10:55:12 PM PIT >> INFO : +FKOTLIN        Filters out junk mutations in bytecode created by compiler for kotlin language features
+10:55:12 PM PIT >> INFO : +FLOGCALL       Filters mutations in code that makes calls to logging frameworks
+10:55:12 PM PIT >> INFO : +FMRNULL        Filters mutations in compiler generated code that inserts Objects.requireNonNull for method references
+10:55:12 PM PIT >> INFO : +FRECORD        Filters mutations in compiler generated record code
+10:55:12 PM PIT >> INFO : +FRETEQUIV      Filters return vals mutants with bytecode equivalent to the unmutated class
+10:55:12 PM PIT >> INFO : +FSEQUIVEQUALS  Filters equivalent mutations that affect only performance in short cutting equals methods
+10:55:12 PM PIT >> INFO : +FSTATI         Filters mutations in static initializers and code called only from them
+10:55:12 PM PIT >> INFO : +FTRYWR         Filters mutations in code generated for try with resources statements
+10:55:12 PM PIT >> INFO : -CLASSLIMIT     Limits the maximum number of mutations per class
+10:55:12 PM PIT >> INFO :   [limit]         Integer value for maximum mutations to create per class
+10:55:12 PM PIT >> INFO : -EXPORT         Exports mutants bytecode and other details to disk
+10:55:12 PM PIT >> INFO : ---------------------------------------------------------------------------
+10:55:16 PM PIT >> FINE : Running report with ReportOptions [targetClasses=[org.joda.time.tz.*, org.joda.time.*, org.joda.time.base.*, org.joda.time.format.*, org.joda.time.convert.*, tutorial.*, org.joda.time.chrono.*, org.joda.time.field.*], excludedMethods=[], excludedClasses=[tutorial*], excludedTestClasses=[^tutorial.*$], codePaths=[/bitnami/jenkins/home/workspace/CICD_pipeline/target/classes], reportDir=/bitnami/jenkins/home/workspace/CICD_pipeline/target/pit-reports, historyInputLocation=null, historyOutputLocation=null, sourceDirs=[/bitnami/jenkins/home/workspace/CICD_pipeline/src/main/java, /bitnami/jenkins/home/workspace/CICD_pipeline/target/generated-sources/annotations, /bitnami/jenkins/home/workspace/CICD_pipeline/src/test/java, /bitnami/jenkins/home/workspace/CICD_pipeline/target/generated-test-sources/test-annotations], classPathElements=[/bitnami/jenkins/home/workspace/CICD_pipeline/target/test-classes, /bitnami/jenkins/home/workspace/CICD_pipeline/target/classes, /bitnami/jenkins/home/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar, /bitnami/jenkins/home/.m2/repository/junit/junit/4.12/junit-4.12.jar, /bitnami/jenkins/home/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /bitnami/jenkins/home/.m2/repository/org/pitest/pitest-junit5-plugin/0.15/pitest-junit5-plugin-0.15.jar, /bitnami/jenkins/home/.m2/repository/org/pitest/pitest/1.7.3/pitest-1.7.3.jar], mutators=[], features=[], dependencyAnalysisMaxDistance=-1, jvmArgs=[-Djava.awt.headless=true], numberOfThreads=8, timeoutFactor=1.25, timeoutConstant=3000, targetTests=[^org\.joda\.time\.tz\..*$, ^org\.joda\.time\..*$, ^org\.joda\.time\.chrono\.gj\..*$, ^org\.joda\.time\.format\..*$, ^org\.joda\.time\.convert\..*$, ^org\.joda\.time\.chrono\..*$, ^org\.joda\.time\.field\..*$], loggingClasses=[], verbosity=VERBOSE, failWhenNoMutations=true, outputs=[HTML, XML], groupConfig=TestGroupConfig [excludedGroups=[], includedGroups=[]], fullMutationMatrix=false, mutationUnitSize=1, shouldCreateTimestampedReports=true, detectInlinedCode=true, exportLineCoverage=false, mutationThreshold=0, testStrengthThreshold=0, coverageThreshold=0, mutationEngine=gregor, javaExecutable=null, includeLaunchClasspath=true, properties={}, maxSurvivors=0, excludedRunners=[], includedTestMethods=[], testPlugin=, useClasspathJar=false, skipFailingTests=false]
+10:55:16 PM PIT >> FINE : System class path is /opt/apache-maven-3.8.8/boot/plexus-classworlds-2.6.0.jar
+10:55:16 PM PIT >> FINE : Maximum available memory is 6388 mb
+10:55:27 PM PIT >> FINE : Could not find java/lang/Object on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/lang/IllegalArgumentException on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/util/ArrayList on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/lang/RuntimeException on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/lang/Exception on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/lang/Throwable on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/util/AbstractList on classpath for analysis. Falling back to classloader
+10:55:28 PM PIT >> FINE : Could not find java/util/AbstractCollection on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/Object on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/util/concurrent/ConcurrentHashMap on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/util/Map on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/util/AbstractMap on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/io/FileInputStream on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/io/InputStream on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/RuntimeException on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/String on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/Exception on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/Throwable on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/IllegalArgumentException on classpath for analysis. Falling back to classloader
+10:55:30 PM PIT >> FINE : Could not find java/lang/SecurityException on classpath for analysis. Falling back to classloader
+10:55:31 PM PIT >> FINE : Incremental analysis set 10081 mutations to a status of NOT_STARTED
+10:55:31 PM PIT >> INFO : Incremental analysis reduced number of mutations by 0
+10:55:31 PM PIT >> INFO : Created  10081 mutation test units in pre scan
+10:55:33 PM PIT >> FINE : MINION : Installing PIT agent
+10:55:34 PM PIT >> INFO : Sending 470 test classes to minion
+10:55:34 PM PIT >> INFO : Sent tests to minion
+10:55:34 PM PIT >> INFO : MINION : 10:55:34 PM PIT >> FINE : Expecting 470 tests classes from parent
+10:55:34 PM PIT >> INFO : MINION : 10:55:34 PM PIT >> FINE : Tests classes received
+10:55:34 PM PIT >> FINE : MINION : org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+10:55:34 PM PIT >> FINE : MINION : 	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:296)
+10:55:34 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:55)
+10:55:34 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:134)
+10:55:34 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:125)
+10:55:34 PM PIT >> FINE : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:109)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.junit5.JUnit5TestUnitFinder.<init>(JUnit5TestUnitFinder.java:54)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.junit5.JUnit5Configuration.testUnitFinder(JUnit5Configuration.java:43)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+10:55:34 PM PIT >> FINE : MINION : 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.makeFinder(PrioritisingTestConfiguration.java:61)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.<init>(PrioritisingTestConfiguration.java:20)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.mutationtest.config.MinionSettings.getTestFrameworkPlugin(MinionSettings.java:38)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.createTestPlugin(CoverageMinion.java:168)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.getTestsFromParent(CoverageMinion.java:132)
+10:55:34 PM PIT >> FINE : MINION : 	at org.pitest.coverage.execute.CoverageMinion.main(CoverageMinion.java:82)
+10:55:34 PM PIT >> INFO : MINION : 10:55:34 PM PIT >> SEVERE : Error calculating coverage. Process will exit.
+10:55:34 PM PIT >> INFO : MINION : org.junit.platform.commons.PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an engine implementation JAR to the classpath
+10:55:34 PM PIT >> INFO : MINION : 	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:296)
+10:55:34 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:55)
+10:55:34 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:134)
+10:55:34 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:125)
+10:55:34 PM PIT >> INFO : MINION : 	at org.junit.platform.launcher.core.LauncherFactory.create(LauncherFactory.java:109)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.junit5.JUnit5TestUnitFinder.<init>(JUnit5TestUnitFinder.java:54)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.junit5.JUnit5Configuration.testUnitFinder(JUnit5Configuration.java:43)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+10:55:34 PM PIT >> INFO : MINION : 	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.makeFinder(PrioritisingTestConfiguration.java:61)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.PrioritisingTestConfiguration.<init>(PrioritisingTestConfiguration.java:20)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.mutationtest.config.MinionSettings.getTestFrameworkPlugin(MinionSettings.java:38)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.createTestPlugin(CoverageMinion.java:168)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.getTestsFromParent(CoverageMinion.java:132)
+10:55:34 PM PIT >> INFO : MINION : 	at org.pitest.coverage.execute.CoverageMinion.main(CoverageMinion.java:82)
+10:55:34 PM PIT >> SEVERE : Coverage generator Minion exited abnormally due to UNKNOWN_ERROR
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:03 min
+[INFO] Finished at: 2024-07-25T22:55:34Z
+[INFO] ------------------------------------------------------------------------
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Failed to execute goal org.pitest:pitest-maven:1.7.3:mutationCoverage (default-cli) on project joda-time: Execution default-cli of goal org.pitest:pitest-maven:1.7.3:mutationCoverage failed: Coverage generation minion exited abnormally!
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Please copy and paste the information and the complete stacktrace below when reporting an issue
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] VM : OpenJDK 64-Bit Server VM
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Vendor : BellSoft
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Version : 17.0.12+10-LTS
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Uptime : 244448
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Input -> 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  1 : -Dclassworlds.conf=/opt/apache-maven-3.8.8/bin/m2.conf
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  2 : -Dmaven.home=/opt/apache-maven-3.8.8
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  3 : -Dlibrary.jansi.path=/opt/apache-maven-3.8.8/lib/jansi-native
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  4 : -Dmaven.multiModuleProjectDirectory=/bitnami/jenkins/home/workspace/CICD_pipeline
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] BootClassPathSupported : false
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Please copy and paste the information and the complete stacktrace below when reporting an issue
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] VM : OpenJDK 64-Bit Server VM
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Vendor : BellSoft
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Version : 17.0.12+10-LTS
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Uptime : 244450
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Input -> 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  1 : -Dclassworlds.conf=/opt/apache-maven-3.8.8/bin/m2.conf
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  2 : -Dmaven.home=/opt/apache-maven-3.8.8
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  3 : -Dlibrary.jansi.path=/opt/apache-maven-3.8.8/lib/jansi-native
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]  4 : -Dmaven.multiModuleProjectDirectory=/bitnami/jenkins/home/workspace/CICD_pipeline
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] BootClassPathSupported : false
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] -> [Help 1]
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4OUj+466QHoq26fliJoYJ2OOQmng4ARKr0q0g1CwmltuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Publishing Clover coverage report...
+No Clover report will be published due to a build Failure
+Looking for PIT reports in /bitnami/jenkins/home/workspace/CICD_pipeline
+ERROR: Step ?Record Pit mutation testing report? aborted due to exception: 
+java.io.IOException: No reports found at location:target/pit-reports/**/mutations.xml
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:366)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher$ParseReportCallable.invoke(PitPublisher.java:347)
+	at hudson.FilePath.act(FilePath.java:1232)
+	at hudson.FilePath.act(FilePath.java:1215)
+	at org.jenkinsci.plugins.pitmutation.PitPublisher.perform(PitPublisher.java:118)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:47)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:767)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:711)
+	at hudson.model.Run.execute(Run.java:1917)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: FAILURE

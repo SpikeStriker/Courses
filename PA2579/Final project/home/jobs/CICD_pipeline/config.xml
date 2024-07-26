@@ -84,17 +84,6 @@
         <statementCoverage>20</statementCoverage>
       </failingTarget>
     </hudson.plugins.clover.CloverPublisher>
-    <org.jenkinsci.plugins.pitmutation.PitPublisher plugin="pitmutation@1.0-18">
-      <buildConditions>
-        <org.jenkinsci.plugins.pitmutation.PitPublisher_-PercentageThresholdCondition>
-          <percentage>0.0</percentage>
-          <outer-class reference="../../.."/>
-        </org.jenkinsci.plugins.pitmutation.PitPublisher_-PercentageThresholdCondition>
-      </buildConditions>
-      <mutationStatsFile>target/pit-reports/**/mutations.xml</mutationStatsFile>
-      <killRatioMustImprove>false</killRatioMustImprove>
-      <minimumKillRatio>0.0</minimumKillRatio>
-    </org.jenkinsci.plugins.pitmutation.PitPublisher>
   </publishers>
   <buildWrappers>
     <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.27"/>

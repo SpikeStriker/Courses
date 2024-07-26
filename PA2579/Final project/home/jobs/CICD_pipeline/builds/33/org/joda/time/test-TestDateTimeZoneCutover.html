@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="../../../img/clover.ico" />
+
+    <link rel="stylesheet" href="../../../aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="../../../aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="../../../aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('../../../style.css');
+        @import url('../../../tree.css');
+        
+    </style>
+
+    <script src="../../../jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../../../aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="../../../aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="../../../aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="../../../package-nodes-tree.js" type="text/javascript"></script>
+    <script src="../../../clover-tree.js" type="text/javascript"></script>
+    <script src="../../../clover.js" type="text/javascript"></script>
+    <script src="../../../clover-descriptions.js" type="text/javascript"></script>
+    <script src="../../../cloud.js" type="text/javascript"></script>
+
+            <title>Joda-Time 2.9.9</title>
+    </head>
+
+<body>
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="https://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="https://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                    <a href="http://www.joda.org/joda-time/" target="_top">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="../../../img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+                    </a>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                            <a href="http://www.joda.org/joda-time/" target="_top">
+                                        Joda-Time 2.9.9
+                                        </a>
+                    </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="">
+                    <a href="../../../dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                <div class="packages-tree-wrapper" data-root-relative="../../../" data-package-name="org.joda.time">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs">
+    
+    <li><a href="../../../dashboard.html"> Project Clover database Fri Jul 26 2024 08:17:02 UTC</a></li>
+     <li><a href="test-pkg-summary.html">Package org.joda.time</a></li>
+</ol></div>
+    
+<h1 class="aui-h2-clover">
+            
+        Class TestDateTimeZoneCutover
+    </h1>
+
+
+ 
+<div class="aui-tabs horizontal-tabs" id="tabs-file">
+    <ul class="tabs-menu">
+        <li class="menu-item">
+            <a href="TestDateTimeZoneCutover.html"><strong>Source file</strong></a>
+        </li>
+        <li class="menu-item active-tab">
+            <a href="#tabs-file-test-results"><strong>Test results</strong></a>
+        </li>
+    </ul>
+    <div class="tabs-pane aui-tabs-pane-100-pcnt active-pane" id="tabs-file-test-results">
+        <div>&#160;</div>
+
+
+
+
+<table id="testClassSummaryTable" class="aui">
+<thead>
+    <tr>
+        <th width="40%"><label>Class</label></th>
+        <th width="10%"><label title="Total number of tests (or test iterations) executed.">Tests</label></th>
+        <th width="10%"><label title="Number of failed tests">Fail</label></th>
+        <th width="10%"><label title="Number of test errors">Error</label></th>
+        <th width="10%">
+            <label title="The total time in seconds taken to run this set of tests.">Time (secs)</label>
+        </th>
+        <th width="20%"><label>% Tests Success</label></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>TestDateTimeZoneCutover</td>
+        <td class="testPasses"><span class="sortValue">120</span>120</td>
+<td class=""><span class="sortValue">0</span>0</td>
+<td class=""><span class="sortValue">0</span>0</td>
+        <td>0.192</td>
+        <td class="align-middle">
+            
+
+<div style="display: table; width: 100%">
+            <div class="barGraphValue"><span class="sortValue">1.0</span>100%</div>         <div style="display: table-cell">
+            
+            <div title="0% Errors" style="min-width: 40px;" class="testBarError">
+                <div title="100% of tests passed&lt;br/&gt;0% of tests failed" class="testBarFail" style="width: 100%"><div class="testBarPass" style="width: 100%"></div></div>
+            </div>
+        </div>
+    </div>        </td>
+    </tr>
+</tbody>
+</table>
+
+<div>&#160;</div>
+
+<table id="testClassTestsTable" class="aui aui-table-sortable">
+<thead>
+    <tr>
+        <th width="40%">
+            <label title="Tests (or test iterations) which were executed.">Tests</label>
+        </th>
+        <th width="10%"><label>Started</label></th>
+        <th width="10%"><label>Status</label></th>
+        <th width="10%">
+            <label title="The total time in seconds taken to run this set of tests.">Time (secs)</label>
+        </th>
+        <th width="30%"><label>Message</label></th>
+    </tr>
+</thead>
+<tbody>
+
+
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusHour_Guatemata_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_minusHour_Guatemata_Autumn_23t.html">TestDateTimeZoneCutover.test_DateTime_minusHour_Guatemata_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025591</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusDay_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_plusDay_Gaza_su.html">TestDateTimeZoneCutover.test_DateTime_plusDay_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026296</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_new_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_new_Turk_jl.html">TestDateTimeZoneCutover.test_DateTime_new_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026324</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testPlusMillisInDstChange</span><a href="TestDateTimeZoneCutover_testPlusMillisInDstChange_2o2.html">TestDateTimeZoneCutover.testPlusMillisInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025566</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testForum4013394_retainOffsetWhenRetainFields_sameOffsetsDifferentZones</span><a href="TestDateTimeZoneCutover_testForum4013394_retainOffsetWhenRetainFields_sameOffsetsDifferentZones_1iy.html">TestDateTimeZoneCutover.testForum4013394_retainOffsetWhenRetainFields_sameOffsetsDifferentZones</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026460</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.017</span>0.017</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_day_NewYork_Spring_preCutover_6b.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025724</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_Gaza_234.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026443</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MoscowIsCorrect_Spring</span><a href="TestDateTimeZoneCutover_test_MoscowIsCorrect_Spring_55.html">TestDateTimeZoneCutover.test_MoscowIsCorrect_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025898</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_addWrapFieldDay_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_addWrapFieldDay_Turk_1ai.html">TestDateTimeZoneCutover.test_DateTime_addWrapFieldDay_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026393</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_postCutover_26y.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025390</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_LocalDate_toDateMidnight_Gaza</span><a href="TestDateTimeZoneCutover_test_LocalDate_toDateMidnight_Gaza_qr.html">TestDateTimeZoneCutover.test_LocalDate_toDateMidnight_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025406</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minute_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_minute_NewYork_Spring_postCutover_28d.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minute_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026436</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_NewYorkIsCorrect_Spring</span><a href="TestDateTimeZoneCutover_test_NewYorkIsCorrect_Spring_lc.html">TestDateTimeZoneCutover.test_NewYorkIsCorrect_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026374</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Guatemata_Autumn</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Guatemata_Autumn_302.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Guatemata_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026029</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_preCutover_2yu.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025763</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusHour_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_minusHour_Turk_123.html">TestDateTimeZoneCutover.test_DateTime_minusHour_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026277</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MutableDateTime_setZoneRetainFields_Turk</span><a href="TestDateTimeZoneCutover_test_MutableDateTime_setZoneRetainFields_Turk_210.html">TestDateTimeZoneCutover.test_MutableDateTime_setZoneRetainFields_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025424</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_preCutover_16p.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025756</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_NewYork_Spring</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_NewYork_Spring_2wf.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_NewYork_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025525</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_preCutover_75.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_minuteOfHour_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025652</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMinuteOfHourInDstChange</span><a href="TestDateTimeZoneCutover_testWithMinuteOfHourInDstChange_2vl.html">TestDateTimeZoneCutover.testWithMinuteOfHourInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025601</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MoscowIsCorrect_Autumn</span><a href="TestDateTimeZoneCutover_test_MoscowIsCorrect_Autumn_w6.html">TestDateTimeZoneCutover.test_MoscowIsCorrect_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025732</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hour_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_hour_NewYork_Spring_preCutover_37r.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hour_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026091</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_day_NewYork_Autumn_postCutover_37o.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025982</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_GuatemataIsCorrect_Autumn</span><a href="TestDateTimeZoneCutover_test_GuatemataIsCorrect_Autumn_11.html">TestDateTimeZoneCutover.test_GuatemataIsCorrect_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026254</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusHour_Guatemata_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_plusHour_Guatemata_Autumn_23x.html">TestDateTimeZoneCutover.test_DateTime_plusHour_Guatemata_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025715</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_NewYork_Autumn</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_NewYork_Autumn_1mf.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_NewYork_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025441</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MockTurkIsCorrect</span><a href="TestDateTimeZoneCutover_test_MockTurkIsCorrect_1cd.html">TestDateTimeZoneCutover.test_MockTurkIsCorrect</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025990</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hour_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_hour_NewYork_Spring_postCutover_1su.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hour_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025708</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_Gaza_2ds.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026229</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_newValid_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_newValid_Gaza_j4.html">TestDateTimeZoneCutover.test_DateTime_newValid_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026503</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testDateTimeCreation_london</span><a href="TestDateTimeZoneCutover_testDateTimeCreation_london_25v.html">TestDateTimeZoneCutover.testDateTimeCreation_london</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025432</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMinuteOfHourInDstChange_mockZone</span><a href="TestDateTimeZoneCutover_testWithMinuteOfHourInDstChange_mockZone_10g.html">TestDateTimeZoneCutover.testWithMinuteOfHourInDstChange_mockZone</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025804</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.002</span>0.002</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_preCutover_7e.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025397</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testDateTimeCreation_newYork</span><a href="TestDateTimeZoneCutover_testDateTimeCreation_newYork_2ib.html">TestDateTimeZoneCutover.testDateTimeCreation_newYork</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025916</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.017</span>0.017</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourBack_NewYork_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourBack_NewYork_Spring_1po.html">TestDateTimeZoneCutover.test_DateTime_setHourBack_NewYork_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026178</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_Turk_qn.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026238</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourZero_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourZero_Turk_19d.html">TestDateTimeZoneCutover.test_DateTime_setHourZero_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025558</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withDay_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_withDay_Gaza_2qn.html">TestDateTimeZoneCutover.test_DateTime_withDay_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026545</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusDay_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_minusDay_Turk_2yo.html">TestDateTimeZoneCutover.test_DateTime_minusDay_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025542</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testBug3476684_adjustOffset</span><a href="TestDateTimeZoneCutover_testBug3476684_adjustOffset_7z.html">TestDateTimeZoneCutover.testBug3476684_adjustOffset</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025787</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withZoneRetainFields_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_withZoneRetainFields_Turk_1od.html">TestDateTimeZoneCutover.test_DateTime_withZoneRetainFields_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025669</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withHourZero_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_withHourZero_Gaza_1y1.html">TestDateTimeZoneCutover.test_DateTime_withHourZero_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025772</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MutableDateTime_withZoneRetainFields_Gaza</span><a href="TestDateTimeZoneCutover_test_MutableDateTime_withZoneRetainFields_Gaza_25f.html">TestDateTimeZoneCutover.test_MutableDateTime_withZoneRetainFields_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026038</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_LocalDate_new_Turk</span><a href="TestDateTimeZoneCutover_test_LocalDate_new_Turk_tv.html">TestDateTimeZoneCutover.test_LocalDate_new_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025890</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_LocalDate_toDateMidnight_Turk</span><a href="TestDateTimeZoneCutover_test_LocalDate_toDateMidnight_Turk_y4.html">TestDateTimeZoneCutover.test_LocalDate_toDateMidnight_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025415</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusDay_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_plusDay_Turk_27e.html">TestDateTimeZoneCutover.test_DateTime_plusDay_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026307</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_Paris_winter</span><a href="TestDateTimeZoneCutover_testWithMillisOfSecondInDstChange_Paris_winter_1gv.html">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_Paris_winter</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025964</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourZero_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourZero_Gaza_sw.html">TestDateTimeZoneCutover.test_DateTime_setHourZero_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025550</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_MockGazaIsCorrect</span><a href="TestDateTimeZoneCutover_test_MockGazaIsCorrect_ta.html">TestDateTimeZoneCutover.test_MockGazaIsCorrect</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026484</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithHourOfDayInDstChange</span><a href="TestDateTimeZoneCutover_testWithHourOfDayInDstChange_p7.html">TestDateTimeZoneCutover.testWithHourOfDayInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025940</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_parse_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_parse_Gaza_135.html">TestDateTimeZoneCutover.test_DateTime_parse_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025826</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_constructor_Moscow_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_constructor_Moscow_Autumn_2k0.html">TestDateTimeZoneCutover.test_DateTime_constructor_Moscow_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025740</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_day_NewYork_Autumn_preCutover_tx.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026102</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_hour_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_hour_NewYork_Spring_preCutover_1ra.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_hour_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025380</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withHourZero_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_withHourZero_Turk_2nv.html">TestDateTimeZoneCutover.test_DateTime_withHourZero_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025779</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testDateTimeCreation_losAngeles</span><a href="TestDateTimeZoneCutover_testDateTimeCreation_losAngeles_13n.html">TestDateTimeZoneCutover.testDateTimeCreation_losAngeles</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026007</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.015</span>0.015</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testBug3476684_adjustOffset_springGap</span><a href="TestDateTimeZoneCutover_testBug3476684_adjustOffset_springGap_38j.html">TestDateTimeZoneCutover.testBug3476684_adjustOffset_springGap</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025679</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.014</span>0.014</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testBug2182444_ausNSW</span><a href="TestDateTimeZoneCutover_testBug2182444_ausNSW_2o9.html">TestDateTimeZoneCutover.testBug2182444_ausNSW</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026195</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.014</span>0.014</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusHour_NewYork_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_plusHour_NewYork_Autumn_2nf.html">TestDateTimeZoneCutover.test_DateTime_plusHour_NewYork_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025372</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_parse_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_parse_Turk_42.html">TestDateTimeZoneCutover.test_DateTime_parse_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025838</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_newValid_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_newValid_Turk_12s.html">TestDateTimeZoneCutover.test_DateTime_newValid_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026511</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_LocalDate_new_Gaza</span><a href="TestDateTimeZoneCutover_test_LocalDate_new_Gaza_2gp.html">TestDateTimeZoneCutover.test_LocalDate_new_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025880</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withZoneRetainFields_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_withZoneRetainFields_Gaza_23b.html">TestDateTimeZoneCutover.test_DateTime_withZoneRetainFields_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025660</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_postCutover_1s3.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026128</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_RioBrancoIsCorrect_Spring</span><a href="TestDateTimeZoneCutover_test_RioBrancoIsCorrect_Spring_vu.html">TestDateTimeZoneCutover.test_RioBrancoIsCorrect_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025499</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithSecondOfMinuteInDstChange</span><a href="TestDateTimeZoneCutover_testWithSecondOfMinuteInDstChange_uo.html">TestDateTimeZoneCutover.testWithSecondOfMinuteInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025457</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_Paris_summer</span><a href="TestDateTimeZoneCutover_testWithMillisOfSecondInDstChange_Paris_summer_wv.html">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_Paris_summer</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025906</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_preCutover_2t.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025575</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Autumn</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Moscow_Autumn_i2.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026493</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_postCutover_19u.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_secondOfMinute_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026427</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourForward_NewYork_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourForward_NewYork_Spring_9v.html">TestDateTimeZoneCutover.test_DateTime_setHourForward_NewYork_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025948</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testDateTimeCreation_paris</span><a href="TestDateTimeZoneCutover_testDateTimeCreation_paris_3m.html">TestDateTimeZoneCutover.testDateTimeCreation_paris</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026171</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testBug3192457_adjustOffset</span><a href="TestDateTimeZoneCutover_testBug3192457_adjustOffset_fy.html">TestDateTimeZoneCutover.testBug3192457_adjustOffset</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025468</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.015</span>0.015</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourAcross_Moscow_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourAcross_Moscow_Spring_qt.html">TestDateTimeZoneCutover.test_DateTime_setHourAcross_Moscow_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026216</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testDateTimeCreation_athens</span><a href="TestDateTimeZoneCutover_testDateTimeCreation_athens_d.html">TestDateTimeZoneCutover.testDateTimeCreation_athens</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026521</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.016</span>0.016</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourAcross_NewYork_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourAcross_NewYork_Spring_1u2.html">TestDateTimeZoneCutover.test_DateTime_setHourAcross_NewYork_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025956</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_day_NewYork_Spring_postCutover_1yp.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_day_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025516</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Autumn_overlap_mins</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Moscow_Autumn_overlap_mins_2r0.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Autumn_overlap_mins</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026285</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.003</span>0.003</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testPeriod</span><a href="TestDateTimeZoneCutover_testPeriod_289.html">TestDateTimeZoneCutover.testPeriod</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026335</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloorNotDST_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloorNotDST_Turk_99.html">TestDateTimeZoneCutover.test_DateTime_roundFloorNotDST_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025620</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testPlusMinutesInDstChange</span><a href="TestDateTimeZoneCutover_testPlusMinutesInDstChange_7o.html">TestDateTimeZoneCutover.testPlusMinutesInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026410</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testBug2182444_usCentral</span><a href="TestDateTimeZoneCutover_testBug2182444_usCentral_1nx.html">TestDateTimeZoneCutover.testBug2182444_usCentral</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025846</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.019</span>0.019</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_minute_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_minute_NewYork_Spring_postCutover_2lh.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_minute_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026000</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_NewYork_winter</span><a href="TestDateTimeZoneCutover_testWithMillisOfSecondInDstChange_NewYork_winter_1xk.html">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_NewYork_winter</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026145</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_RioBranco_Spring</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_RioBranco_Spring_2wm.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_RioBranco_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026083</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusHour_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_minusHour_Gaza_w2.html">TestDateTimeZoneCutover.test_DateTime_minusHour_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026270</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusHour_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_plusHour_Gaza_4v.html">TestDateTimeZoneCutover.test_DateTime_plusHour_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026345</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_day_NewYork_Autumn_preCutover_zq.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026137</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Turk</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Turk_iw.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025641</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_preCutover_1bm.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_hourOfDay_NewYork_Autumn_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026262</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_day_NewYork_Autumn_postCutover_35q.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026402</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_addWrapFieldDay_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_addWrapFieldDay_Gaza_2tw.html">TestDateTimeZoneCutover.test_DateTime_addWrapFieldDay_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026385</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_minute_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_minute_NewYork_Spring_preCutover_ut.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_minute_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025508</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_NewYorkIsCorrect_Autumn</span><a href="TestDateTimeZoneCutover_test_NewYorkIsCorrect_Autumn_1z2.html">TestDateTimeZoneCutover.test_NewYorkIsCorrect_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026223</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusDay_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_minusDay_Gaza_168.html">TestDateTimeZoneCutover.test_DateTime_minusDay_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025534</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusHour_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_plusHour_Turk_1e9.html">TestDateTimeZoneCutover.test_DateTime_plusHour_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026356</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_day_NewYork_Spring_postCutover_8e.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025974</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_day_NewYork_Spring_preCutover_2y5.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_day_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025747</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testPlusSecondsInDstChange</span><a href="TestDateTimeZoneCutover_testPlusSecondsInDstChange_1dm.html">TestDateTimeZoneCutover.testPlusSecondsInDstChange</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025583</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_postCutover_x6.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_hourOfDay_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025873</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_withDay_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_withDay_Turk_kt.html">TestDateTimeZoneCutover.test_DateTime_withDay_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026552</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_NewYork_summer</span><a href="TestDateTimeZoneCutover_testWithMillisOfSecondInDstChange_NewYork_summer_27b.html">TestDateTimeZoneCutover.testWithMillisOfSecondInDstChange_NewYork_summer</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026119</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_Turk_2gs.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026452</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusDayMidGap_Turk</span><a href="TestDateTimeZoneCutover_test_DateTime_plusDayMidGap_Turk_ie.html">TestDateTimeZoneCutover.test_DateTime_plusDayMidGap_Turk</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026163</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_JustAfterLastEverOverlap</span><a href="TestDateTimeZoneCutover_test_DateTime_JustAfterLastEverOverlap_w4.html">TestDateTimeZoneCutover.test_DateTime_JustAfterLastEverOverlap</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026046</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.028</span>0.028</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_new_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_new_Gaza_q4.html">TestDateTimeZoneCutover.test_DateTime_new_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026315</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Spring</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Moscow_Spring_98.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Moscow_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025449</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_postCutover_1jz.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minuteOfHour_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026365</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_constructor_NewYork_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_constructor_NewYork_Autumn_2ud.html">TestDateTimeZoneCutover.test_DateTime_constructor_NewYork_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025818</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourForward_Moscow_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourForward_Moscow_Spring_1vg.html">TestDateTimeZoneCutover.test_DateTime_setHourForward_Moscow_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025490</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusHour_Moscow_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_minusHour_Moscow_Autumn_361.html">TestDateTimeZoneCutover.test_DateTime_minusHour_Moscow_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025610</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_postCutover_1d1.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_secondOfMinute_NewYork_Autumn_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025700</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minute_NewYork_Spring_preCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundCeiling_minute_NewYork_Spring_preCutover_2zs.html">TestDateTimeZoneCutover.test_DateTime_roundCeiling_minute_NewYork_Spring_preCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025795</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_getOffsetFromLocal_Gaza</span><a href="TestDateTimeZoneCutover_test_getOffsetFromLocal_Gaza_2ag.html">TestDateTimeZoneCutover.test_getOffsetFromLocal_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982025633</span>26 Jul 08:20:25</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.001</span>0.001</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_minusHour_NewYork_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_minusHour_NewYork_Autumn_1d0.html">TestDateTimeZoneCutover.test_DateTime_minusHour_NewYork_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026420</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_setHourBack_Moscow_Spring</span><a href="TestDateTimeZoneCutover_test_DateTime_setHourBack_Moscow_Spring_2pd.html">TestDateTimeZoneCutover.test_DateTime_setHourBack_Moscow_Spring</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026188</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusDayMidGap_Gaza</span><a href="TestDateTimeZoneCutover_test_DateTime_plusDayMidGap_Gaza_2b3.html">TestDateTimeZoneCutover.test_DateTime_plusDayMidGap_Gaza</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026156</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_roundFloor_hour_NewYork_Spring_postCutover</span><a href="TestDateTimeZoneCutover_test_DateTime_roundFloor_hour_NewYork_Spring_postCutover_2gx.html">TestDateTimeZoneCutover.test_DateTime_roundFloor_hour_NewYork_Spring_postCutover</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026109</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+<tr>
+    <td><span class="sortValue">TestDateTimeZoneCutover.test_DateTime_plusHour_Moscow_Autumn</span><a href="TestDateTimeZoneCutover_test_DateTime_plusHour_Moscow_Autumn_dm.html">TestDateTimeZoneCutover.test_DateTime_plusHour_Moscow_Autumn</a></td>
+    <td style="whitespace:nowrap;"><span class="sortValue">1721982026245</span>26 Jul 08:20:26</td>
+    <td>      <span class="sortValue">1</span><span class="aui-lozenge aui-lozenge-success">PASS</span>
+  </td>
+    <td><span class="sortValue">0.0</span>0</td>
+    <td style="width:50%">
+     &#160;     </td>
+</tr>
+
+    </tbody>
+</table>
+
+    </div> <!-- tabs-pane -->
+</div> <!-- aui-tabs horizontal-tabs -->
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="https://openclover.org">OpenClover</a> v 4.5.2
+                on Fri Jul 26 2024 08:22:44 UTC using coverage data from Fri Jul 26 2024 08:21:06 UTC.
+            </li>
+        </ul>
+        <ul>
+            <li>OpenClover is free and open-source software. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

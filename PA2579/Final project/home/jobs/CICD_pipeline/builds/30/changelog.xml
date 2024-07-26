@@ -1,0 +1,10 @@
+commit 46dc831c6c2482d8aed74df6238b6e5fc1e1115e
+tree cec28985288cbc69f2e95941179ea2f64a504ebe
+parent e13a0d1e0b27344cab54c95f93a257c9448240ce
+author Uday Jain <uday9k@gmail.com> 2024-07-26 01:18:58 +0200
+committer Uday Jain <uday9k@gmail.com> 2024-07-26 01:18:58 +0200
+
+    try different version of pitest and junit5 7
+
+
+:100755 100755 3978f8e82d33b339eb52eafbb912e021d4b63495 33131d7665579b721f213c600ee6d19d9c62ef12 M	pom.xml
