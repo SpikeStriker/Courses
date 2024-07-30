@@ -36,7 +36,7 @@
       <injectBuildVariables>false</injectBuildVariables>
     </hudson.tasks.Maven>
     <hudson.tasks.Maven>
-      <targets>test-compile org.pitest:pitest-maven:mutationCoverage</targets>
+      <targets>-DwithHistory test-compile org.pitest:pitest-maven:mutationCoverage</targets>
       <mavenName>MAVEN</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
