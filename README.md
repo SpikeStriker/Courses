@@ -1,26 +1,14 @@
 # Courses
 
-Repo containing deliverables and notes from courses done
+Detailed repository summary generated automatically from available manifests and READMEs. Please review and refine where needed.
 
-## Repository Summary
-Coursework and academic project repository with structured lab material, assignments, and research
-deliverables. Contains top-level folders: 5EL272, ET1550 Project 1, ET1550 Project 2, ET1550 Project
-3, HIG750, PA2577, ...
+## Problem statements addressed
 
-## Key Contents
-### Directories
-- `5EL272`
-- `ET1550 Project 1`
-- `ET1550 Project 2`
-- `ET1550 Project 3`
-- `HIG750`
-- `PA2577`
-- `PA2578`
-- `PA2579`
+- Describe the key problems this repo solves (e.g., reproducible experiments, teaching labs, algorithm implementations).
 
-### Files
-- `.gitignore`
-- `LICENSE`
 
-## Usage
-- Refer to the repository files and scripts for setup and execution instructions.
+
+## How to contribute
+
+- Open issues for bugs or feature requests.
+- Create PRs against `main` with a clear description.
